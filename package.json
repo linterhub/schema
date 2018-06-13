@@ -1,0 +1,15 @@
+{
+  "name": "linterhub.schema",
+  "version": "1.0.0",
+  "description": "JSON schemas for linterhub",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linterhub/schema.git"
+  },
+  "author": "linterhub",
+  "license": "MIT",
+  "homepage": "https://schema.linterhub.com",
+  "bugs": {
+    "url": "https://github.com/linterhub/schema/issues"
+  }
+}
