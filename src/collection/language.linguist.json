@@ -3074,14 +3074,6 @@
                 },
                 {
                     "enum": [
-                        "Pod 6"
-                    ],
-                    "extensions": [
-                        ".pod"
-                    ]
-                },
-                {
-                    "enum": [
                         "PogoScript"
                     ],
                     "extensions": [

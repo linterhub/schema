@@ -1,0 +1,10 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Collection: software license",
+    "description": "The set of identifiers of software licenses imported from SPDX catalog",
+    "type": "string",
+    "enum": [
+        ""
+    ],
+    "additionalItems": false
+}
