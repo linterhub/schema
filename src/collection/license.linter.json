@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Collection: software license",
+    "description": "The set of special software licenses",
+    "type": "string",
+    "enum": [
+        "Custom",
+        "Unknown"
+    ],
+    "additionalItems": false
+}

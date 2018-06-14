@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Licensed object",
+    "description": "The set of software licenses names",
+    "type": "string",
+    "oneOf": [
+        {
+            "$ref": "./license.linter.json"
+        },
+        {
+            "$ref": "./license.spdx.json"
+        }
+    ]
+}
