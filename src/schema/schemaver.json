@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$version": "1.0.0",
+    "$id": "https://schema.linterhub.com/schemaver.json",
+    "title": "Versioned Schema",
+    "description": "The meta-schema of versioned JSON schema",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "http://json-schema.org/draft-06/schema#"
+        },
+        {
+            "properties": {
+                "$version": {
+                    "title": "Version",
+                    "description": "The version of the object",
+                    "type": "string",
+                    "pattern": "^[0-9]+.[0-9]+.[0-9]+$"
+                }
+            },
+            "required": [
+                "$version"
+            ]
+        }
+    ]
+}
