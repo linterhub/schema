@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Collection: Package Manager",
+    "description": "The set of system package managers",
+    "type": "string",
+    "enum": [
+        "os",
+        "url",
+        "platform",
+        "pacman",
+        "chocolatey"
+    ],
+    "additionalItems": false
+}

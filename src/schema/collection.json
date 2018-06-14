@@ -7,104 +7,13 @@
     "type": "object",
     "definitions": {
         "language": {
-            "title": "Language",
-            "description": "The set of programming languages",
-            "type": "string",
-            "oneOf": [
-                {
-                    "enum": [
-                        "1C Enterprise"
-                    ],
-                    "extensions": [
-                        ".bsl",
-                        ".os"
-                    ]
-                },
-                {
-                    "enum": [
-                        "ASP"
-                    ],
-                    "extensions": [
-                        ".asp",
-                        ".asax",
-                        ".ascx",
-                        ".ashx",
-                        ".asmx",
-                        ".aspx",
-                        ".axd"
-                    ]
-                }
-            ]
+            "$ref": "./../collection/language.json"
         },
         "license": {
-            "$schema": "http://json-schema.org/draft-06/schema#",
-            "title": "License",
-            "description": "The set of software licenses names",
-            "type": "string",
-            "oneOf": [
-                {
-                    "$schema": "http://json-schema.org/draft-06/schema#",
-                    "title": "Collection: software license",
-                    "description": "The set of special software licenses",
-                    "type": "string",
-                    "enum": [
-                        "Custom",
-                        "Unknown"
-                    ],
-                    "additionalItems": false
-                },
-                {
-                    "$schema": "http://json-schema.org/draft-06/schema#",
-                    "title": "Collection: software license",
-                    "description": "The set of special software licenses",
-                    "type": "string",
-                    "enum": [
-                        "0BSD",
-                        "AAL",
-                        "ADSL",
-                        "MIT"
-                    ],
-                    "additionalItems": false
-                }
-            ]
+            "$ref": "./../collection/license.json"
         },
         "manager": {
-            "$schema": "http://json-schema.org/draft-06/schema#",
-            "title": "Collection: Package Manager",
-            "description": "The set of names of package managers",
-            "type": "string",
-            "oneOf": [
-                {
-                    "$schema": "http://json-schema.org/draft-06/schema#",
-                    "title": "Collection: Package Manager",
-                    "description": "The set of language package managers",
-                    "type": "string",
-                    "enum": [
-                        "bower",
-                        "composer",
-                        "npm",
-                        "pip",
-                        "yarn",
-                        "gem"
-                    ],
-                    "additionalItems": false
-                },
-                {
-                    "$schema": "http://json-schema.org/draft-06/schema#",
-                    "title": "Collection: Package Manager",
-                    "description": "The set of system package managers",
-                    "type": "string",
-                    "enum": [
-                        "os",
-                        "url",
-                        "platform",
-                        "pacman",
-                        "chocolatey"
-                    ],
-                    "additionalItems": false
-                }
-            ],
-            "additionalItems": false
+            "$ref": "./../collection/manager.json"
         }
     }
 }

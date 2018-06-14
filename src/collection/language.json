@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Collection: programming language and extension",
+    "description": "The set of programming languages names",
+    "type": "string",
+    "oneOf": [
+        {
+            "$ref": "./language.linter.json"
+        },
+        {
+            "$ref": "./language.linguist.json"
+        }
+    ]
+}
