@@ -6,6 +6,7 @@ const amd = {
     fs: require('fs'),
     git: require('gulp-git'),
     yaml: require('js-yaml'),
+    eslint: require('gulp-eslint'),
     gulp: require('gulp'),
     hubRegistry: require('gulp-hub'),
     jsonData: require('gulp-data'),
