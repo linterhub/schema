@@ -5,12 +5,18 @@
     },
     "collection": {
         "dir": "src/collection/",
+        "mask": "src/collection/*.json",
         "licenses": {
             "spdx": "src/collection/license.spdx.json"
         },
         "languages": {
             "linguist": "src/collection/language.linguist.json"
         }
+    },
+    "schema": {
+        "mask": "src/schema/*.json",
+        "ver": "src/schema/schemaver.json",
+        "draft": "src/collection/draft-06.json"
     },
     "ext": {
         "linguist": "ext/github/linguist/lib/linguist/languages.yml",
