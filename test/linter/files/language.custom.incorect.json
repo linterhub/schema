@@ -1,0 +1,14 @@
+{
+    "$schema": "https://schema.linterhub.com/linter.json",
+    "$version": "1.0.0",
+    "package-id": "url://url",
+    "languages": [
+        "Text1"
+    ],
+    "extensions": [
+        ".txt"
+    ],
+    "configs": [
+        "config.json"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "$schema": "https://schema.linterhub.com/deps.json",
+    "$version": "1.0.0",
+    "package": "url://url",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "npm"
+            }
+        ]
+    ]
+}

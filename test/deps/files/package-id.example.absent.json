@@ -1,0 +1,17 @@
+{
+    "$schema": "https://schema.linterhub.com/deps.json",
+    "$version": "1.0.0",
+    "dependencies": [
+        [
+            {
+                "manager": "platform"
+            },
+            {
+                "manager": "bower",
+                "package": "name",
+                "version": "1.0.0",
+                "target": true
+            }
+        ]
+    ]
+}

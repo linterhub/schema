@@ -4,6 +4,7 @@ const cfg = require('./config.json');
 // Shared node modules
 const amd = {
     fs: require('fs'),
+    log: require('fancy-log'),
     git: require('gulp-git'),
     yaml: require('js-yaml'),
     eslint: require('gulp-eslint'),
@@ -13,6 +14,7 @@ const amd = {
     jsonFormat: require('gulp-json-format'),
     jsonSchema: require('gulp-json-schema'),
     jsonSchemaBundle: require('gulp-jsonschema-bundle'),
+    jsonSchemaValidator: require('jsonschema').Validator,
 };
 
 // Shared functions

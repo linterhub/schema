@@ -1,0 +1,57 @@
+{
+    "description": "package schema",
+    "$schema": { 
+        "$ref": "https://schema.linterhub.com/package.json"
+    },
+    "tests": [
+        {
+            "description": "with full data",
+            "data": { 
+                "$ref" : "test/package/files/full.example.valid.json" 
+            },
+            "valid": true
+        },
+        {
+            "description": "with custom license",
+            "data": { 
+                "$ref" : "test/package/files/license.custom.valid.json" 
+            },
+            "valid": true
+        },
+        {
+            "description": "with SPDX license",
+            "data": { 
+                "$ref" : "test/package/files/license.spdx.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "incorect license",
+            "data": { 
+                "$ref" : "test/package/files/license.example.incorect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no license",
+            "data": { 
+                "$ref" : "test/package/files/license.example.absent.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no id",
+            "data": { 
+                "$ref" : "test/package/files/id.example.absent.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no name",
+            "data": { 
+                "$ref" : "test/package/files/name.example.absent.json"
+            },
+            "valid": false
+        }
+    ]
+}
