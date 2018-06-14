@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Collection: Package Manager",
+    "description": "The set of names of package managers",
+    "type": "string",
+    "oneOf": [
+        {
+            "$ref": "./manager.language.json"
+        },
+        {
+            "$ref": "./manager.system.json"
+        }
+    ],
+    "additionalItems": false
+}

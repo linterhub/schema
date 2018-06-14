@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Collection: Package Manager",
+    "description": "The set of language package managers",
+    "type": "string",
+    "enum": [
+        "bower",
+        "composer",
+        "npm",
+        "pip",
+        "yarn",
+        "gem"
+    ],
+    "additionalItems": false
+}
