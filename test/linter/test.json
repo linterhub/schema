@@ -1,0 +1,64 @@
+{
+    "description": "linter schema",
+    "$schema": { 
+        "$ref": "https://schema.linterhub.com/linter.json"
+    },
+    "tests": [
+        {
+            "description": "with full data",
+            "data": { 
+                "$ref" : "test/linter/files/full.example.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "with linguist language",
+            "data": { 
+                "$ref" : "test/linter/files/language.linguist.valid.json" 
+            },
+            "valid": true
+        },
+        {
+            "description": "with custom language",
+            "data": { 
+                "$ref" : "test/linter/files/language.custom.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "with collection of languages",
+            "data": { 
+                "$ref" : "test/linter/files/language.collection.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "incorect collection of languages",
+            "data": { 
+                "$ref" : "test/linter/files/language.collection.incorect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "incorect custom language",
+            "data": { 
+                "$ref" : "test/linter/files/language.custom.incorect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "incorect linguist language",
+            "data": { 
+                "$ref" : "test/linter/files/language.linguist.incorect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no package-id",
+            "data": { 
+                "$ref" : "test/linter/files/package-id.example.absent.json"
+            },
+            "valid": false
+        } 
+    ]
+}

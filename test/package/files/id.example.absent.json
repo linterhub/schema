@@ -1,0 +1,9 @@
+{
+    "$schema": "https://schema.linterhub.com/package.json",
+    "$version": "1.0.0",
+    "name": "name",
+    "description": "description",
+    "url": "url://url",
+    "license": "Custom",
+    "copying": "copying"
+}

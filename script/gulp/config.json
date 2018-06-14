@@ -26,7 +26,12 @@
         "collection": "src/schema/collection.json"
     },
     "build": {
-        "dir": "build"
+        "dir": "build",
+        "mask": "build/*.json"
+    },
+    "test": {
+        "dir": "test",
+        "mask": "test/**/test.json"
     },
     "ext": {
         "linguist": "ext/github/linguist/lib/linguist/languages.yml",
