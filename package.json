@@ -8,11 +8,13 @@
     "build": "gulp build",
     "test": "gulp build && gulp test-build",
     "lint": "gulp lint",
-    "import": "gulp import"
+    "import": "gulp import",
+    "update": "git fetch && git rebase && git submodule update --remote --merge"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "gulp before-commit"
+      "pre-commit": "npm run-script test",
+      "post-commit": "npm run-script update"
     }
   },
   "repository": {
