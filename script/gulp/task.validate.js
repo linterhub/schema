@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // Get shared core
 const core = global.lhcore;

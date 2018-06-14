@@ -1,4 +1,10 @@
 {
+    "src": {
+        "dir": "src",
+        "mask": "src/**/*.json",
+        "js": "**/*.js",
+        "exclude": "!**/node_modules/**"
+    },
     "template": {
         "linguist": "src/template/language.linguist.json",
         "spdx": "src/template/license.spdx.json"
