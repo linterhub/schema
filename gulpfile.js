@@ -11,7 +11,12 @@ hubRegistry([
     'script/gulp/**/task.*.js',
 ]);
 
-gulp.task('default', gulp.series('validate', 'lint'));
+gulp.task('default', gulp.series(
+    'validate',
+    'lint',
+    'build'
+));
 gulp.task('before-commit', gulp.series('pull-submodules', 'lint'));
 gulp.task('import', gulp.series('pull-submodules', 'import'));
 gulp.task('validate', gulp.series('import', 'validate'));
+gulp.task('build', gulp.series('validate', 'lint', 'build'));

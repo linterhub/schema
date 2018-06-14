@@ -12,6 +12,7 @@ const amd = {
     jsonData: require('gulp-data'),
     jsonFormat: require('gulp-json-format'),
     jsonSchema: require('gulp-json-schema'),
+    jsonSchemaBundle: require('gulp-jsonschema-bundle'),
 };
 
 // Shared functions
