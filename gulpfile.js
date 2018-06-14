@@ -14,7 +14,8 @@ hubRegistry([
 gulp.task('default', gulp.series(
     'validate',
     'lint',
-    'build'
+    'build',
+    'test-build'
 ));
 gulp.task('before-commit', gulp.series('pull-submodules', 'lint'));
 gulp.task('import', gulp.series('pull-submodules', 'import'));

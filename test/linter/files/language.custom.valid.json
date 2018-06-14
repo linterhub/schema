@@ -1,0 +1,14 @@
+{
+    "$schema": "https://schema.linterhub.com/linter.json",
+    "$version": "1.0.0",
+    "package": "url://url",
+    "languages": [
+        "JSP"
+    ],
+    "extensions": [
+        ".jsp"
+    ],
+    "configs": [
+        "config.json"
+    ]
+}
