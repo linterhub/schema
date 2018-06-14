@@ -4,6 +4,9 @@
   "description": "JSON schemas for linterhub",
   "scripts": {
     "gulp": "./node_modules/gulp/bin/gulp.js",
+    "eslint": "./node_modules/.bin/eslint",
+    "build": "gulp build",
+    "lint": "gulp lint",
     "import": "gulp import"
   },
   "husky": {
@@ -28,6 +31,7 @@
     "gulp-hub": "^0.8.0",
     "gulp-json-format": "^2.0.0",
     "gulp-json-schema": "^1.0.0",
+    "gulp-jsonschema-bundle": "0.0.3",
     "husky": "^1.0.0-rc.8",
     "js-yaml": "^3.12.0"
   },
