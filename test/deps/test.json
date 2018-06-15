@@ -1,62 +1,55 @@
 {
     "description": "deps schema",
-    "$schema": { 
+    "$schema": {
         "$ref": "https://schema.linterhub.com/deps.json"
     },
     "tests": [
         {
             "description": "with full data",
-            "data": { 
+            "data": {
                 "$ref" : "test/deps/files/full.example.valid.json"
             },
             "valid": true
         },
         {
             "description": "with manager system",
-            "data": { 
-                "$ref" : "test/deps/files/manager.system.valid.json" 
+            "data": {
+                "$ref" : "test/deps/files/manager.system.valid.json"
             },
             "valid": true
         },
         {
             "description": "with manager language",
-            "data": { 
+            "data": {
                 "$ref" : "test/deps/files/manager.language.valid.json"
             },
             "valid": true
         },
         {
-            "description": "incorect manager name",
-            "data": { 
-                "$ref" : "test/deps/files/manager.example.incorect.json"
+            "description": "incorrect manager name",
+            "data": {
+                "$ref" : "test/deps/files/manager.example.incorrect.json"
             },
             "valid": false
         },
         {
-            "description": "incorect package name",
-            "data": { 
-                "$ref" : "test/deps/files/package.example.incorect.json"
+            "description": "incorrect package name",
+            "data": {
+                "$ref" : "test/deps/files/package.example.incorrect.json"
             },
             "valid": false
         },
         {
             "description": "no manager",
-            "data": { 
+            "data": {
                 "$ref" : "test/deps/files/manager.example.absent.json"
             },
             "valid": false
         },
         {
             "description": "no package",
-            "data": { 
+            "data": {
                 "$ref" : "test/deps/files/package.example.absent.json"
-            },
-            "valid": false
-        },
-        {
-            "description": "no package-id",
-            "data": { 
-                "$ref" : "test/deps/files/package-id.example.absent.json"
             },
             "valid": false
         }

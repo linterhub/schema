@@ -40,7 +40,7 @@
         },
         "package": {
             "title": "Package",
-            "description": "The definition of required package, later it should be converted to package-id reference",
+            "description": "The definition of required package, later it should be converted to linterhub package reference",
             "type": "object",
             "properties": {
                 "manager": {
@@ -56,7 +56,7 @@
                 },
                 "version": {
                     "title": "Version",
-                    "description": "The package version in a format accepted by package manager, if not specifdied the latest version is assumed",
+                    "description": "The package version in a format accepted by package manager, if not specified the latest version is assumed",
                     "type": "string"
                 },
                 "target": {

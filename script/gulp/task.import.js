@@ -9,7 +9,7 @@ const jsonData = core.amd.jsonData;
 const jsonFormat = core.amd.jsonFormat;
 const config = core.cfg;
 
-// Externall functions as aliases
+// External functions as aliases
 const readJson = core.fnc.readJson;
 const readYaml = core.fnc.readYaml;
 const toBuffer = core.fnc.jsonToBuffer;
