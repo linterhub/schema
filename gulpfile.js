@@ -1,3 +1,5 @@
+'use strict';
+
 // Set global shared core
 const lhcore = require('./script/gulp/index.js');
 global.lhcore = lhcore;
@@ -8,7 +10,7 @@ const hubRegistry = lhcore.amd.hubRegistry;
 
 // Load tasks into the registry of gulp
 hubRegistry([
-    'script/gulp/**/task.*.js',
+  'script/gulp/**/task.*.js',
 ]);
 
 gulp.task('import', gulp.series('pull-submodules', 'import'));

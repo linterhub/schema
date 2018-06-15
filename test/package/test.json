@@ -26,9 +26,9 @@
             "valid": true
         },
         {
-            "description": "incorect license",
+            "description": "incorrect license",
             "data": { 
-                "$ref" : "test/package/files/license.example.incorect.json"
+                "$ref" : "test/package/files/license.example.incorrect.json"
             },
             "valid": false
         },

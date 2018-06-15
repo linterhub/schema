@@ -7,7 +7,7 @@ const core = global.lhcore;
 const gulp = core.amd.gulp;
 const git = core.amd.git;
 
-// Update gt submodules
+// Update git submodules
 const pullSubmodules = () => git.updateSubmodule({args: '--init'});
 
 // Tasks
