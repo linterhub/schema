@@ -11,6 +11,11 @@ const config = core.cfg;
 // Externally functions as aliases
 const readJson = core.fnc.readJson;
 
+// Copy all static assets to release
+const copyStatic = () => gulp
+    .src(config.assets.cname)
+    .pipe(gulp.dest(config.release.dir));
+
 // Copy to release all schemas and update root
 const createRelease = () => gulp
     .src(config.build.mask)
@@ -22,5 +27,6 @@ const createRelease = () => gulp
     }));
 
 // Tasks
+gulp.task('static', copyStatic);
 gulp.task('create-release', createRelease);
-gulp.task('release', gulp.parallel('create-release'));
+gulp.task('release', gulp.parallel('static', 'create-release'));

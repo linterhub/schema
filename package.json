@@ -9,7 +9,7 @@
     "test": "gulp build && gulp test-build",
     "lint": "gulp lint",
     "import": "gulp import",
-    "release": "gulp release",
+    "release": "gulp release && gulp test-release",
     "update": "git fetch && git rebase && git submodule update --remote --merge"
   },
   "husky": {
