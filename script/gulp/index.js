@@ -7,6 +7,7 @@ const cfg = require('./config.json');
 const amd = {
   fs: require('fs'),
   log: require('fancy-log'),
+  path: require('path'),
   git: require('gulp-git'),
   yaml: require('js-yaml'),
   eslint: require('gulp-eslint'),

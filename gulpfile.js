@@ -21,5 +21,7 @@ gulp.task('default', gulp.series(
     'validate',
     'lint',
     'build',
-    'test-build'
+    'test-build',
+    'release',
+    'test-release'
 ));
