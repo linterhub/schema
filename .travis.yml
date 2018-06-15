@@ -1,0 +1,23 @@
+language: node_js
+node_js: stable
+cache:
+  directories:
+    - node_modules
+git:
+  submodules: false
+before_install:
+  - git submodule update --init
+install:
+  - npm install
+script:
+  - npm run test
+  - npm run release
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github_token: $GITHUB_TOKEN
+  local-dir: dist
+  on:
+    branch: master
+    target_branch: gh-pages

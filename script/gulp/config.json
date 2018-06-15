@@ -41,6 +41,9 @@
         "dir": "dist",
         "mask": "dist/*.json"
     },
+    "assets": {
+        "cname": "CNAME"
+    },
     "node": {
         "dir": "node_modules"
     }
