@@ -6,8 +6,9 @@ const cfg = require('./config.json');
 // Shared node modules
 const amd = {
   fs: require('fs'),
-  log: require('fancy-log'),
+  del: require('del'),
   path: require('path'),
+  log: require('fancy-log'),
   git: require('gulp-git'),
   yaml: require('js-yaml'),
   eslint: require('gulp-eslint'),
