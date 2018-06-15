@@ -40,5 +40,8 @@
     "release": {
         "dir": "dist",
         "mask": "dist/*.json"
+    },
+    "node": {
+        "dir": "node_modules"
     }
 }
