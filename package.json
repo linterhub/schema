@@ -1,7 +1,26 @@
 {
-  "name": "schema",
-  "version": "1.0.0",
+  "author": "linterhub",
+  "name": "@linterhub/schema",
+  "version": "0.0.0-development",
   "description": "JSON schemas for linterhub",
+  "license": "MIT",
+  "homepage": "https://schema.linterhub.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linterhub/schema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/linterhub/schema/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "beta"
+  },
+  "main": "index.js",
+  "files": [
+    "dist/*.json",
+    "README.md"
+  ],
   "scripts": {
     "gulp": "./node_modules/gulp/bin/gulp.js",
     "eslint": "./node_modules/.bin/eslint",
@@ -10,7 +29,8 @@
     "lint": "gulp lint",
     "import": "gulp import",
     "release": "gulp release && gulp test-release",
-    "update": "git fetch && git rebase && git submodule update --remote --merge"
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "husky": {
     "hooks": {
@@ -18,14 +38,10 @@
       "post-commit": "npm run-script update"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/linterhub/schema.git"
-  },
-  "author": "linterhub",
-  "license": "MIT",
-  "homepage": "https://schema.linterhub.com",
   "devDependencies": {
+    "@semantic-release/changelog": "^2.0.2",
+    "@semantic-release/exec": "^2.2.4",
+    "@semantic-release/git": "^5.0.0",
     "del": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1",
@@ -40,10 +56,9 @@
     "gulp-jsonschema-bundle": "0.0.3",
     "husky": "^1.0.0-rc.8",
     "js-yaml": "^3.12.0",
-    "jsonschema": "^1.2.4"
-  },
-  "bugs": {
-    "url": "https://github.com/linterhub/schema/issues"
-  },
-  "dependencies": {}
+    "jsonschema": "^1.2.4",
+    "semantic-release": "^15.5.4",
+    "travis-deploy-once": "^5.0.0",
+    "yargs": "^11.0.0"
+  }
 }

@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.linterhub.com/schemaver.json",
-    "$version": "1.0.0",
+    "$version": "0.0.0",
     "$id": "https://schema.linterhub.com/deps.json",
     "title": "Package dependencies",
     "description": "The schema of dependencies that extends package",

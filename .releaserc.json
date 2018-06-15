@@ -1,0 +1,63 @@
+{
+    "release": {
+        "verifyConditions": [
+            "@semantic-release/changelog",
+            "@semantic-release/npm",
+            "@semantic-release/github",
+            "@semantic-release/git"
+        ],
+        "prepare": [
+            "@semantic-release/npm",
+            "@semantic-release/changelog"
+        ],
+        "analyzeCommits": {
+            "releaseRules": [
+                {
+                    "type": "docs",
+                    "scope": ".*md",
+                    "release": "patch"
+                },
+                {
+                    "type": "fix",
+                    "release": "patch"
+                },
+                {
+                    "type": "new",
+                    "release": "patch"
+                },
+                {
+                    "type": "perf",
+                    "release": "patch"
+                },
+                {
+                    "type": "feat",
+                    "release": "minor"
+                },
+                {
+                    "type": "breaking",
+                    "release": "major"
+                }
+            ],
+            "parserOpts": {
+                "noteKeywords": [
+                    "BREAKING CHANGE",
+                    "BREAKING CHANGES",
+                    "BREAKING"
+                ]
+            }
+        },
+        "publish": [
+            {
+                "path": "@semantic-release/exec",
+                "cmd": "gulp release --nextRelease=${nextRelease.version} && gulp test-release"
+            },
+            "@semantic-release/npm",
+            {
+                "path": "@semantic-release/github",
+                "assets": [
+                    "dist/*.json"
+                ]
+            }
+        ]
+    }
+}
