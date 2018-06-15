@@ -1,0 +1,31 @@
+{
+    "spellright.language": "en",
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "json",
+        "javascript",
+        "yaml"
+    ],
+    "spellright.ignoreFiles": [
+        "**/.gitignore",
+        "**/.spellignore",
+        "**/package.lock.json",
+        "src/collection/**/**",
+        "ext/**/**",
+        ".vscode/**/**",
+    ],
+    "javascript.validate.enable": false,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "ext/**/**": true,
+        ".vscode/**/**": true
+    },
+    "eslint.enable": true,
+    "eslint.provideLintTask": true
+}

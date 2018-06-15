@@ -1,7 +1,7 @@
 {
     "$schema": "https://schema.linterhub.com/linter.json",
     "$version": "1.0.0",
-    "package-id": "url://url",
+    "package": "url://url",
     "languages": [
         "Text1"
     ],

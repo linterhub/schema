@@ -42,5 +42,6 @@
   },
   "bugs": {
     "url": "https://github.com/linterhub/schema/issues"
-  }
+  },
+  "dependencies": {}
 }
