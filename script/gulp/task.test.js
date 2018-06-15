@@ -61,7 +61,7 @@ const test = (done) => gulp
         return Promise.all(tasks);
     }));
 
-// Preload schemas in build folder
+// Preload schemas from build folder
 const buildPreload = () => gulp
     .src(config.build.mask)
     .pipe(jsonData((file) => {
@@ -70,7 +70,18 @@ const buildPreload = () => gulp
         log.info(`SCHEMA PRELOAD: ${file.path}`);
     }));
 
+// Preload schemas from release folder
+const releasePreload = () => gulp
+    .src(config.release.mask)
+    .pipe(jsonData((file) => {
+        const schema = readJson(file.path);
+        validator.addSchema(schema, schema.$id);
+        log.info(`SCHEMA PRELOAD: ${file.path}`);
+    }));
+
 // Tasks
 gulp.task('test-preload-build', buildPreload);
+gulp.task('test-preload-release', releasePreload);
 gulp.task('test-build', gulp.series('test-preload-build', test));
+gulp.task('test-release', gulp.series('test-preload-release', test));
 gulp.task('test', gulp.series('test-build'));
