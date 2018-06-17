@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.linterhub.com/schemaver.json",
-    "$version": "1.0.0",
+    "$version": "0.0.0",
     "$id": "https://schema.linterhub.com/collection.json",
     "title": "Collections",
     "description": "The schema with references to external data sets",
