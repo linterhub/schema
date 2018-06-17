@@ -3,10 +3,17 @@ node_js: stable
 cache:
   directories:
     - node_modules
+    - ~/.npm
+git:
+  submodules: false
+before_install:
+  - git submodule update --init
 install:
   - npm install
 script:
   - npm run test
+before_deploy:
+  - npm run travis-deploy-once "npm run semantic-release"
 deploy:
   provider: pages
   skip-cleanup: true
@@ -16,3 +23,6 @@ deploy:
   on:
     branch: master
     target_branch: gh-pages
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

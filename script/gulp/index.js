@@ -9,6 +9,7 @@ const amd = {
   del: require('del'),
   path: require('path'),
   log: require('fancy-log'),
+  argv: require('yargs').argv,
   git: require('gulp-git'),
   yaml: require('js-yaml'),
   eslint: require('gulp-eslint'),
@@ -26,6 +27,9 @@ const fnc = {
   readJson: (path) => JSON.parse(amd.fs.readFileSync(path)),
   readYaml: (path) => amd.yaml.safeLoad(amd.fs.readFileSync(path)),
   jsonToBuffer: (json) => Buffer.from(JSON.stringify(json), 'utf8'),
+  nextRelease: () => typeof amd.argv.nextRelease !== 'undefined'
+    ? amd.argv.nextRelease
+    : cfg.meta.version,
 };
 
 // Exported shared config, modules and functions

@@ -46,5 +46,8 @@
     },
     "node": {
         "dir": "node_modules"
+    },
+    "meta": {
+        "version": "0.9.0"
     }
 }

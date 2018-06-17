@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.linterhub.com/schemaver.json",
-    "$version": "1.0.0",
+    "$version": "0.0.0",
     "$id": "https://schema.linterhub.com/package.json",
     "title": "Package meta-information",
     "description": "The schema of package meta information",
