@@ -8,25 +8,27 @@ const gulp = core.amd.gulp;
 const jsonSchema = core.amd.jsonSchema;
 const config = core.cfg;
 
-// Validate all core schemas according to schemaver
-const validateCore = () => gulp
-    .src(config.schema.mask)
+// Validate all schemas
+const validate = (mask, schema) => gulp
+    .src(mask)
     .pipe(jsonSchema({
-        schema: config.schema.ver,
+        schema: schema,
         loadMissingSchemas: true,
         checkRecursive: true,
         verbose: true,
     }));
 
+// Validate all core schemas according to schemaver
+const validateCore = () => validate(
+    config.schema.mask,
+    config.schema.ver
+);
+
 // Validate all collection schemas according to schemaver
-const validateCollection = () => gulp
-    .src(config.collection.mask)
-    .pipe(jsonSchema({
-        schema: config.schema.draft,
-        loadMissingSchemas: true,
-        checkRecursive: true,
-        verbose: true,
-    }));
+const validateCollection = () => validate(
+    config.collection.mask,
+    config.schema.schema
+);
 
 // Tasks
 gulp.task('validate-core', validateCore);

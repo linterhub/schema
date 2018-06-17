@@ -8,7 +8,15 @@ const gulp = core.amd.gulp;
 const git = core.amd.git;
 
 // Update git submodules
-const pullSubmodules = () => git.updateSubmodule({args: '--init'});
+const pullSubmodules = () => git.updateSubmodule({
+    args: '--init --remote --merge',
+});
+
+// Pull git repository
+const pullRepository = () => git.pull({
+    args: '--rebase',
+});
+
 
 // Remote and merge git submodules
 const mergeSubmodules = () => git.updateSubmodule({args: '--remote --merge'});
@@ -20,12 +28,6 @@ const fetch = () => git.exec({args: 'fetch'});
 const rebase = () => git.exec({args: 'rebase'});
 
 // Tasks
-gulp.task('fetch', fetch);
-gulp.task('rebase', rebase);
-gulp.task('merge-submodules', mergeSubmodules);
-gulp.task('pull-submodules', pullSubmodules);
-
-gulp.task('update-submodules', gulp.series(
-            'fetch',
-            'rebase',
-            'merge-submodules'));
+gulp.task('git-sub-pull', pullSubmodules);
+gulp.task('git-pull', pullRepository);
+gulp.task('pull', gulp.series('git-sub-pull', 'git-pull'));

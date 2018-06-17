@@ -27,4 +27,4 @@ const createBuild = () => gulp
 // Tasks
 gulp.task('bundle', bundle);
 gulp.task('create-build', createBuild);
-gulp.task('build', gulp.series('bundle', 'create-build'));
+gulp.task('bundle-build', gulp.series('bundle', 'create-build'));

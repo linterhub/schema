@@ -34,8 +34,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run-script test",
-      "post-commit": "npm run-script update"
+      "pre-commit": "gulp build && gulp test-build",
+      "post-commit": "gulp pull"
     }
   },
   "devDependencies": {

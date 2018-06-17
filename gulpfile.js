@@ -13,13 +13,11 @@ hubRegistry([
   'script/gulp/**/task.*.js',
 ]);
 
-gulp.task('import', gulp.series('pull-submodules', 'import'));
-gulp.task('validate', gulp.series('import', 'validate'));
-gulp.task('build', gulp.series('validate', 'lint', 'build'));
+gulp.task('import', gulp.series('git-pull', 'import-schemas'));
+gulp.task('build', gulp.series('validate', 'lint', 'bundle-build'));
+gulp.task('clean-build', gulp.series('import', 'build'));
 
 gulp.task('default', gulp.series(
-    'validate',
-    'lint',
     'build',
     'test-build',
     'release',

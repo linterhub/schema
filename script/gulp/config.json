@@ -22,7 +22,7 @@
     "schema": {
         "mask": "src/schema/*.json",
         "ver": "src/schema/schemaver.json",
-        "draft": "src/collection/draft-06.json",
+        "schema": "src/collection/schema.json",
         "collection": "src/schema/collection.json"
     },
     "build": {

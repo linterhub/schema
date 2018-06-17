@@ -45,7 +45,7 @@ const testFalse = (test, schema, done, error) => {
 const runTest = (test, schema, done) => {
     const data = readJson(test.data.$ref);
     const result = validator.validate(data, schema.$schema.$ref);
-    if (result.errors !== 'undefined' && result.errors.length !== 0) {
+    if (result.errors && result.errors.length) {
         testFalse(test, schema, done, result);
     } else {
         testTrue(test, schema, done);
@@ -61,27 +61,23 @@ const test = (done) => gulp
         return Promise.all(tasks);
     }));
 
-// Preload schemas from build folder
-const buildPreload = () => gulp
-    .src(config.build.mask)
+// Preload schemas from folder
+const preload = (mask) => gulp
+    .src(mask)
     .pipe(jsonData((file) => {
         const schema = readJson(file.path);
         validator.addSchema(schema, schema.$id);
         log.info(`SCHEMA PRELOAD: ${file.path}`);
     }));
 
+// Preload schemas from build folder
+const buildPreload = () => preload(config.build.mask);
+
 // Preload schemas from release folder
-const releasePreload = () => gulp
-    .src(config.release.mask)
-    .pipe(jsonData((file) => {
-        const schema = readJson(file.path);
-        validator.addSchema(schema, schema.$id);
-        log.info(`SCHEMA PRELOAD: ${file.path}`);
-    }));
+const releasePreload = () => preload(config.release.mask);
 
 // Tasks
 gulp.task('test-preload-build', buildPreload);
 gulp.task('test-preload-release', releasePreload);
 gulp.task('test-build', gulp.series('test-preload-build', test));
 gulp.task('test-release', gulp.series('test-preload-release', test));
-gulp.task('test', gulp.series('test-build'));

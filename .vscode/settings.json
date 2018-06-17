@@ -14,9 +14,8 @@
         "**/package.lock.json",
         "src/collection/**/**",
         "ext/**/**",
-        ".vscode/**/**",
+        ".vscode/**/**"
     ],
-    "javascript.validate.enable": false,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
@@ -24,8 +23,13 @@
         "**/node_modules": true,
         "**/bower_components": true,
         "ext/**/**": true,
-        ".vscode/**/**": true
+        ".vscode/**/**": true,
+        ".git/**/**": true
     },
+    "javascript.validate.enable": false,
     "eslint.enable": true,
-    "eslint.provideLintTask": true
+    "eslint.provideLintTask": true,
+    "files.exclude": {
+        "**/.git": false
+    }
 }
