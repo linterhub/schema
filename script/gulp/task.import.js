@@ -56,4 +56,7 @@ const importLanguages = () => gulp
 // Tasks
 gulp.task('import-licenses', importLicenses);
 gulp.task('import-languages', importLanguages);
-gulp.task('import', gulp.parallel('import-licenses', 'import-languages'));
+gulp.task('import-schemas', gulp.parallel(
+    'import-licenses',
+    'import-languages'
+));
