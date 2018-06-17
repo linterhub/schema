@@ -1,6 +1,6 @@
 {
-  "name": "schema",
-  "version": "1.0.0",
+  "name": "@linterhub/schema",
+  "version": "0.0.0-semantic",
   "description": "JSON schemas for linterhub",
   "scripts": {
     "gulp": "./node_modules/gulp/bin/gulp.js",
@@ -9,13 +9,12 @@
     "test": "gulp build && gulp test-build",
     "lint": "gulp lint",
     "import": "gulp import",
-    "release": "gulp release && gulp test-release",
-    "update": "git fetch && git rebase && git submodule update --remote --merge"
+    "release": "gulp release && gulp test-release"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run-script test",
-      "post-commit": "npm run-script update"
+      "pre-commit": "gulp build && gulp test-build",
+      "post-commit": "gulp pull"
     }
   },
   "repository": {
