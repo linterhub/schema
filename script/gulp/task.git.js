@@ -18,6 +18,15 @@ const pullRepository = () => git.pull({
 });
 
 
+// Remote and merge git submodules
+const mergeSubmodules = () => git.updateSubmodule({args: '--remote --merge'});
+
+// Git fetch
+const fetch = () => git.exec({args: 'fetch'});
+
+// Git rebase
+const rebase = () => git.exec({args: 'rebase'});
+
 // Tasks
 gulp.task('git-sub-pull', pullSubmodules);
 gulp.task('git-pull', pullRepository);
