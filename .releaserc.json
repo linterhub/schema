@@ -3,10 +3,14 @@
     "verifyConditions": [
         "@semantic-release/changelog",
         "@semantic-release/npm",
-        "@semantic-release/github",
-        "@semantic-release/git"
+        "@semantic-release/git",
+        "@semantic-release/github"
     ],
     "prepare": [
+        {
+            "path": "@semantic-release/exec",
+            "cmd": "gulp release --nextRelease=${nextRelease.version}"
+        },
         "@semantic-release/npm",
         "@semantic-release/changelog"
     ],
@@ -46,17 +50,19 @@
             ]
         }
     },
-    "publish": [
+    "verifyRelease" : [
         {
             "path": "@semantic-release/exec",
-            "cmd": "gulp release --nextRelease=${nextRelease.version} && gulp test-release"
-        },
-        "@semantic-release/npm",
+            "cmd": "gulp test-release"
+        }
+    ],
+    "publish": [
         {
             "path": "@semantic-release/github",
             "assets": [
                 "dist/*.json"
             ]
-        }
+        },
+        "@semantic-release/npm"
     ]
 }
