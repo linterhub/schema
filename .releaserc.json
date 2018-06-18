@@ -4,13 +4,13 @@
         "@semantic-release/changelog",
         "@semantic-release/npm",
         "@semantic-release/git",
-        "@semantic-release/github"
-    ],
-    "prepare": [
+        "@semantic-release/github" ,
         {
             "path": "@semantic-release/exec",
             "cmd": "gulp release --nextRelease=${nextRelease.version}"
-        },
+        }
+    ],
+    "prepare": [
         "@semantic-release/npm",
         "@semantic-release/changelog"
     ],
@@ -31,6 +31,10 @@
             },
             {
                 "type": "perf",
+                "release": "patch"
+            },
+            {
+                "type": "ci",
                 "release": "patch"
             },
             {
