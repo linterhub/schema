@@ -4,11 +4,7 @@
         "@semantic-release/changelog",
         "@semantic-release/npm",
         "@semantic-release/git",
-        "@semantic-release/github" ,
-        {
-            "path": "@semantic-release/exec",
-            "cmd": "gulp release --nextRelease=${nextRelease.version}"
-        }
+        "@semantic-release/github"
     ],
     "prepare": [
         "@semantic-release/npm",
@@ -57,7 +53,7 @@
     "verifyRelease" : [
         {
             "path": "@semantic-release/exec",
-            "cmd": "gulp test-release"
+            "cmd": "gulp release --nextRelease=${nextRelease.version} && gulp test-release"
         }
     ],
     "publish": [
