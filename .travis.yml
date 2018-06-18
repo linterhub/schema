@@ -12,8 +12,7 @@ install:
   - npm install
 script:
   - npm run test
-before_deploy:
-  - npm run travis-deploy-once "npm run semantic-release"
+before_deploy: npm run travis-deploy-once "npm run semantic-release"
 deploy:
   provider: pages
   skip-cleanup: true

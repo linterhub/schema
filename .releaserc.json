@@ -23,7 +23,7 @@
             },
             {
                 "type": "new",
-                "release": "patch"
+                "release": "minor"
             },
             {
                 "type": "perf",
