@@ -30,6 +30,10 @@
                 "release": "patch"
             },
             {
+                "type": "ci",
+                "release": "patch"
+            },
+            {
                 "type": "feat",
                 "release": "minor"
             },
@@ -46,17 +50,19 @@
             ]
         }
     },
-    "publish": [
+    "verifyRelease" : [
         {
             "path": "@semantic-release/exec",
             "cmd": "gulp release --nextRelease=${nextRelease.version} && gulp test-release"
-        },
-        "@semantic-release/npm",
+        }
+    ],
+    "publish": [
         {
             "path": "@semantic-release/github",
             "assets": [
                 "dist/*.json"
             ]
-        }
+        },
+        "@semantic-release/npm"
     ]
 }
