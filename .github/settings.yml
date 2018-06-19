@@ -1,0 +1,65 @@
+# Pull Requests for GitHub repository settings https://github.com/apps/settings
+repository:
+  # A short description of the repository that will show up on GitHub
+  description: JSON schemas for linterhub
+
+  # A URL with more information about the repository
+  homepage: https://schema.linterhub.com
+
+  # Either `true` to enable issues for this repository, `false` to disable them.
+  has_issues: true
+
+  # Either `true` to enable the wiki for this repository, `false` to disable it.
+  has_wiki: false
+
+  # Either `true` to enable downloads for this repository, `false` to disable them.
+  has_downloads: true
+
+  # Updates the default branch for this repository.
+  default_branch: develop
+
+  # Either `true` to allow squash-merging pull requests, or `false` to prevent
+  # squash-merging.
+  allow_squash_merge: false
+
+  # Either `true` to allow merging pull requests with a merge commit, or `false`
+  # to prevent merging pull requests with merge commits.
+  allow_merge_commit: false
+
+  # Either `true` to allow rebase-merging pull requests, or `false` to prevent
+  # rebase-merging.
+  allow_rebase_merge: true
+
+# Labels: define labels for Issues and Pull Requests
+# Colors and idea are from https://github.com/yoshuawuyts/github-standard-labels
+# and http://issuelabeling.com/
+labels:
+  - name: "Priority: High"
+    color: d93f0b
+  - name: "Priority: Medium"
+    color: fbca04
+  - name: "Priority: Low"
+    color: 0e8a16
+  - name: "Type: Bug"
+    color: ee0701
+  - name: "Type: Feature"
+    color: 1d76db
+  - name: "Type: Maintenance"
+    color: fbca04
+  - name: "Type: Question"
+    color: 0e8a16
+  - name: "Status: Available"
+    color: c2e0c6
+  - name: "Status: Blocked"
+    color: ee0701
+  - name: "Status: In Progress"
+    color: cccccc
+  - name: "Status: On Hold"
+    color: e99695
+  - name: "Status: Pending"
+    color: fbca04
+  - name: "Status: Rejected"
+    color: 5319e7
+# Add areas by using the following template
+#  - name: "Area: API
+#    color: 1d76db
