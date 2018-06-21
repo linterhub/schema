@@ -15,6 +15,8 @@ const amd = {
   eslint: require('gulp-eslint'),
   gulp: require('gulp'),
   hubRegistry: require('gulp-hub'),
+  markdownlint: require('markdownlint'),
+  through2: require('through2'),
   jsonData: require('gulp-data'),
   jsonFormat: require('gulp-json-format'),
   jsonSchema: require('gulp-json-schema'),

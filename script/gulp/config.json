@@ -3,7 +3,8 @@
         "dir": "src",
         "mask": "src/**/*.json",
         "js": "**/*.js",
-        "exclude": "!**/node_modules/**"
+        "exclude": "!**/node_modules/**",
+        "documentation": "*.md"
     },
     "template": {
         "linguist": "src/template/language.linguist.json",
