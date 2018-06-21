@@ -6,7 +6,7 @@ const core = global.lhcore;
 // External modules as aliases
 const gulp = core.amd.gulp;
 const log = core.amd.log;
-const jsonData = core.amd.jsonData;
+const gulpData = core.amd.gulpData;
 const config = core.cfg;
 const JsonSchemaValidator = core.amd.jsonSchemaValidator;
 
@@ -55,7 +55,7 @@ const runTest = (test, schema, done) => {
 // Run all json tests
 const test = (done) => gulp
     .src(config.test.mask)
-    .pipe(jsonData((file) => {
+    .pipe(gulpData((file) => {
         const schema = readJson(file.path);
         const tasks = schema.tests.map((test) => runTest(test, schema, done));
         return Promise.all(tasks);
@@ -64,7 +64,7 @@ const test = (done) => gulp
 // Preload schemas from folder
 const preload = (mask) => gulp
     .src(mask)
-    .pipe(jsonData((file) => {
+    .pipe(gulpData((file) => {
         const schema = readJson(file.path);
         validator.addSchema(schema, schema.$id);
         log.info(`SCHEMA PRELOAD: ${file.path}`);

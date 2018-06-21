@@ -5,7 +5,7 @@ const core = global.lhcore;
 
 // External modules as aliases
 const gulp = core.amd.gulp;
-const jsonData = core.amd.jsonData;
+const gulpData = core.amd.gulpData;
 const jsonFormat = core.amd.jsonFormat;
 const config = core.cfg;
 
@@ -17,7 +17,7 @@ const toBuffer = core.fnc.jsonToBuffer;
 // Import licenses from spdx
 const importLicenses = () => gulp
     .src(config.template.spdx)
-    .pipe(jsonData((file) => {
+    .pipe(gulpData((file) => {
         const list = readJson(config.ext.spdx);
         const template = readJson(file.path);
         template.enum = list.licenses.map((l) => l.licenseId);
@@ -30,7 +30,7 @@ const importLicenses = () => gulp
 // Import languages from linguist
 const importLanguages = () => gulp
     .src(config.template.linguist)
-    .pipe(jsonData((file) => {
+    .pipe(gulpData((file) => {
         const list = readYaml(config.ext.linguist);
         const template = readJson(file.path);
         const names = Object.keys(list);
