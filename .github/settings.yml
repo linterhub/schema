@@ -35,31 +35,37 @@ repository:
 # and http://issuelabeling.com/
 labels:
   - name: "Priority: High"
-    color: d93f0b
+    color: FF0000
   - name: "Priority: Medium"
-    color: fbca04
+    color: FF8080
   - name: "Priority: Low"
-    color: 0e8a16
+    color: FFE6E6
   - name: "Type: Bug"
-    color: ee0701
+    color: 0000FF
   - name: "Type: Feature"
-    color: 1d76db
+    color: 4040FF
   - name: "Type: Maintenance"
-    color: fbca04
+    color: 8080FF
   - name: "Type: Question"
-    color: 0e8a16
+    color: BFBFFF
+  - name: "Type: CI"
+    color: BFBFFF
+  - name: "Type: Documentation"
+    color: E6E6FF
+  - name: "Type: Test"
+    color: 8080FF
   - name: "Status: Available"
-    color: c2e0c6
+    color: 60BF60
   - name: "Status: Blocked"
-    color: ee0701
+    color: 008000
   - name: "Status: In Progress"
-    color: cccccc
+    color: 60BF60
   - name: "Status: On Hold"
-    color: e99695
+    color: A8E0A8
   - name: "Status: Pending"
-    color: fbca04
+    color: 0E8C0E
   - name: "Status: Rejected"
-    color: 5319e7
+    color: DAF2DA
 # Add areas by using the following template
 #  - name: "Area: API
 #    color: 1d76db
