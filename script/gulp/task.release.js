@@ -6,7 +6,7 @@ const core = global.lhcore;
 // External modules as aliases
 const gulp = core.amd.gulp;
 const jsonFormat = core.amd.jsonFormat;
-const jsonData = core.amd.jsonData;
+const gulpData = core.amd.gulpData;
 const path = core.amd.path;
 const log = core.amd.log;
 const config = core.cfg;
@@ -24,7 +24,7 @@ const copyStatic = () => gulp
 // Copy to release all schemas and update root
 const createRelease = () => gulp
     .src(config.build.mask)
-    .pipe(jsonData((file) => {
+    .pipe(gulpData((file) => {
         let content = readJson(file.path);
         content.$version = nextRelease();
         file.contents = jsonToBuffer(content);
