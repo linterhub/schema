@@ -11,6 +11,7 @@ const config = core.cfg;
 const markdownlint = core.amd.markdownlint;
 const log = core.amd.log;
 const gulpData = core.amd.gulpData;
+const path = core.amd.path;
 
 // Lint and auto-fix all js files
 const lintJs = () => gulp
@@ -37,7 +38,11 @@ const lintMarkdown = (done) => gulp
         config.src.exclude.ext,
     ])
     .pipe(gulpData((file) => {
-        const results = markdownlint.sync({'files': [file.path]});
+        const results = markdownlint.sync({
+            'files': [file.path],
+            'config': require(
+                path.join('../../', config.src.config.markdownlint)),
+        });
         const errors = results[file.path];
         errors.map((error) => printMarkdownError(error, file));
         if (errors.length > 0 ) {
