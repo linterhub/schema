@@ -7,6 +7,9 @@
             "node": "!**/node_modules/**",
             "ext": "!ext/**"
         },
+        "config": {
+            "markdownlint": ".mdlrc.json"
+        },
         "documentation": "**/*.md"
     },
     "template": {
