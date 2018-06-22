@@ -14,6 +14,7 @@ const amd = {
   yaml: require('js-yaml'),
   eslint: require('gulp-eslint'),
   gulp: require('gulp'),
+  ghPages: require('gh-pages'),
   hubRegistry: require('gulp-hub'),
   markdownlint: require('markdownlint'),
   gulpData: require('gulp-data'),
