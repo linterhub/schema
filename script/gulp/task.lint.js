@@ -39,14 +39,16 @@ const lintMarkdown = (done) => gulp
     ])
     .pipe(gulpData((file) => {
         const results = markdownlint.sync({
-            'files': [file.path],
-            'config': markdownlintConfig,
+            files: [file.path],
+            config: markdownlintConfig,
         });
         const errors = results[file.path];
         errors.map((error) => printMarkdownError(error, file));
         if (errors.length > 0 ) {
             done(`Failed with ${errors.length} ${
                 (errors.length === 1 ? `error` : `errors`)}`);
+        } else {
+            done();
         }
     }));
 
