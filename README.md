@@ -1,13 +1,9 @@
-# @linterhub/schema
-
-[![travis-build](https://travis-ci.org/linterhub/schema.svg?branch=master)](https://github.com/linterhub/schema)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![npm package](https://img.shields.io/npm/v/@linterhub/schema.svg)](https://www.npmjs.com/package/@linterhub/schema)
+# @linterhub/schema [![travis][travis-shield]][travis-url] [![semantic][semantic-shield]][semantic-url] [![npm][npm-shield]][npm-url] [![github][github-shield]][github-url]
 
 ## Table of Contents
 
 - [Background](#background)
-- [Install](#install)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Maintainers](#maintainers)
 - [Contribute](#contribute)
@@ -15,14 +11,38 @@
 
 ## Background
 
-## Install
+There are a lot of [linters][linter-url] of different types, distributed
+in different ways and each may have specific runtime dependencies.
+This repository contains a proposal of unified linter definition,
+distribution and configuration formats (JSON Schema files).
+The proposal is pretty similar to [meta-package managers][meta-url]
+approach.
+
+> More details in [docs][doc-url] or at [the catalog page][catalog-url].
+
+## Installation
 
 ## Usage
-
-## Maintainers
 
 ## Contribute
 
 ## License
 
-MIT © 2018 linterhub
+[MIT][license-url]
+
+[travis-shield]: https://img.shields.io/travis/linterhub/schema/master.svg
+[travis-url]: https://travis-ci.org/linterhub/schema/branches
+[semantic-shield]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-url]: https://github.com/semantic-release/semantic-release
+[npm-shield]: https://img.shields.io/npm/v/@linterhub/schema.svg
+[npm-url]: https://www.npmjs.com/package/@linterhub/schema
+[github-shield]: https://img.shields.io/github/release/linterhub/schema.svg?label=github
+[github-url]: https://github.com/linterhub/schema
+
+[schema-url]: http://json-schema.org/
+[web-url]: https://schema.linterhub.com
+[doc-url]: ./doc/
+[linter-url]: https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis
+[license-url]: ./license.md
+[catalog-url]: https://github.com/linterhub/catalog
+[meta-url]: https://en.wikipedia.org/wiki/List_of_software_package_management_systems#Meta_package_managers

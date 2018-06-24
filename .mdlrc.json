@@ -1,4 +1,7 @@
 {
     "default": true,
-    "MD013": {"tables": false }
+    "MD013": {
+        "tables": false,
+        "headings": false
+    }
 }
