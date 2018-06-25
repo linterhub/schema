@@ -5,7 +5,6 @@
 - [Background](#background)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Maintainers](#maintainers)
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -22,9 +21,30 @@ approach.
 
 ## Installation
 
+Requirements:
+
+- [`Node.js 8.3.0 or higher`][node-js]
+- [`npm 5.3.0 or higher`][npm]
+
+```bash
+npm install @linterhub/schema --save-dev
+```
+
 ## Usage
 
+```javascript
+const schema = require('@linterhub/schema');
+console.log(schema.linter);
+```
+
+Full description in [documentation][doc-url]
+
 ## Contribute
+
+You may contribute in several ways like creating new features, tests,
+fixing bugs, improving documentation or examples.
+
+> More details in [CONTRIBUTING.md][contributing].
 
 ## License
 
@@ -36,9 +56,10 @@ approach.
 [semantic-url]: https://github.com/semantic-release/semantic-release
 [npm-shield]: https://img.shields.io/npm/v/@linterhub/schema.svg
 [npm-url]: https://www.npmjs.com/package/@linterhub/schema
+[npm]: https://www.npmjs.com
+[node-js]: https://nodejs.org
 [github-shield]: https://img.shields.io/github/release/linterhub/schema.svg?label=github
 [github-url]: https://github.com/linterhub/schema
-
 [schema-url]: http://json-schema.org/
 [web-url]: https://schema.linterhub.com
 [doc-url]: ./doc/
@@ -46,3 +67,4 @@ approach.
 [license-url]: ./license.md
 [catalog-url]: https://github.com/linterhub/catalog
 [meta-url]: https://en.wikipedia.org/wiki/List_of_software_package_management_systems#Meta_package_managers
+[contributing]: ./github/CONTRIBUTING.md
