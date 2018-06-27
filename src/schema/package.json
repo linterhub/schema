@@ -48,5 +48,72 @@
         "package",
         "name",
         "license"
-    ]
+    ],
+    "definitions": {
+        "url:uri": {
+            "title": "URL",
+            "description": "The URL in URI format",
+            "type": "string",
+            "format": "uri"
+        },
+        "url:type": {
+            "title": "URL type",
+            "description": "The allowed URL types",
+            "type": "string",
+            "enum": [
+                "documentation",
+                "issues",
+                "repository",
+                "manager",
+                "homepage",
+                "unknown"
+            ]
+        },
+        "url:typed": {
+            "title": "URL (Typed)",
+            "description": "The URL with type specified",
+            "type": "object",
+            "properties": {
+                "url": {
+                    "title": "URL",
+                    "description": "The URL in URI format",
+                    "$ref": "#/definitions/url:uri"
+                },
+                "type": {
+                    "title": "Type",
+                    "description": "The type of url",
+                    "$ref": "#/definitions/url:type"
+                }
+            },
+            "additionalProperties": false
+        },
+        "url:complex": {
+            "title": "URL",
+            "description": "The URL in one of acceptable formats",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/url:uri"
+                },
+                {
+                    "$ref": "#/definitions/url:type"
+                }
+            ],
+            "additionalProperties": false
+        },
+        "urls": {
+            "title": "URL",
+            "description": "The URL or collection of URLs",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/url:complex"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/url:complex"
+                    }
+                }
+            ]
+        }
+    }
 }
