@@ -19,6 +19,9 @@ const pullRepository = () => git.pull({
 
 
 // Tasks
-gulp.task('git-sub-pull', pullSubmodules);
-gulp.task('git-pull', pullRepository);
-gulp.task('pull', gulp.series('git-sub-pull', 'git-pull'));
+gulp.task('pull:submodules', pullSubmodules);
+gulp.task('pull:repository', pullRepository);
+gulp.task('pull:all', gulp.series(
+    'pull:submodules',
+    'pull:repository'
+));

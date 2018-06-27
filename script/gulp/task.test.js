@@ -71,13 +71,13 @@ const preload = (mask) => gulp
     }));
 
 // Preload schemas from build folder
-const buildPreload = () => preload(config.build.mask);
+const preloadBuild = () => preload(config.build.mask);
 
 // Preload schemas from release folder
-const releasePreload = () => preload(config.release.mask);
+const preloadRelease = () => preload(config.release.mask);
 
 // Tasks
-gulp.task('test-preload-build', buildPreload);
-gulp.task('test-preload-release', releasePreload);
-gulp.task('test-build', gulp.series('test-preload-build', test));
-gulp.task('test-release', gulp.series('test-preload-release', test));
+gulp.task('preload:build', preloadBuild);
+gulp.task('preload:release', preloadRelease);
+gulp.task('test:build', gulp.series('preload:build', test));
+gulp.task('test:release', gulp.series('preload:release', test));
