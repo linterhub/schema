@@ -17,7 +17,7 @@ const bundle = () => gulp
   .pipe(gulp.dest(config.build.dir));
 
 // Copy to build all schemas
-const createBuild = () => gulp
+const create = () => gulp
   .src([
     config.schema.mask,
     '!' + config.schema.collection,
@@ -25,6 +25,5 @@ const createBuild = () => gulp
   .pipe(gulp.dest(config.build.dir));
 
 // Tasks
-gulp.task('bundle', bundle);
-gulp.task('create-build', createBuild);
-gulp.task('bundle-build', gulp.series('bundle', 'create-build'));
+gulp.task('build:bundle', bundle);
+gulp.task('build:create', create);

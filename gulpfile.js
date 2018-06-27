@@ -7,19 +7,103 @@ global.lhcore = lhcore;
 // External modules as aliases
 const gulp = lhcore.amd.gulp;
 const hubRegistry = lhcore.amd.hubRegistry;
+const gulpHelpDoc = lhcore.amd.gulpHelpDoc;
 
 // Load tasks into the registry of gulp
 hubRegistry([
   'script/gulp/**/task.*.js',
 ]);
 
-gulp.task('import', gulp.series('git-pull', 'import-schemas'));
-gulp.task('build', gulp.series('validate', 'lint', 'bundle-build'));
-gulp.task('clean-build', gulp.series('import', 'build'));
+/**
+ * Validate all core and collection schemas
+ *
+ * @task {validate}
+ */
+gulp.task('validate', gulp.parallel('validate:all'));
 
-gulp.task('default', gulp.series(
-    'build',
-    'test-build',
-    'release',
-    'test-release'
+/**
+ * Check all files via linting
+ *
+ * @task {lint}
+ */
+gulp.task('lint', gulp.parallel('lint:all'));
+
+/**
+ * Clean following folders: build, release and node modules
+ *
+ * @task {clean}
+ */
+gulp.task('clean', gulp.parallel('clean:all'));
+
+/**
+ * Import licenses and languages
+ *
+ * @task {import}
+ */
+gulp.task('import', gulp.series('pull:submodules', 'import:all'));
+
+/**
+ * Create build and run tests for core schemas in `build` folder
+ *
+ * @task {build}
+ */
+gulp.task('build', gulp.series(
+    'lint',
+    'validate',
+    'build:bundle',
+    'build:create'
 ));
+
+/**
+ * Create a pull for git submodules and repository
+ *
+ * @task {pull}
+ */
+gulp.task('pull', gulp.parallel('pull:all'));
+
+/**
+ * The created release of core schemas with next version of release and
+ * include all static files, put it's to `release` folder,
+ * and run tests for core schemas after that
+ *
+ * @task {release}
+ * @arg {nextRelease} [optional] version of next release. By default: 0.9.0
+ */
+gulp.task('release', gulp.series(
+    'build',
+    'test:build',
+    'release:copy',
+    'release:create',
+    'release:logging',
+    'test:release'
+));
+
+/**
+ * Run test for core schemas in `build` folder
+ *
+ * @task {test}
+ */
+gulp.task('test', gulp.series(
+    'build',
+    'test:build'
+));
+
+/**
+ * Publish last release to gh-pages
+ *
+ * @task {deploy}
+ */
+gulp.task('deploy', gulp.series(
+    'clean:release',
+    'deploy:copy',
+    'deploy:publish'
+));
+
+/**
+ * Print help
+ *
+ * @task {default}
+ */
+gulp.task('default', () => {
+  return gulpHelpDoc(gulp);
+});

@@ -15,7 +15,7 @@ const readYaml = core.fnc.readYaml;
 const toBuffer = core.fnc.jsonToBuffer;
 
 // Import licenses from spdx
-const importLicenses = () => gulp
+const licenses = () => gulp
     .src(config.template.spdx)
     .pipe(gulpData((file) => {
         const list = readJson(config.ext.spdx);
@@ -28,7 +28,7 @@ const importLicenses = () => gulp
     .pipe(gulp.dest(config.collection.dir));
 
 // Import languages from linguist
-const importLanguages = () => gulp
+const languages = () => gulp
     .src(config.template.linguist)
     .pipe(gulpData((file) => {
         const list = readYaml(config.ext.linguist);
@@ -54,9 +54,6 @@ const importLanguages = () => gulp
     .pipe(gulp.dest(config.collection.dir));
 
 // Tasks
-gulp.task('import-licenses', importLicenses);
-gulp.task('import-languages', importLanguages);
-gulp.task('import-schemas', gulp.parallel(
-    'import-licenses',
-    'import-languages'
-));
+gulp.task('import:licenses', licenses);
+gulp.task('import:languages', languages);
+gulp.task('import:all', gulp.parallel('import:licenses', 'import:languages'));

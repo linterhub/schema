@@ -14,7 +14,7 @@ const gulpData = core.amd.gulpData;
 const markdownlintConfig = require(`../../${config.src.config.markdownlint}`);
 
 // Lint and auto-fix all js files
-const lintJs = () => gulp
+const js = () => gulp
     .src([
         config.src.js,
         config.src.exclude.node,
@@ -25,13 +25,13 @@ const lintJs = () => gulp
     .pipe(eslint.failAfterError());
 
 // Lint and auto-fix all json files
-const lintJson = () => gulp
+const json = () => gulp
     .src(config.src.mask)
     .pipe(jsonFormat(4))
     .pipe(gulp.dest(config.src.dir));
 
 // Lint documentation files
-const lintMarkdown = (done) => gulp
+const markdown = (done) => gulp
     .src([
         config.src.documentation,
         config.src.exclude.node,
@@ -63,7 +63,7 @@ const printMarkdownError = (error, file) => {
 };
 
 // Tasks
-gulp.task('lint-js', lintJs);
-gulp.task('lint-json', lintJson);
-gulp.task('lint-markdown', lintMarkdown);
-gulp.task('lint', gulp.parallel('lint-js', 'lint-json', 'lint-markdown'));
+gulp.task('lint:js', js);
+gulp.task('lint:json', json);
+gulp.task('lint:markdown', markdown);
+gulp.task('lint:all', gulp.parallel('lint:js', 'lint:json', 'lint:markdown'));
