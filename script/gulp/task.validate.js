@@ -31,6 +31,9 @@ const validateCollection = () => validate(
 );
 
 // Tasks
-gulp.task('validate-core', validateCore);
-gulp.task('validate-collection', validateCollection);
-gulp.task('validate', gulp.parallel('validate-core', 'validate-collection'));
+gulp.task('validate:core', validateCore);
+gulp.task('validate:collection', validateCollection);
+gulp.task('validate:all', gulp.parallel(
+    'validate:core',
+    'validate:collection'
+));

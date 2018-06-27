@@ -22,12 +22,12 @@ const copyLastRelease = () => gulp
         return path.join(config.release.dir, version);
     }));
 
-const deploy = (done) => ghPages.publish(config.release.dir, {add: true}, done);
+const publish = (done) => ghPages.publish(
+    config.release.dir,
+    {add: true},
+    done
+);
 
 // Tasks
-gulp.task('copy-release', copyLastRelease);
-gulp.task('push', deploy);
-gulp.task('deploy', gulp.series(
-                        'clean-release',
-                        'copy-release',
-                        'push'));
+gulp.task('deploy:publish', publish);
+gulp.task('deploy:copy', copyLastRelease);

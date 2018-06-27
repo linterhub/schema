@@ -17,12 +17,12 @@ const jsonToBuffer = core.fnc.jsonToBuffer;
 const nextRelease = core.fnc.nextRelease;
 
 // Copy all static assets to release
-const copyStatic = () => gulp
+const copy = () => gulp
     .src(config.assets.cname)
     .pipe(gulp.dest(config.release.dir));
 
 // Copy to release all schemas and update root
-const createRelease = () => gulp
+const create = () => gulp
     .src(config.build.mask)
     .pipe(gulpData((file) => {
         let content = readJson(file.path);
@@ -39,12 +39,12 @@ const createRelease = () => gulp
     }));
 
 // Log release number
-const logRelease = (done) => {
+const logging = (done) => {
     log.info(`Release: ${nextRelease()}`);
     done();
 };
 
 // Tasks
-gulp.task('static', copyStatic);
-gulp.task('create-release', createRelease);
-gulp.task('release', gulp.parallel('static', 'create-release', logRelease));
+gulp.task('release:logging', logging);
+gulp.task('release:create', create);
+gulp.task('release:copy', copy);
