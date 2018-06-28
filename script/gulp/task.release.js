@@ -45,6 +45,6 @@ const logging = (done) => {
 };
 
 // Tasks
-gulp.task('release:logging', logging);
+gulp.task('release:log', logging);
 gulp.task('release:create', create);
 gulp.task('release:copy', copy);
