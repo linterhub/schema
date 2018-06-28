@@ -30,8 +30,7 @@
         "url": {
             "title": "URL",
             "description": "The package homepage (website, online documentation or repository)",
-            "type": "string",
-            "format": "uri"
+            "$ref": "#/definitions/urls"
         },
         "license": {
             "title": "License",
@@ -60,6 +59,7 @@
             "title": "URL type",
             "description": "The allowed URL types",
             "type": "string",
+            "default": "homepage",
             "enum": [
                 "documentation",
                 "issues",
@@ -85,6 +85,9 @@
                     "$ref": "#/definitions/url:type"
                 }
             },
+            "required": [
+                "url"
+            ],
             "additionalProperties": false
         },
         "url:complex": {
@@ -95,10 +98,9 @@
                     "$ref": "#/definitions/url:uri"
                 },
                 {
-                    "$ref": "#/definitions/url:type"
+                    "$ref": "#/definitions/url:typed"
                 }
-            ],
-            "additionalProperties": false
+            ]
         },
         "urls": {
             "title": "URL",
