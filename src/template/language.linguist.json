@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://schema.linterhub.com/collection/language.linguist.json",
     "title": "Collection: programming language and extension",
     "description": "The set of programming languages and associated file extensions imported from linguist project",
     "type": "string",
