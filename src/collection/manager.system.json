@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://schema.linterhub.com/collection/manager.system.json",
     "title": "Collection: Package Manager",
     "description": "The set of system package managers",
     "type": "string",

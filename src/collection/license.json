@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://schema.linterhub.com/collection/license.json",
     "title": "Licensed object",
     "description": "The set of software licenses names",
     "type": "string",

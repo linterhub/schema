@@ -22,8 +22,8 @@ const testTrue = (test, schema, done) => {
         log.error(`FAIL: ${schema.description} ${test.description}`);
         log.error(`FILE: ${test.data.$ref}`);
         log.error(`MESSAGE: Validation failed`);
-        done();
     }
+    done();
 };
 
 // If result of test is false
@@ -70,6 +70,12 @@ const preload = (mask) => gulp
         log.info(`SCHEMA PRELOAD: ${file.path}`);
     }));
 
+// Preload schemas from source folder
+const preloadSource = () => preload([
+    config.schema.mask,
+    config.collection.mask,
+]);
+
 // Preload schemas from build folder
 const preloadBuild = () => preload(config.build.mask);
 
@@ -77,7 +83,9 @@ const preloadBuild = () => preload(config.build.mask);
 const preloadRelease = () => preload(config.release.mask);
 
 // Tasks
+gulp.task('preload:source', preloadSource);
 gulp.task('preload:build', preloadBuild);
 gulp.task('preload:release', preloadRelease);
+gulp.task('test:source', gulp.series('preload:source', test));
 gulp.task('test:build', gulp.series('preload:build', test));
 gulp.task('test:release', gulp.series('preload:release', test));
