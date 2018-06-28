@@ -45,8 +45,7 @@ const markdown = (done) => gulp
         const errors = results[file.path];
         errors.map((error) => printMarkdownError(error, file));
         if (errors.length > 0 ) {
-            done(`Failed with ${errors.length} ${
-                (errors.length === 1 ? `error` : `errors`)}`);
+            done(`Failed with ${errors.length} error(s)`);
         } else {
             done();
         }

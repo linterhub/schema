@@ -19,21 +19,21 @@ hubRegistry([
  *
  * @task {validate}
  */
-gulp.task('validate', gulp.parallel('validate:all'));
+gulp.task('validate', gulp.series('validate:all'));
 
 /**
  * Check all files via linting
  *
  * @task {lint}
  */
-gulp.task('lint', gulp.parallel('lint:all'));
+gulp.task('lint', gulp.series('lint:all'));
 
 /**
  * Clean following folders: build, release and node modules
  *
  * @task {clean}
  */
-gulp.task('clean', gulp.parallel('clean:all'));
+gulp.task('clean', gulp.series('clean:all'));
 
 /**
  * Import licenses and languages
@@ -74,7 +74,7 @@ gulp.task('release', gulp.series(
     'test:build',
     'release:copy',
     'release:create',
-    'release:logging',
+    'release:log',
     'test:release'
 ));
 
