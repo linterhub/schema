@@ -50,6 +50,7 @@ gulp.task('import', gulp.series('pull:submodules', 'import:all'));
 gulp.task('build', gulp.series(
     'lint',
     'validate',
+    'clean:build',
     'build:bundle',
     'build:create'
 ));
@@ -72,10 +73,8 @@ gulp.task('pull', gulp.parallel('pull:all'));
 gulp.task('release', gulp.series(
     'build',
     'test:build',
-    'release:copy',
-    'release:create',
-    'release:log',
-    'test:release'
+    'clean:release',
+    'release:all'
 ));
 
 /**
@@ -84,8 +83,12 @@ gulp.task('release', gulp.series(
  * @task {test}
  */
 gulp.task('test', gulp.series(
+    'test:source',
     'build',
-    'test:build'
+    'test:build',
+    'clean:release',
+    'release:all',
+    'test:release'
 ));
 
 /**
