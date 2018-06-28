@@ -34,3 +34,5 @@ changelog
 yargs
 markdownlint
 travis
+arg
+gh-pages
