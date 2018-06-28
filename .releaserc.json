@@ -53,7 +53,7 @@
     "verifyRelease" : [
         {
             "path": "@semantic-release/exec",
-            "cmd": "gulp release --nextRelease=${nextRelease.version} && gulp test-release"
+            "cmd": "gulp release --nextRelease=${nextRelease.version} && gulp test:release"
         }
     ],
     "publish": [

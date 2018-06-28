@@ -48,3 +48,8 @@ const logging = (done) => {
 gulp.task('release:log', logging);
 gulp.task('release:create', create);
 gulp.task('release:copy', copy);
+gulp.task('release:all', gulp.series(
+    'release:copy',
+    'release:create',
+    'release:log'
+));
