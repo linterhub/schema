@@ -1,5 +1,7 @@
 # @linterhub/schema [![travis][travis-shield]][travis-url] [![semantic][semantic-shield]][semantic-url] [![npm][npm-shield]][npm-url] [![github][github-shield]][github-url]
 
+> JSON Schema definitions for linterhub
+
 ## Table of Contents
 
 - [Background](#background)
@@ -13,38 +15,52 @@
 There are a lot of [linters][linter-url] of different types, distributed
 in different ways and each may have specific runtime dependencies.
 This repository contains a proposal of unified linter definition,
-distribution and configuration formats (JSON Schema files).
-The proposal is pretty similar to [meta-package managers][meta-url]
-approach.
+distribution and configuration formats (JSON Schema & JSON files).
+Under the hood, the main idea is pretty similar to
+[meta-package managers][meta-url] approach.
 
 > More details in [docs][doc-url] or at [the catalog page][catalog-url].
 
 ## Installation
 
+### NPM
+
 Requirements:
 
-- [`Node.js 8.3.0 or higher`][node-js]
-- [`npm 5.3.0 or higher`][npm]
+- [Node.js][node-js] 8.3+
+- [npm][npm] 5.3+
 
 ```bash
 npm install @linterhub/schema --save-dev
 ```
 
+### GitHub
+
+All schemas and the source code are available for download
+at [GitHub Releases][github-release-url] and
+[GitHub pages][github-pages-url] as well.
+
 ## Usage
+
+### JavaScript
+
+Get Schema for `linter` definition and output it to console:
 
 ```javascript
 const schema = require('@linterhub/schema');
 console.log(schema.linter);
 ```
 
-Full description in [documentation][doc-url]
+### JSON
+
+Describe the linter capabilities and provide some extra info:
+how to install it and how to execute it - [Step by Step guide][doc-url].
 
 ## Contribute
 
-You may contribute in several ways like creating new features, tests,
-fixing bugs, improving documentation or examples.
-
-> More details in [CONTRIBUTING.md][contributing].
+You may contribute in several ways like requesting new features,
+adding tests, fixing bugs, improving documentation or examples.
+Please check our [contributing guidelines][contributing].
 
 ## License
 
@@ -60,6 +76,8 @@ fixing bugs, improving documentation or examples.
 [node-js]: https://nodejs.org
 [github-shield]: https://img.shields.io/github/release/linterhub/schema.svg?label=github
 [github-url]: https://github.com/linterhub/schema
+[github-release-url]: https://github.com/linterhub/schema/releases
+[github-pages-url]: https://github.com/linterhub/schema/tree/gh-pages
 [schema-url]: http://json-schema.org/
 [web-url]: https://schema.linterhub.com
 [doc-url]: ./doc/
