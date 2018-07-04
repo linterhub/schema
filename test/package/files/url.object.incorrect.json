@@ -4,12 +4,10 @@
     "package": "uri://uri",
     "name": "name",
     "description": "description",
-    "url": [
-        {
-            "url": "url://url",
+    "url": {
+            "url": "url",
             "type": "homepage"
-        }
-    ],
+    },
     "license": "Custom",
     "copying": "copying"
 }
