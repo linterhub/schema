@@ -5,48 +5,13 @@
     "title": "Package meta-information",
     "description": "The schema of package meta information",
     "type": "object",
-    "properties": {
-        "package": {
-            "title": "Package",
-            "description": "The package unique identifier in URI form which points to current version of package file",
-            "type": "string",
-            "format": "uri"
+    "allOf": [
+        {
+            "$ref": "./schemaver.json#/definitions/object"
         },
-        "name": {
-            "title": "Name",
-            "description": "The original name of the package",
-            "type": "string"
-        },
-        "version": {
-            "title": "Version",
-            "description": "The package version in a format it was originally specified",
-            "type": "string"
-        },
-        "description": {
-            "title": "Description",
-            "description": "The textual description of the package",
-            "type": "string"
-        },
-        "url": {
-            "title": "URL",
-            "description": "The package homepage (website, online documentation or repository)",
-            "$ref": "#/definitions/urls"
-        },
-        "license": {
-            "title": "License",
-            "description": "The package license",
-            "type": "string",
-            "$ref": "./collection.json#/definitions/license"
-        },
-        "license-text": {
-            "type": "string",
-            "description": "The package license text"
+        {
+            "$ref": "#/definitions/object"
         }
-    },
-    "required": [
-        "package",
-        "name",
-        "license"
     ],
     "definitions": {
         "url:uri": {
@@ -115,6 +80,58 @@
                         "$ref": "#/definitions/url:complex"
                     }
                 }
+            ]
+        },
+        "object": {
+            "properties": {
+                "$schema": {
+                    "title": "Schema",
+                    "description": "The parent schema uri",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "package": {
+                    "title": "Package",
+                    "description": "The package unique identifier in URI form which points to current version of package file",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "name": {
+                    "title": "Name",
+                    "description": "The original name of the package",
+                    "type": "string"
+                },
+                "version": {
+                    "title": "Version",
+                    "description": "The package version in a format it was originally specified",
+                    "type": "string"
+                },
+                "description": {
+                    "title": "Description",
+                    "description": "The textual description of the package",
+                    "type": "string"
+                },
+                "url": {
+                    "title": "URL",
+                    "description": "The package homepage (website, online documentation or repository)",
+                    "$ref": "#/definitions/urls"
+                },
+                "license": {
+                    "title": "License",
+                    "description": "The package license",
+                    "$ref": "./collection.json#/definitions/license"
+                },
+                "license-text": {
+                    "title": "License text",
+                    "description": "The package license text",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "$schema",
+                "package",
+                "name",
+                "license"
             ]
         }
     }

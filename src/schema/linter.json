@@ -5,48 +5,75 @@
     "title": "Linter meta-information",
     "description": "The schema of linter meta-information that extends package",
     "type": "object",
-    "properties": {
-        "package": {
-            "title": "Package",
-            "description": "The package unique identifier in URI form which points to current version of package file",
-            "type": "string",
-            "format": "uri"
+    "allOf": [
+        {
+            "$ref": "./schemaver.json#/definitions/object"
         },
-        "languages": {
-            "type": "array",
-            "description": "The list of supported languages",
-            "items": {
-                "$ref": "./collection.json#/definitions/language"
-            }
-        },
-        "extensions": {
-            "title": "Extensions",
-            "description": "The list of supported extensions, by default corresponding extensions for linter languages are used",
-            "type": "array",
-            "default": [],
-            "items": {
-                "$ref": "#/definitions/extension"
-            }
-        },
-        "configs": {
-            "title": "Configuration files",
-            "description": "List of file names or masks which could be treated as linter configuration file",
-            "type": "array",
-            "default": [],
-            "items": {
-                "type": "string"
-            }
+        {
+            "$ref": "#/definitions/object"
         }
-    },
-    "required": [
-        "package"
     ],
     "definitions": {
+        "config": {
+            "title": "Config",
+            "description": "The config extension",
+            "type": "string"
+        },
         "extension": {
             "title": "Extension",
             "description": "The filename extension",
             "type": "string",
             "pattern": "^\\..*"
+        },
+        "object": {
+            "properties": {
+                "$schema": {
+                    "title": "Schema",
+                    "description": "The parent schema uri",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "package": {
+                    "title": "Package",
+                    "description": "The package unique identifier in URI form which points to current version of package file",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "languages": {
+                    "title": "Languages",
+                    "description": "The list of supported languages",
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "$ref": "./collection.json#/definitions/language"
+                    },
+                    "uniqueItems": true
+                },
+                "extensions": {
+                    "title": "Extensions",
+                    "description": "The list of supported extensions, by default corresponding extensions for linter languages are used",
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "$ref": "#/definitions/extension"
+                    },
+                    "uniqueItems": true
+                },
+                "configs": {
+                    "title": "Configuration files",
+                    "description": "List of file names or masks which could be treated as linter configuration file",
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "$ref": "#/definitions/config"
+                    },
+                    "uniqueItems": true
+                }
+            },
+            "required": [
+                "$schema",
+                "package"
+            ]
         }
     }
 }
