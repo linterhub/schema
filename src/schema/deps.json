@@ -5,27 +5,13 @@
     "title": "Package dependencies",
     "description": "The schema of dependencies that extends package",
     "type": "object",
-    "properties": {
-        "package": {
-            "title": "Package",
-            "description": "The package unique identifier in URI form which points to current version of package file",
-            "type": "string",
-            "format": "uri"
+    "allOf": [
+        {
+            "$ref": "./schemaver.json#/definitions/object"
         },
-        "dependencies": {
-            "title": "Dependencies",
-            "description": "The array of linter dependencies, where each dependency is an array of required packages",
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/dependency"
-            },
-            "minItems": 1,
-            "uniqueItems": true
+        {
+            "$ref": "#/definitions/object"
         }
-    },
-    "required": [
-        "package",
-        "dependencies"
     ],
     "definitions": {
         "dependency": {
@@ -46,7 +32,6 @@
                 "manager": {
                     "title": "Package manager",
                     "description": "The package manager name",
-                    "type": "string",
                     "$ref": "./collection.json#/definitions/manager"
                 },
                 "package": {
@@ -60,9 +45,9 @@
                     "type": "string"
                 },
                 "target": {
-                    "type": "boolean",
                     "title": "Target",
                     "description": "The flag indicating whether the package is the target itself",
+                    "type": "boolean",
                     "default": false
                 }
             },
@@ -71,6 +56,37 @@
                 "package"
             ],
             "additionalProperties": true
+        },
+        "object": {
+            "properties": {
+                "$schema": {
+                    "title": "Schema",
+                    "description": "The parent schema uri",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "package": {
+                    "title": "Package",
+                    "description": "The package unique identifier in URI form which points to current version of package file",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "dependencies": {
+                    "title": "Dependencies",
+                    "description": "The array of linter dependencies, where each dependency is an array of required packages",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/dependency"
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                }
+            },
+            "required": [
+                "$schema",
+                "package",
+                "dependencies"
+            ]
         }
     }
 }
