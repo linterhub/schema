@@ -6,7 +6,9 @@
     "description": "description",
     "url": [
         {
-            "url": "url://url",
+            "url": "url://url"
+        },
+        {
             "type": "homepage"
         }
     ],
