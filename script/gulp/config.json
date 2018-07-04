@@ -13,6 +13,7 @@
         "documentation": "**/*.md"
     },
     "template": {
+        "mask": "src/template/*.json",
         "linguist": "src/template/language.linguist.json",
         "spdx": "src/template/license.spdx.json"
     },
