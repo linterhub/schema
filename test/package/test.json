@@ -1,55 +1,118 @@
 {
     "description": "package schema",
-    "$schema": { 
+    "$schema": {
         "$ref": "https://schema.linterhub.com/package.json"
     },
     "tests": [
         {
             "description": "with full data",
-            "data": { 
-                "$ref" : "test/package/files/full.example.valid.json" 
+            "data": {
+                "$ref" : "test/package/files/full.example.valid.json"
             },
             "valid": true
         },
         {
             "description": "with custom license",
-            "data": { 
-                "$ref" : "test/package/files/license.custom.valid.json" 
+            "data": {
+                "$ref" : "test/package/files/license.custom.valid.json"
             },
             "valid": true
         },
         {
             "description": "with SPDX license",
-            "data": { 
+            "data": {
                 "$ref" : "test/package/files/license.spdx.valid.json"
             },
             "valid": true
         },
         {
+            "description": "with single url",
+            "data": {
+                "$ref" : "test/package/files/url.single.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "with array url",
+            "data": {
+                "$ref" : "test/package/files/url.array.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "with object url",
+            "data": {
+                "$ref" : "test/package/files/url.object.valid.json"
+            },
+            "valid": true
+        },
+        {
             "description": "incorrect license",
-            "data": { 
+            "data": {
                 "$ref" : "test/package/files/license.example.incorrect.json"
             },
             "valid": false
         },
         {
+            "description": "incorrect url in object",
+            "data": {
+                "$ref" : "test/package/files/url.object.incorrect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "incorrect url in array",
+            "data": {
+                "$ref" : "test/package/files/url.array.incorrect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "incorrect single url",
+            "data": {
+                "$ref" : "test/package/files/url.single.incorrect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "incorrect url type",
+            "data": {
+                "$ref" : "test/package/files/url.type.incorrect.json"
+            },
+            "valid": false
+        },
+        {
             "description": "no license",
-            "data": { 
+            "data": {
                 "$ref" : "test/package/files/license.example.absent.json"
             },
             "valid": false
         },
         {
             "description": "no id",
-            "data": { 
+            "data": {
                 "$ref" : "test/package/files/id.example.absent.json"
             },
             "valid": false
         },
         {
             "description": "no name",
-            "data": { 
+            "data": {
                 "$ref" : "test/package/files/name.example.absent.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no url in array",
+            "data": {
+                "$ref" : "test/package/files/url.array.absent.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no url in object",
+            "data": {
+                "$ref" : "test/package/files/url.object.absent.json"
             },
             "valid": false
         }
