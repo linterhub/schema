@@ -24,16 +24,24 @@ const validateCore = () => validate(
     config.schema.ver
 );
 
-// Validate all collection schemas according to schemaver
+// Validate all collection schemas according to draft schema
 const validateCollection = () => validate(
     config.collection.mask,
     config.schema.schema
 );
 
+// Validate all template schemas according to draft schema
+const validateTemplate = () => validate(
+    config.template.mask,
+    config.schema.schema
+);
+
 // Tasks
 gulp.task('validate:core', validateCore);
+gulp.task('validate:template', validateTemplate);
 gulp.task('validate:collection', validateCollection);
 gulp.task('validate:all', gulp.parallel(
     'validate:core',
+    'validate:template',
     'validate:collection'
 ));
