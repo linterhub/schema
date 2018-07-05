@@ -1,0 +1,14 @@
+{
+    "$schema": "https://schema.linterhub.com/package.json",
+    "package": "uri://uri",
+    "name": "name",
+    "description": "description",
+    "url": [
+        {
+            "url": "url://url",
+            "type": "homepage"
+        }
+    ],
+    "license": "Custom",
+    "copying": "copying"
+}

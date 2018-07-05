@@ -1,0 +1,14 @@
+{
+    "$version": "1.0.0",
+    "package": "uri://uri",
+    "name": "name",
+    "description": "description",
+    "url": [
+        {
+            "url": "url://url",
+            "type": "homepage"
+        }
+    ],
+    "license": "Custom",
+    "copying": "copying"
+}
