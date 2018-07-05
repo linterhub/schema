@@ -27,8 +27,3 @@ const cleanNode = () => del([
 gulp.task('clean:node', cleanNode);
 gulp.task('clean:build', cleanBuild);
 gulp.task('clean:release', cleanRelease);
-gulp.task('clean:all', gulp.parallel(
-    'clean:node',
-    'clean:build',
-    'clean:release'
-));
