@@ -17,6 +17,7 @@ const amd = {
   ghPages: require('gh-pages'),
   hubRegistry: require('gulp-hub'),
   markdownlint: require('markdownlint'),
+  gulpExec: require('gulp-exec'),
   gulpData: require('gulp-data'),
   gulpInstall: require('gulp-install'),
   gulpHelpDoc: require('gulp-help-doc'),
