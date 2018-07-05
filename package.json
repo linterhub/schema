@@ -52,6 +52,7 @@
     "gulp-git": "^2.7.0",
     "gulp-help-doc": "^1.1.1",
     "gulp-hub": "^0.8.0",
+    "gulp-install": "^1.1.0",
     "gulp-json-format": "^2.0.0",
     "gulp-json-schema": "^1.0.0",
     "gulp-jsonschema-bundle": "0.0.3",
