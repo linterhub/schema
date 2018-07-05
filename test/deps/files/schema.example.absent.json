@@ -1,0 +1,18 @@
+{
+    "$version": "1.0.0",
+    "package": "url://url",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "npm"
+            },
+            {
+                "manager": "bower",
+                "package": "name",
+                "version": "1.0.0",
+                "target": true
+            }
+        ]
+    ]
+}

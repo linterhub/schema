@@ -1,0 +1,16 @@
+{
+    "$schema": "linter.json",
+    "$version": "1.0.0",
+    "package": "url://url",
+    "languages": [
+        "Text",
+        "JSP"
+    ],
+    "extensions": [
+        ".txt",
+        ".jsp"
+    ],
+    "configs": [
+        "config.json"
+    ]
+}
