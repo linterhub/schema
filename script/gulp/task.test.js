@@ -19,11 +19,12 @@ const testTrue = (test, schema, done) => {
     if (test.valid) {
         log.info(`OK: ${schema.description} ${test.description}`);
     } else {
+        const errorMessage = `MESSAGE: Validation failed`;
         log.error(`FAIL: ${schema.description} ${test.description}`);
         log.error(`FILE: ${test.data.$ref}`);
-        log.error(`MESSAGE: Validation failed`);
+        log.error(errorMessage);
+        done(errorMessage);
     }
-    done();
 };
 
 // If result of test is false
@@ -46,9 +47,9 @@ const runTest = (test, schema, done) => {
     const data = readJson(test.data.$ref);
     const result = validator.validate(data, schema.$schema.$ref);
     if (result.errors && result.errors.length) {
-        testFalse(test, schema, done, result);
+       testFalse(test, schema, done, result);
     } else {
-        testTrue(test, schema, done);
+       testTrue(test, schema, done);
     }
 };
 
