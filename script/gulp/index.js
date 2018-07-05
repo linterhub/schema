@@ -18,6 +18,7 @@ const amd = {
   hubRegistry: require('gulp-hub'),
   markdownlint: require('markdownlint'),
   gulpData: require('gulp-data'),
+  gulpInstall: require('gulp-install'),
   gulpHelpDoc: require('gulp-help-doc'),
   jsonFormat: require('gulp-json-format'),
   jsonSchema: require('gulp-json-schema'),

@@ -29,11 +29,25 @@ gulp.task('validate', gulp.series('validate:all'));
 gulp.task('lint', gulp.series('lint:all'));
 
 /**
+ * Clean node_modules folder and install all npm package
+ *
+ * @task {packages:reinstall}
+ */
+gulp.task('packages:reinstall', gulp.series(
+    'clean:node',
+    'packages:install'
+));
+
+/**
  * Clean following folders: build, release and node modules
  *
  * @task {clean}
  */
-gulp.task('clean', gulp.series('clean:all'));
+gulp.task('clean', gulp.parallel(
+    'packages:reinstall',
+    'clean:build',
+    'clean:release'
+));
 
 /**
  * Import licenses and languages
@@ -71,6 +85,7 @@ gulp.task('pull', gulp.parallel('pull:all'));
  * @arg {nextRelease} [optional] version of next release. By default: 0.9.0
  */
 gulp.task('release', gulp.series(
+    'test:source',
     'build',
     'test:build',
     'clean:release',
@@ -78,7 +93,7 @@ gulp.task('release', gulp.series(
 ));
 
 /**
- * Run test for core schemas in `build` folder
+ * Run test for core schemas
  *
  * @task {test}
  */
