@@ -13,6 +13,7 @@ const packageJson = require('../../package.json');
 // Externally functions as aliases
 const readJson = core.fnc.readJson;
 
+// Copy last release from npm package to release folder
 const copyLastRelease = () => gulp
     .src(`./node_modules/${packageJson.name}/${config.release.mask}`)
     .pipe(gulp.dest(config.release.dir))
@@ -22,6 +23,7 @@ const copyLastRelease = () => gulp
         return path.join(config.release.dir, version);
     }));
 
+// Publish release folder to gh-pages
 const publish = (done) => ghPages.publish(
     config.release.dir,
     {add: true},

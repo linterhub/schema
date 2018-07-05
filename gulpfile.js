@@ -125,3 +125,21 @@ gulp.task('deploy', gulp.series(
 gulp.task('default', () => {
   return gulpHelpDoc(gulp);
 });
+
+/**
+ * The test deploy of core schemas with next version of release
+ *
+ * @task {release}
+ * @arg {nextRelease} [optional] version of next release. By default: 0.9.0
+ */
+gulp.task('test:deploy', gulp.series(
+    'clean',
+    'build',
+    'test:build',
+    'release:all',
+    'test:release',
+    'npm:pack',
+    'packages:local',
+    'clean:release',
+    'deploy:copy'
+));
