@@ -35,6 +35,12 @@ const fnc = {
   nextRelease: () => typeof amd.argv.nextRelease !== 'undefined'
     ? amd.argv.nextRelease
     : cfg.meta.version,
+  gitUserName: () => typeof amd.argv.gitUserName !== 'undefined'
+    ? amd.argv.gitUserName
+    : cfg.git.user.name,
+  gitUserEmail: () => typeof amd.argv.gitUserEmail !== 'undefined'
+    ? amd.argv.gitUserEmail
+    : cfg.git.user.email,
 };
 
 // Exported shared config, modules and functions
