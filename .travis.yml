@@ -20,8 +20,7 @@ jobs:
       node_js: "8"
       script: npm run semantic-release
     - stage: gh-pages
-      if: branch = master
+      if: branch = master AND type = push
       node_js: "8"
       script:
-        - npm install @linterhub/schema --force
         - gulp deploy
