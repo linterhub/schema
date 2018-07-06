@@ -59,7 +59,8 @@
         "version": "0.9.0"
     },
     "root": {
-        "package": "./package.json",
-        "tgz": "./*.tgz"
+        "dir": "./",
+        "tgz": "./*.tgz",
+        "package": "./package.json"
     }
 }
