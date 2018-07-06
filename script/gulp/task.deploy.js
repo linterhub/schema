@@ -12,6 +12,8 @@ const packageJson = require('../../package.json');
 
 // Externally functions as aliases
 const readJson = core.fnc.readJson;
+const gitUserName = core.fnc.gitUserName;
+const gitUserEmail = core.fnc.gitUserEmail;
 
 // Copy last release from npm package to release folder
 const copyLastRelease = () => gulp
@@ -26,7 +28,14 @@ const copyLastRelease = () => gulp
 // Publish release folder to gh-pages
 const publish = (done) => ghPages.publish(
     config.release.dir,
-    {add: true},
+    {
+        add: true,
+        user: {
+            name: gitUserName(),
+            email: gitUserEmail(),
+        },
+        message: config.git.message,
+    },
     done
 );
 
