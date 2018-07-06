@@ -12,6 +12,13 @@
         },
         "documentation": "**/*.md"
     },
+    "git": {
+        "user": {
+            "name": "linterhub",
+            "email": "deploy@linterhub.com"
+        },
+        "message": "Deployment commit"
+    },
     "template": {
         "mask": "src/template/*.json",
         "linguist": "src/template/language.linguist.json",

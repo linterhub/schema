@@ -110,6 +110,8 @@ gulp.task('test', gulp.series(
  * Publish last release to gh-pages
  *
  * @task {deploy}
+ * @arg {gitUserName} [optional] set a git user name
+ * @arg {gitUserEmail} [optional] set a git user email
  */
 gulp.task('deploy', gulp.series(
     'clean:release',
