@@ -14,6 +14,7 @@ const packageJson = require('../../package.json');
 const readJson = core.fnc.readJson;
 const gitUserName = core.fnc.gitUserName;
 const gitUserEmail = core.fnc.gitUserEmail;
+const githubToken = core.fnc.githubToken;
 
 // Copy last release from npm package to release folder
 const copyLastRelease = () => gulp
@@ -26,18 +27,22 @@ const copyLastRelease = () => gulp
     }));
 
 // Publish release folder to gh-pages
-const publish = (done) => ghPages.publish(
-    config.release.dir,
-    {
-        add: true,
-        user: {
-            name: gitUserName(),
-            email: gitUserEmail(),
+const publish = (done) => {
+    const packageJson = readJson(config.root.package);
+    return ghPages.publish(
+        config.release.dir,
+        {
+            add: true,
+            repo: `https://${githubToken()}@github.com/${packageJson.repository}.git`,
+            user: {
+                name: gitUserName(),
+                email: gitUserEmail(),
+            },
+            message: config.git.message,
         },
-        message: config.git.message,
-    },
-    done
-);
+        done
+    );
+};
 
 // Tasks
 gulp.task('deploy:publish', publish);
