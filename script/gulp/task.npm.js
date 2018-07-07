@@ -7,6 +7,7 @@ const core = global.lhcore;
 const gulp = core.amd.gulp;
 const config = core.cfg;
 const gulpExec = core.amd.gulpExec;
+const gulpInstall = core.amd.gulpInstall;
 
 // External functions as aliases
 const readJson = core.fnc.readJson;

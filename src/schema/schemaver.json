@@ -14,12 +14,6 @@
         }
     ],
     "definitions": {
-        "$version": {
-            "title": "Version",
-            "description": "The value of object version",
-            "type": "string",
-            "pattern": "^[0-9]+.[0-9]+.[0-9]+$"
-        },
         "schema": {
             "title": "JSON Schema",
             "description": "The meta-schema of JSON schema",
@@ -34,10 +28,18 @@
                 "$version": {
                     "title": "Version",
                     "description": "The version value",
-                    "$ref": "#/definitions/$version"
+                    "type": "string",
+                    "pattern": "^[0-9]+.[0-9]+.[0-9]+$"
+                },
+                "$schema": {
+                    "title": "Schema",
+                    "description": "The parent schema uri",
+                    "type": "string",
+                    "format": "uri"
                 }
             },
             "required": [
+                "$schema",
                 "$version"
             ]
         }
