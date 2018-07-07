@@ -1,0 +1,76 @@
+{
+    "$schema": "https://schema.linterhub.com/schemaver.json",
+    "$version": "1.0.0",
+    "$id": "https://schema.linterhub.com/deps.json",
+    "title": "Package dependencies",
+    "description": "The schema of dependencies that extends package",
+    "type": "object",
+    "properties": {
+        "package": {
+            "title": "Package",
+            "description": "The package unique identifier in URI form which points to current version of package file",
+            "type": "string",
+            "format": "uri"
+        },
+        "dependencies": {
+            "title": "Dependencies",
+            "description": "The array of linter dependencies, where each dependency is an array of required packages",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/dependency"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "package",
+        "dependencies"
+    ],
+    "definitions": {
+        "dependency": {
+            "title": "Dependency",
+            "description": "The array of required packages",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/package"
+            },
+            "minLength": 1,
+            "uniqueItems": true
+        },
+        "package": {
+            "title": "Package",
+            "description": "The definition of required package, later it should be converted to linterhub package reference",
+            "type": "object",
+            "properties": {
+                "manager": {
+                    "title": "Package manager",
+                    "description": "The package manager name",
+                    "type": "string",
+                    "$ref": "./collection.json#/definitions/manager"
+                },
+                "package": {
+                    "title": "Package",
+                    "description": "The package name in a format accepted by package manager",
+                    "type": "string"
+                },
+                "version": {
+                    "title": "Version",
+                    "description": "The package version in a format accepted by package manager, if not specified the latest version is assumed",
+                    "type": "string"
+                },
+                "target": {
+                    "type": "boolean",
+                    "title": "Target",
+                    "description": "The flag indicating whether the package is the target itself",
+                    "default": false
+                }
+            },
+            "required": [
+                "manager",
+                "package"
+            ],
+            "additionalProperties": true
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "$version": "1.0.0",
+    "$id": "https://schema.linterhub.com/linter.json",
+    "title": "Linter meta-information",
+    "description": "The schema of linter meta-information that extends package",
+    "type": "object",
+    "properties": {
+        "package": {
+            "title": "Package",
+            "description": "The package unique identifier in URI form which points to current version of package file",
+            "type": "string",
+            "format": "uri"
+        },
+        "languages": {
+            "type": "array",
+            "description": "The list of supported languages",
+            "items": {
+                "$ref": "./collection.json#/definitions/language"
+            }
+        },
+        "extensions": {
+            "title": "Extensions",
+            "description": "The list of supported extensions, by default corresponding extensions for linter languages are used",
+            "type": "array",
+            "default": [],
+            "items": {
+                "$ref": "#/definitions/extension"
+            }
+        },
+        "configs": {
+            "title": "Configuration files",
+            "description": "List of file names or masks which could be treated as linter configuration file",
+            "type": "array",
+            "default": [],
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "package"
+    ],
+    "definitions": {
+        "extension": {
+            "title": "Extension",
+            "description": "The filename extension",
+            "type": "string",
+            "pattern": "^\\..*"
+        }
+    }
+}
