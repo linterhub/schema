@@ -59,12 +59,6 @@
         },
         "object": {
             "properties": {
-                "$schema": {
-                    "title": "Schema",
-                    "description": "The parent schema uri",
-                    "type": "string",
-                    "format": "uri"
-                },
                 "package": {
                     "title": "Package",
                     "description": "The package unique identifier in URI form which points to current version of package file",
@@ -83,7 +77,6 @@
                 }
             },
             "required": [
-                "$schema",
                 "package",
                 "dependencies"
             ]
