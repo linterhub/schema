@@ -23,4 +23,4 @@ jobs:
       if: branch = master AND type = push
       node_js: "8"
       script:
-        - gulp deploy --gitUserName=$GH_USERNAME --gitUserEmail=$GH_USEREMAIL
+        - gulp deploy --gitUserName=$GH_USERNAME --gitUserEmail=$GH_USEREMAIL --githubToken=$GH_TOKEN

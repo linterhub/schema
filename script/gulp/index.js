@@ -41,6 +41,9 @@ const fnc = {
   gitUserEmail: () => typeof amd.argv.gitUserEmail !== 'undefined'
     ? amd.argv.gitUserEmail
     : cfg.git.user.email,
+  githubToken: () => typeof amd.argv.githubToken !== 'undefined'
+    ? amd.argv.githubToken
+    : '',
 };
 
 // Exported shared config, modules and functions
