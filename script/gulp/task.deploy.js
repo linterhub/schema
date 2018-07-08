@@ -7,6 +7,7 @@ const core = global.lhcore;
 const gulp = core.amd.gulp;
 const config = core.cfg;
 const path = core.amd.path;
+const log = core.amd.log;
 const ghPages = core.amd.ghPages;
 const packageJson = require('../../package.json');
 
@@ -29,16 +30,25 @@ const copyLastRelease = () => gulp
 // Publish release folder to gh-pages
 const publish = (done) => {
     const packageJson = readJson(config.root.package);
+    const name = gitUserName();
+    const email = gitUserEmail();
+    const token = githubToken();
+    log.info(`GH USER : ${name}`);
+    log.info(`GH EMAIL: ${email}`);
+    log.info(`GH TOKEN: ${token ? 'OK' : 'NOT OK'}`);
+    const repo = `https://${token}@github.com/${packageJson.repository}.git`;
     return ghPages.publish(
         config.release.dir,
         {
             add: true,
-            repo: `https://${githubToken()}@github.com/${packageJson.repository}.git`,
+            repo: repo,
             user: {
-                name: gitUserName(),
-                email: gitUserEmail(),
+                name: name,
+                email: email,
             },
             message: config.git.message,
+            silent: true,
+            logger: (message) => log.error(`${message}\n`),
         },
         done
     );
