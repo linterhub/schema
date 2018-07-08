@@ -47,7 +47,6 @@ const publish = (done) => {
                 email: email,
             },
             message: config.git.message,
-            silent: true,
             logger: (message) => log.error(`${message}\n`),
         },
         done
