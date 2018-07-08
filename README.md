@@ -19,7 +19,7 @@ distribution and configuration formats (JSON Schema & JSON files).
 Under the hood, the main idea is pretty similar to
 [meta-package managers][meta-url] approach.
 
-> More details in [docs][doc-url] or at [the catalog page][catalog-url].
+> More details in [doс][doc-url] or at [the catalog page][catalog-url].
 
 ## Installation
 
@@ -85,4 +85,4 @@ Please check our [contributing guidelines][contributing].
 [license-url]: ./license.md
 [catalog-url]: https://github.com/linterhub/catalog
 [meta-url]: https://en.wikipedia.org/wiki/List_of_software_package_management_systems#Meta_package_managers
-[contributing]: ./github/CONTRIBUTING.md
+[contributing]: ./.github/CONTRIBUTING.md
