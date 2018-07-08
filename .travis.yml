@@ -2,11 +2,6 @@ language: node_js
 node_js:
   - "8"
   - "9"
-cache:
-  directories:
-    - node_modules
-    - ~/.npm
-    - build
 git:
   submodules: false
 before_install: git submodule update --init
