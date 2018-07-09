@@ -80,9 +80,9 @@ Please check our [contributing guidelines][contributing].
 [github-pages-url]: https://github.com/linterhub/schema/tree/gh-pages
 [schema-url]: http://json-schema.org/
 [web-url]: https://schema.linterhub.com
-[doc-url]: ./doc/
+[doc-url]: https://github.com/linterhub/schema/blob/master/doc
 [linter-url]: https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis
-[license-url]: ./license.md
+[license-url]: https://github.com/linterhub/schema/blob/master/LICENSE.md
 [catalog-url]: https://github.com/linterhub/catalog
 [meta-url]: https://en.wikipedia.org/wiki/List_of_software_package_management_systems#Meta_package_managers
-[contributing]: ./.github/CONTRIBUTING.md
+[contributing]: https://github.com/linterhub/schema/blob/master/.github/CONTRIBUTING.md
