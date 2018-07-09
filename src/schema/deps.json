@@ -55,7 +55,7 @@
                 "manager",
                 "package"
             ],
-            "additionalProperties": true
+            "additionalProperties": false
         },
         "object": {
             "properties": {
