@@ -18,7 +18,10 @@ const nextRelease = core.fnc.nextRelease;
 
 // Copy all static assets to release
 const copy = () => gulp
-    .src(config.assets.cname)
+    .src([
+        config.assets.cname,
+        config.assets.readme,
+    ])
     .pipe(gulp.dest(config.release.dir));
 
 // Copy to release all schemas and update root

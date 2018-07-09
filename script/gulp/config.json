@@ -57,7 +57,8 @@
         "mask": "dist/*.json"
     },
     "assets": {
-        "cname": "CNAME"
+        "cname": "CNAME",
+        "readme": "README.md"
     },
     "node": {
         "dir": "node_modules"
