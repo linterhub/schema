@@ -117,6 +117,7 @@ gulp.task('deploy', gulp.series(
     'clean:release',
     'packages:personal',
     'deploy:copy',
+    'release:copy',
     'deploy:publish'
 ));
 
