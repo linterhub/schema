@@ -26,20 +26,6 @@
             "valid": true
         },
         {
-            "description": "with schema url",
-            "data": {
-                "$ref" : "test/deps/files/schema.example.valid.json"
-            },
-            "valid": true
-        },
-        {
-            "description": "with version",
-            "data": {
-                "$ref" : "test/deps/files/version.example.valid.json"
-            },
-            "valid": true
-        },
-        {
             "description": "incorrect manager name",
             "data": {
                 "$ref" : "test/deps/files/manager.example.incorrect.json"
@@ -54,20 +40,6 @@
             "valid": false
         },
         {
-            "description": "incorrect schema url",
-            "data": {
-                "$ref" : "test/deps/files/schema.example.incorrect.json"
-            },
-            "valid": false
-        },
-        {
-            "description": "incorrect version type",
-            "data": {
-                "$ref" : "test/deps/files/version.example.incorrect.json"
-            },
-            "valid": false
-        },
-        {
             "description": "no manager",
             "data": {
                 "$ref" : "test/deps/files/manager.example.absent.json"
@@ -78,20 +50,6 @@
             "description": "no package",
             "data": {
                 "$ref" : "test/deps/files/package.example.absent.json"
-            },
-            "valid": false
-        },
-        {
-            "description": "no schema",
-            "data": {
-                "$ref" : "test/deps/files/schema.example.absent.json"
-            },
-            "valid": false
-        },
-        {
-            "description": "no version",
-            "data": {
-                "$ref" : "test/deps/files/version.example.absent.json"
             },
             "valid": false
         }

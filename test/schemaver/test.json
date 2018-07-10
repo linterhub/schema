@@ -1,0 +1,57 @@
+{
+    "description": "versioned schema",
+    "$schema": {
+        "$ref": "https://schema.linterhub.com/schemaver.json"
+    },
+    "tests": [
+        {
+            "description": "with full data",
+            "data": {
+                "$ref" : "test/schemaver/files/full.example.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "with schema",
+            "data": {
+                "$ref" : "test/schemaver/files/schema.example.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "with version",
+            "data": {
+                "$ref" : "test/schemaver/files/version.example.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "incorrect schema url",
+            "data": {
+                "$ref" : "test/schemaver/files/schema.example.incorrect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "incorrect version type",
+            "data": {
+                "$ref" : "test/schemaver/files/version.example.incorrect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no schema",
+            "data": {
+                "$ref" : "test/schemaver/files/schema.example.absent.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no version",
+            "data": {
+                "$ref" : "test/schemaver/files/version.example.absent.json"
+            },
+            "valid": false
+        }
+    ]
+}
