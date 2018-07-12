@@ -58,7 +58,9 @@
     },
     "assets": {
         "cname": "CNAME",
-        "readme": "README.md"
+        "readme": "README.md",
+        "theme": "config/_config.yml",
+        "logo": "assets/img/logo.png"
     },
     "node": {
         "dir": "node_modules"

@@ -21,6 +21,8 @@ const copy = () => gulp
     .src([
         config.assets.cname,
         config.assets.readme,
+        config.assets.theme,
+        config.assets.logo,
     ])
     .pipe(gulp.dest(config.release.dir));
 
