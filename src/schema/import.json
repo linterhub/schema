@@ -4,23 +4,14 @@
     "$id": "https://schema.linterhub.com/import.json",
     "title": "Import schema",
     "description": "The schema for import linters with meta-information",
-    "properties": {
-        "source": {
-            "title": "Source",
-            "description": "The information of package manager",
-            "$ref": "#/definitions/source"
+    "allOf": [
+        {
+            "$ref": "./schemaver.json#/definitions/object"
         },
-        "linters": {
-            "title": "Linters",
-            "description": "The information about linters",
-            "$ref": "#/definitions/linters"
+        {
+            "$ref": "#/definitions/object"
         }
-    },
-    "required": [
-        "source",
-        "linters"
     ],
-    "additionalProperties": false,
     "definitions": {
         "source": {
             "title": "Source",
@@ -141,6 +132,24 @@
                 "$ref": "#/definitions/linter"
             },
             "minItems": 1
+        },
+        "object": {
+            "properties": {
+                "source": {
+                    "title": "Source",
+                    "description": "The information of package manager",
+                    "$ref": "#/definitions/source"
+                },
+                "linters": {
+                    "title": "Linters",
+                    "description": "The information about linters",
+                    "$ref": "#/definitions/linters"
+                }
+            },
+            "required": [
+                "source",
+                "linters"
+            ]
         }
     }
 }
