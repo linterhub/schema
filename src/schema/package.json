@@ -27,6 +27,7 @@
             "default": "homepage",
             "enum": [
                 "documentation",
+                "download",
                 "issues",
                 "repository",
                 "manager",
