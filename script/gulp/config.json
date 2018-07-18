@@ -7,10 +7,11 @@
             "node": "!**/node_modules/**",
             "ext": "!ext/**"
         },
-        "config": {
-            "markdownlint": ".mdlrc.json"
-        },
         "documentation": "**/*.md"
+    },
+    "configs": {
+        "eslint": ".eslintrc.json",
+        "markdownlint": "config/.mdlrc.json"
     },
     "git": {
         "user": {
