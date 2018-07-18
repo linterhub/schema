@@ -11,7 +11,7 @@ const config = core.cfg;
 const markdownlint = core.amd.markdownlint;
 const log = core.amd.log;
 const gulpData = core.amd.gulpData;
-const markdownlintConfig = require(`../../${config.src.config.markdownlint}`);
+const markdownlintConfig = require(`../../${config.configs.markdownlint}`);
 
 // Lint and auto-fix all js files
 const js = () => gulp
@@ -20,7 +20,9 @@ const js = () => gulp
         config.src.exclude.node,
         config.src.exclude.ext,
     ])
-    .pipe(eslint())
+    .pipe(eslint({
+        'configFile': config.configs.eslint,
+    }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 
@@ -44,10 +46,9 @@ const markdown = (done) => gulp
         });
         const errors = results[file.path];
         errors.map((error) => printMarkdownError(error, file));
+
         if (errors.length > 0 ) {
             done(`Failed with ${errors.length} error(s)`);
-        } else {
-            done();
         }
     }));
 
