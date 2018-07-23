@@ -4,6 +4,7 @@
     "$id": "https://schema.linterhub.com/import.json",
     "title": "Import schema",
     "description": "The schema for import linters with meta-information",
+    "type": "object",
     "allOf": [
         {
             "$ref": "./schemaver.json#/definitions/object"
@@ -21,7 +22,7 @@
                 "name":{
                     "title": "Name",
                     "description": "Name of package manager",
-                    "$ref": "./collection.json/definitions/manager"
+                    "$ref": "./collection.json#/definitions/manager"
                 },
                 "version": {
                     "title": "Version",
@@ -34,7 +35,7 @@
             ],
             "additionalProperties": false
         },
-        "linter:name":{
+        "linter:name": {
             "title": "Name",
             "description": "Name of linter",
             "type": "string"
@@ -57,6 +58,7 @@
         "linter:complex": {
             "title": "Linter",
             "description": "Full data of linter",
+            "type": "object",
             "properties": {
                 "name": {
                     "title": "Name",
