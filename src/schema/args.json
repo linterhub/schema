@@ -18,7 +18,7 @@
             "title": "Id",
             "description": "Id by default",
             "type": "string",
-            "pattern": "^[-a-z]+$"
+            "pattern": "^[^:]+$"
         },
         "id:linterhub": {
             "title": "Id linterhub",
@@ -109,9 +109,23 @@
                         "arguments": {
                             "title": "Arguments",
                             "description": "The console app arguments",
-                            "items": {
-                                "$ref": "#/definitions/argument"
-                            }
+                            "type": "object",
+                            "properties": {
+                                "properties": {
+                                    "type": "object",
+                                    "patternProperties": {
+                                        "^[-a-z]+$|^$": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/argument"
+                                        }
+                                    },
+                                    "additionalProperties": false
+                                }
+                            },
+                            "required": [
+                                "properties"
+                            ],
+                            "additionalProperties": false
                         }
                     },
                     "required": [
