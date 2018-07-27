@@ -1,0 +1,144 @@
+{
+    "$schema": "https://schema.linterhub.com/schemaver.json",
+    "$version": "0.0.0",
+    "$id": "https://schema.linterhub.com/args.json",
+    "title": "Arguments schema",
+    "description": "The schema of package arguments",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./schemaver.json#/definitions/object"
+        },
+        {
+            "$ref": "#/definitions/object"
+        }
+    ],
+    "definitions": {
+        "id:default": {
+            "title": "Id",
+            "description": "Id by default",
+            "type": "string",
+            "pattern": "^[^:]+$"
+        },
+        "id:linterhub": {
+            "title": "Id linterhub",
+            "description": "Id with prefix linterhub",
+            "type": "string",
+            "pattern": "^linterhub:[a-z]+$"
+        },
+        "id:arg": {
+            "title": "Id arg",
+            "description": "Id with prefix arg",
+            "type": "string",
+            "pattern": "^arg:[-a-z]+$"
+        },
+        "argument": {
+            "title": "Argument",
+            "description": "The package argument",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "title": "Id",
+                    "description": "The name of the argument from the original tool",
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/id:default"
+                        },
+                        {
+                            "$ref": "#/definitions/id:linterhub"
+                        },
+                        {
+                            "$ref": "#/definitions/id:arg"
+                        }
+                    ]
+                },
+                "named": {
+                    "title": "Named",
+                    "description": "Hide orignal name. Used when package have multiple arguments without prefix",
+                    "type": "boolean",
+                    "default": false
+                },
+                "type": {
+                    "title": "Type",
+                    "description": "The value type of the argument.",
+                    "type": "string"
+                },
+                "description": {
+                    "title": "Description",
+                    "description": "Help text from the original tool for that argument, two sentences maximum",
+                    "type": "string"
+                },
+                "default": {
+                    "title": "Default",
+                    "description": "The default value for that argument; if argument is readonly and default is not set then 0, \"\" or null is used",
+                    "type": "object",
+                    "default": null
+                },
+                "enum": {
+                    "title": "Enum",
+                    "description": "Need to use if the argument value has a limited list. Type of argument must be string",
+                    "type": "array",
+                    "default": [],
+                    "uniqueItems": true
+                }
+            },
+            "required": [
+                "type",
+                "description"
+            ],
+            "additionalProperties": false
+        },
+        "object": {
+            "properties": {
+                "package": {
+                    "title": "Package",
+                    "description": "The package unique identifier in URI form which points to current version of package file",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "delimiter":{
+                    "title": "Delimiter",
+                    "description":"Delimiter used between command-line options and their arguments",
+                    "type":"string"
+                },
+                "definitions": {
+                    "title": "Definitions",
+                    "description": "The arguments definitions",
+                    "type": "object",
+                    "properties": {
+                        "arguments": {
+                            "title": "Arguments",
+                            "description": "The console app arguments",
+                            "type": "object",
+                            "properties": {
+                                "properties": {
+                                    "type": "object",
+                                    "patternProperties": {
+                                        "^[-a-z]+$|^$": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/argument"
+                                        }
+                                    },
+                                    "additionalProperties": false
+                                }
+                            },
+                            "required": [
+                                "properties"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": [
+                        "arguments"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "required": [
+                "package",
+                "delimiter",
+                "definitions"
+            ]
+        }
+    }
+}
