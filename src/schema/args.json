@@ -1,0 +1,199 @@
+{
+    "$schema": "https://schema.linterhub.com/schemaver.json",
+    "$id": "https://schema.linterhub.com/args.json",
+    "$version": "0.0.0",
+    "title": "Arguments schema",
+    "description": "The schema of package arguments",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./schemaver.json#/definitions/object"
+        },
+        {
+            "$ref": "#/definitions/object"
+        }
+    ],
+    "definitions": {
+        "arg": {
+            "title": "Argument",
+            "description": "The generic argument definition; reserved to split it into command, option and flag",
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "./schemaver.json#/definitions/schema"
+                },
+                {
+                    "$ref": "#/definitions/arg:extra"
+                }
+            ]
+        },
+        "arg:extra": {
+            "title": "Argument",
+            "description": "The extra argument properties",
+            "type": "object",
+            "properties": {
+                "named": {
+                    "title": "Named",
+                    "description": "Whether the argument is named or not; reserved for positional arguments too",
+                    "type": "boolean",
+                    "default": true
+                },
+                "usage": {
+                    "$ref": "#/definitions/arg:usage"
+                },
+                "delimiter": {
+                    "$ref": "#/definitions/arg:delimiter"
+                }
+            }
+        },
+        "arg:usage": {
+            "title": "Usage",
+            "description": "The argument usage",
+            "type": "string",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/arg:usage/definitions/none"
+                },
+                {
+                    "$ref": "#/definitions/arg:usage/definitions/arg"
+                },
+                {
+                    "$ref": "#/definitions/arg:usage/definitions/glob"
+                },
+                {
+                    "$ref": "#/definitions/arg:usage/definitions/stdin"
+                },
+                {
+                    "$ref": "#/definitions/arg:usage/definitions/config"
+                },
+                {
+                    "$ref": "#/definitions/arg:usage/definitions/help"
+                },
+                {
+                    "$ref": "#/definitions/arg:usage/definitions/version"
+                }
+            ],
+            "default": "arg",
+            "definitions": {
+                "none": {
+                    "title": "none",
+                    "description": "Not editable and not visible: changing this argument may cause unexpected output or execute a wrong command",
+                    "type": "string",
+                    "const": "none"
+                },
+                "arg": {
+                    "title": "arg",
+                    "description": "Editable and visible: an ordinary option or a flag",
+                    "type": "string",
+                    "const": "arg"
+                },
+                "glob": {
+                    "title": "glob",
+                    "description": "Not editable and visible: filesysyem path or mask which are calculated at runtime",
+                    "type": "string",
+                    "const": "glob"
+                },
+                "stdin": {
+                    "title": "stdin",
+                    "description": "Not editable and visible: indicates whether stdin is supported as an input source",
+                    "type": "string",
+                    "const": "stdin"
+                },
+                "config": {
+                    "title": "config",
+                    "description": "Editable and visible: allows to specify custom config if it's supported",
+                    "type": "string",
+                    "const": "config"
+                },
+                "help": {
+                    "title": "help",
+                    "description": "Not editable and not visible: allows to execute help command",
+                    "type": "string",
+                    "const": "help"
+                },
+                "version": {
+                    "title": "version",
+                    "description": "Not editable and not visible: allows to execute version command",
+                    "type": "string",
+                    "const": "version"
+                }
+            }
+        },
+        "arg:delimiter": {
+            "title": "Delimiter",
+            "description": "The character used as separator between arguments",
+            "type": "string",
+            "default": " "
+        },
+        "object": {
+            "title": "Args",
+            "description": "The arguments object definition",
+            "type": "object",
+            "properties": {
+                "package": {
+                    "title": "Package",
+                    "description": "The package unique identifier in URI form which points to current version of package file",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "definitions": {
+                    "title": "Definitions",
+                    "description": "The arguments definitions",
+                    "type": "object",
+                    "properties": {
+                        "object": {
+                            "title": "Object",
+                            "description": "The arguments object schema",
+                            "type": "object",
+                            "patternProperties": {
+                                "^[-a-z]+$|^$": {
+                                    "$ref": "#/definitions/arg"
+                                }
+                            }
+                        }
+                    }
+                },
+                "delimiter": {
+                    "$ref": "#/definitions/arg:delimiter"
+                }
+            },
+            "required": [
+                "package"
+            ]
+        }
+    },
+    "examples": [
+        {
+            "$schema": "https://schema.linterhub.com/args.json",
+            "$id": "https://hub.linterhub.com/example/args.json",
+            "$version": "1.0.0",
+            "package": "https://hub.linterhub.com/example/package.json",
+            "description": "The example of arguments schema instance",
+            "allOf": [
+                {
+                    "$ref": "./schemaver.json"
+                },
+                {
+                    "$ref": "#/definitions/object"
+                }
+            ],
+            "definitions": {
+                "object": {
+                    "properties": {
+                        "test": {
+                            "description": "test",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "$schema": "https://hub.linterhub.com/example/args.json",
+            "$id": "https://hub.linterhub.com/example/config.json",
+            "$version": "1.0.0",
+            "description": "The example of default configuration for arguments",
+            "test": false
+        }
+    ]
+}
