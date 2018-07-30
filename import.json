@@ -1,0 +1,157 @@
+{
+    "$schema": "https://schema.linterhub.com/schemaver.json",
+    "$version": "1.3.0",
+    "$id": "https://schema.linterhub.com/import.json",
+    "title": "Import schema",
+    "description": "The schema for import linters with meta-information",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./schemaver.json#/definitions/object"
+        },
+        {
+            "$ref": "#/definitions/object"
+        }
+    ],
+    "definitions": {
+        "source": {
+            "title": "Source",
+            "description": "The information of package manager",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "title": "Name",
+                    "description": "Name of package manager",
+                    "$ref": "./collection.json#/definitions/manager"
+                },
+                "version": {
+                    "title": "Version",
+                    "description": "Recommendation version of package manager",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "additionalProperties": false
+        },
+        "linter:name": {
+            "title": "Name",
+            "description": "Name of linter",
+            "type": "string"
+        },
+        "linter:version": {
+            "title": "Version",
+            "description": "Version of linter",
+            "type": "string"
+        },
+        "linter:versions": {
+            "title": "Versions",
+            "description": "Array versions of linter",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/linter:version"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        },
+        "linter:complex": {
+            "title": "Linter",
+            "description": "Full data of linter",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "title": "Name",
+                    "description": "Name of linter",
+                    "$ref": "#/definitions/linter:name"
+                },
+                "version": {
+                    "title": "Version",
+                    "description": "Version of linter",
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/linter:version"
+                        },
+                        {
+                            "$ref": "#/definitions/linter:versions"
+                        }
+                    ]
+                },
+                "languages": {
+                    "title": "Languages",
+                    "description": "The list of supported languages",
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "$ref": "./collection.json#/definitions/language"
+                    },
+                    "uniqueItems": true
+                },
+                "extensions": {
+                    "title": "Extensions",
+                    "description": "The list of supported extensions, by default corresponding extensions for linter languages are used",
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "$ref": "./linter.json#/definitions/extension"
+                    },
+                    "uniqueItems": true
+                },
+                "configs": {
+                    "title": "Configuration files",
+                    "description": "List of file names or masks which could be treated as linter configuration file",
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "$ref": "./linter.json#/definitions/config"
+                    },
+                    "uniqueItems": true
+                }
+            },
+            "required": [
+                "name",
+                "version"
+            ],
+            "additionalProperties": false
+        },
+        "linter": {
+            "title": "Linter",
+            "description": "Linter meta-information for import",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/linter:name"
+                },
+                {
+                    "$ref": "#/definitions/linter:complex"
+                }
+            ]
+        },
+        "linters": {
+            "title": "Linters",
+            "description": "Array of linters with meta-information",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/linter"
+            },
+            "minItems": 1
+        },
+        "object": {
+            "properties": {
+                "source": {
+                    "title": "Source",
+                    "description": "The information of package manager",
+                    "$ref": "#/definitions/source"
+                },
+                "linters": {
+                    "title": "Linters",
+                    "description": "The information about linters",
+                    "$ref": "#/definitions/linters"
+                }
+            },
+            "required": [
+                "source",
+                "linters"
+            ]
+        }
+    }
+}
