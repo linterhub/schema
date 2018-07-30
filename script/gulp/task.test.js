@@ -78,10 +78,16 @@ const preloadSource = () => preload([
 ]);
 
 // Preload schemas from build folder
-const preloadBuild = () => preload(config.build.mask);
+const preloadBuild = () => preload([
+    config.build.mask,
+    config.schema.schema,
+]);
 
 // Preload schemas from release folder
-const preloadRelease = () => preload(config.release.mask);
+const preloadRelease = () => preload([
+    config.release.mask,
+    config.schema.schema,
+]);
 
 // Tasks
 gulp.task('preload:source', preloadSource);
