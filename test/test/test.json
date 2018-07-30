@@ -1,0 +1,57 @@
+{
+    "description": "test schema",
+    "$schema": {
+        "$ref": "https://schema.linterhub.com/test.json"
+    },
+    "tests": [
+        {
+            "description": "with full data",
+            "data": {
+                "$ref" : "test/test/files/full.example.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "no title in root",
+            "data": {
+                "$ref": "test/test/files/title.example.absent.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no description in root",
+            "data": {
+                "$ref": "test/test/files/description.example.absent.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no tests in root",
+            "data": {
+                "$ref": "test/test/files/tests.example.absent.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no data in test",
+            "data": {
+                "$ref": "test/test/files/data.tests.absent.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no description in test",
+            "data": {
+                "$ref": "test/test/files/description.tests.absent.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no valid in test",
+            "data": {
+                "$ref": "test/test/files/valid.tests.absent.json"
+            },
+            "valid": false
+        }
+    ]
+}
