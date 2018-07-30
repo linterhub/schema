@@ -1,0 +1,12 @@
+{
+    "$schema": "https://schema.linterhub.com/test.json",
+    "$version": "0.9.0",
+    "title": "test",
+    "description": "description of test",
+    "tests": [
+        {
+            "description": "with full data",
+            "valid": false
+        }
+    ]
+}
