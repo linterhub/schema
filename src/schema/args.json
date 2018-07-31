@@ -145,9 +145,16 @@
                             "title": "Object",
                             "description": "The arguments object schema",
                             "type": "object",
-                            "patternProperties": {
-                                "^[-a-z]+$|^$": {
-                                    "$ref": "#/definitions/arg"
+                            "properties": {
+                                "properties": {
+                                    "title": "Properties",
+                                    "description": "The arguments properties of package",
+                                    "type": "object",
+                                    "patternProperties": {
+                                        "^[-a-z]+$|^$": {
+                                            "$ref": "#/definitions/arg"
+                                        }
+                                    }
                                 }
                             }
                         }
