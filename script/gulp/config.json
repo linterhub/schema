@@ -61,7 +61,7 @@
         "cname": "CNAME",
         "readme": "README.md",
         "theme": "config/_config.yml",
-        "logo": "assets/img/logo.png"
+        "logo": "assets/img/logo.svg"
     },
     "node": {
         "dir": "node_modules"
