@@ -12,79 +12,51 @@
             "valid": true
         },
         {
-            "description": "with array of linters",
-            "data": {
-                "$ref": "test/import/files/linters.array.valid.json"
-            },
-            "valid": true
-        },
-        {
-            "description": "with source name",
-            "data": {
-                "$ref": "test/import/files/source.name.valid.json"
-            },
-            "valid": true
-        },
-        {
-            "description": "incorrect array of linters",
-            "data": {
-                "$ref": "test/import/files/linters.array.incorrect.json"
-            },
-            "valid": false
-        },
-        {
             "description": "incorrect source name",
             "data": {
-                "$ref": "test/import/files/source.name.incorrect.json"
-            },
-            "valid": false
-        },
-        {
-            "description": "incorrect version of linters",
-            "data": {
-                "$ref": "test/import/files/linters.version.incorrect.json"
+                "$ref": "test/import/files/name.source.incorrect.json"
             },
             "valid": false
         },
         {
             "description": "incorrect languages of linters",
             "data": {
-                "$ref": "test/import/files/linters.languages.incorrect.json"
+                "$ref": "test/import/files/languages.linter.incorrect.json"
             },
             "valid": false
         },
         {
             "description": "incorrect extensions of linters",
             "data": {
-                "$ref": "test/import/files/linters.extensions.incorrect.json"
+                "$ref": "test/import/files/extensions.linter.incorrect.json"
             },
             "valid": false
         },
         {
             "description": "no array of linters",
             "data": {
-                "$ref": "test/import/files/linters.array.absent.json"
+                "$ref": "test/import/files/linters.example.absent.json"
             },
             "valid": false
         },
         {
             "description": "no name of linters",
             "data": {
-                "$ref": "test/import/files/linters.name.absent.json"
+                "$ref": "test/import/files/name.linter.absent.json"
             },
             "valid": false
         },
         {
             "description": "no version of linters",
             "data": {
-                "$ref": "test/import/files/linters.version.absent.json"
+                "$ref": "test/import/files/version.linter.absent.json"
             },
             "valid": false
         },
         {
             "description": "no name of package manager",
             "data": {
-                "$ref": "test/import/files/source.name.absent.json"
+                "$ref": "test/import/files/name.source.absent.json"
             },
             "valid": false
         }
