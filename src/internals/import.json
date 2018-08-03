@@ -19,7 +19,7 @@
             "description": "The information of package manager",
             "type": "object",
             "properties": {
-                "name":{
+                "name": {
                     "title": "Name",
                     "description": "Name of package manager",
                     "$ref": "./collection.json#/definitions/manager"
@@ -129,7 +129,7 @@
         "linters": {
             "title": "Linters",
             "description": "Array of linters with meta-information",
-            "type":"array",
+            "type": "array",
             "items": {
                 "$ref": "#/definitions/linter"
             },

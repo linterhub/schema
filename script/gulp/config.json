@@ -39,6 +39,10 @@
             "linguist": "src/collection/language.linguist.json"
         }
     },
+    "internals": {
+        "dir": "src/internals/",
+        "mask": "src/internals/*.json"
+    },
     "schema": {
         "dir": "src/schema/",
         "mask": "src/schema/*.json",

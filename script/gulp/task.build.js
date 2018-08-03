@@ -24,6 +24,7 @@ const bundle = () => gulp
 const create = () => gulp
   .src([
     config.schema.mask,
+    config.internals.mask,
     '!' + config.schema.collection,
   ])
   .pipe(gulp.dest(config.build.dir));

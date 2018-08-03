@@ -37,3 +37,4 @@ travis
 arg
 gh-pages
 .css
+boolean

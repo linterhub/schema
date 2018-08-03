@@ -74,6 +74,7 @@ const preload = (mask) => gulp
 // Preload schemas from source folder
 const preloadSource = () => preload([
     config.schema.mask,
+    config.internals.mask,
     config.collection.mask,
 ]);
 
