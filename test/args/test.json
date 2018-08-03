@@ -1,0 +1,36 @@
+{
+    "description": "args schema",
+    "$schema": {
+        "$ref": "https://schema.linterhub.com/args.json"
+    },
+    "tests": [
+        {
+            "description": "with full data",
+            "data": {
+                "$ref" : "test/args/files/full.example.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "incorrect package",
+            "data": {
+                "$ref": "test/args/files/package.example.incorrect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "incorrect usage in argument ",
+            "data": {
+                "$ref": "test/args/files/usage.argument.incorrect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "no package",
+            "data": {
+                "$ref": "test/args/files/package.example.absent.json"
+            },
+            "valid": false
+        }
+    ]
+}
