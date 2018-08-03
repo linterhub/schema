@@ -23,6 +23,7 @@ const copy = () => gulp
         config.assets.readme,
         config.assets.theme,
         config.assets.logo,
+        config.typings.mask,
     ])
     .pipe(gulp.dest(config.release.dir));
 

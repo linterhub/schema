@@ -1,0 +1,13 @@
+{
+    "$schema": "https://schema.linterhub.com/test.json",
+    "$version": "0.9.0",
+    "title": "test",
+    "tests": [
+        {
+            "data": {
+                "$ref": "uri"
+            },
+            "valid": false
+        }
+    ]
+}
