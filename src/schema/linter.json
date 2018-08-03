@@ -13,6 +13,9 @@
             "$ref": "#/definitions/object"
         }
     ],
+    "required": [
+        "package"
+    ],
     "definitions": {
         "config": {
             "title": "Config",
@@ -63,10 +66,7 @@
                     },
                     "uniqueItems": true
                 }
-            },
-            "required": [
-                "package"
-            ]
+            }
         }
     }
 }
