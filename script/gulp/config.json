@@ -13,6 +13,10 @@
         "eslint": ".eslintrc.json",
         "markdownlint": "config/.mdlrc.json"
     },
+    "typings": {
+        "dir": "build/typings",
+        "mask": "build/typings/*.d.ts"
+    },
     "git": {
         "user": {
             "name": "linterhub",
@@ -36,6 +40,7 @@
         }
     },
     "schema": {
+        "dir": "src/schema/",
         "mask": "src/schema/*.json",
         "ver": "src/schema/schemaver.json",
         "schema": "src/collection/schema.json",

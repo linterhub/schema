@@ -7,7 +7,7 @@
     "type": "object",
     "allOf": [
         {
-            "$ref": "#/definitions/schema"
+            "$ref": "http://json-schema.org/draft-06/schema#"
         },
         {
             "$ref": "#/definitions/object"

@@ -9,6 +9,8 @@ const amd = {
   del: require('del'),
   path: require('path'),
   log: require('fancy-log'),
+  rename: require('gulp-rename'),
+  json2ts: require('json-schema-to-typescript'),
   argv: require('yargs').argv,
   git: require('gulp-git'),
   yaml: require('js-yaml'),
