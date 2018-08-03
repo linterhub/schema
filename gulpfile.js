@@ -66,7 +66,8 @@ gulp.task('build', gulp.series(
     'validate',
     'clean:build',
     'build:bundle',
-    'build:create'
+    'build:create',
+    'build:typings'
 ));
 
 /**
