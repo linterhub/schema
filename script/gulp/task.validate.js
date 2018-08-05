@@ -36,12 +36,20 @@ const validateTemplate = () => validate(
     config.schema.schema
 );
 
+// Validate all internals schemas according to schemaver
+const validateInternals = () => validate(
+    config.internals.mask,
+    config.schema.ver
+);
+
 // Tasks
 gulp.task('validate:core', validateCore);
 gulp.task('validate:template', validateTemplate);
+gulp.task('validate:internals', validateInternals);
 gulp.task('validate:collection', validateCollection);
 gulp.task('validate:all', gulp.parallel(
     'validate:core',
     'validate:template',
+    'validate:internals',
     'validate:collection'
 ));
