@@ -1,8 +1,4 @@
 {
     "default": true,
-    "MD013": {
-        "tables": false,
-        "headings": false,
-        "code_blocks": false
-    }
+    "MD013": false
 }

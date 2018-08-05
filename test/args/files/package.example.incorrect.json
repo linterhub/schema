@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schema.linterhub.com/args.json",
+    "$id": "https://hub.linterhub.com/example/args.json",
+    "$version": "1.0.0",
+    "package": "package",
+    "description": "The example of arguments schema instance",
+    "allOf": [
+        {
+            "$ref": "https://schema.linterhub.com/schemaver.json"
+        },
+        {
+            "$ref": "#/definitions/object"
+        }
+    ],
+    "definitions": {
+        "object": {
+            "title": "Args",
+            "description": "The arguments object definition",
+            "type": "object",
+            "properties": {
+                "test": {
+                    "title": "Test",
+                    "description": "Description of test argument",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
