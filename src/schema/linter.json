@@ -62,6 +62,22 @@
                         "$ref": "#/definitions/config"
                     },
                     "uniqueItems": true
+                },
+                "url": {
+                    "title": "URL",
+                    "description": "The linter homepage",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "license": {
+                    "title": "License",
+                    "description": "The linter license",
+                    "$ref": "./collection.json#/definitions/license"
+                },
+                "description": {
+                    "title": "Description",
+                    "description": "The linter description",
+                    "type": "string"
                 }
             },
             "required": [
