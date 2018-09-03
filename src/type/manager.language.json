@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://schema.linterhub.com/collection/manager.language.json",
-    "title": "Collection: Package Manager",
+    "$id": "https://schema.linterhub.com/type/manager.language.json",
+    "title": "Type: Package Manager",
     "description": "The set of language package managers",
     "type": "string",
     "enum": [

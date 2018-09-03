@@ -25,7 +25,7 @@ const licenses = () => gulp
         return file;
     }))
     .pipe(jsonFormat(4))
-    .pipe(gulp.dest(config.collection.dir));
+    .pipe(gulp.dest(config.type.dir));
 
 // Import languages from linguist
 const languages = () => gulp
@@ -51,7 +51,7 @@ const languages = () => gulp
         return file;
     }))
     .pipe(jsonFormat(4))
-    .pipe(gulp.dest(config.collection.dir));
+    .pipe(gulp.dest(config.type.dir));
 
 // Tasks
 gulp.task('import:licenses', licenses);

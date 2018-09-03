@@ -7,16 +7,16 @@
     "type": "object",
     "definitions": {
         "language": {
-            "$ref": "./../collection/language.json#"
+            "$ref": "./../type/language.json#"
         },
         "license": {
-            "$ref": "./../collection/license.json#"
+            "$ref": "./../type/license.json#"
         },
         "manager": {
-            "$ref": "./../collection/manager.json#"
+            "$ref": "./../type/manager.json#"
         },
         "schema": {
-            "$ref": "./../collection/schema.json#"
+            "$ref": "./../type/schema.json#"
         }
     }
 }

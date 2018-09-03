@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://schema.linterhub.com/collection/manager.json",
-    "title": "Collection: Package Manager",
+    "$id": "https://schema.linterhub.com/type/manager.json",
+    "title": "Type: Package Manager",
     "description": "The set of names of package managers",
     "type": "string",
     "oneOf": [

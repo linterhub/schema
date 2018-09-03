@@ -25,8 +25,8 @@ const validateCore = () => validate(
 );
 
 // Validate all type schemas using base schema
-const validateCollection = () => validate(
-    config.collection.mask,
+const validateType = () => validate(
+    config.type.mask,
     config.schema.schema
 );
 
@@ -39,9 +39,9 @@ const validateTemplate = () => validate(
 // Tasks
 gulp.task('validate:core', validateCore);
 gulp.task('validate:template', validateTemplate);
-gulp.task('validate:collection', validateCollection);
+gulp.task('validate:type', validateType);
 gulp.task('validate:all', gulp.parallel(
     'validate:core',
     'validate:template',
-    'validate:collection'
+    'validate:type'
 ));

@@ -29,21 +29,21 @@
         "linguist": "src/template/language.linguist.json",
         "spdx": "src/template/license.spdx.json"
     },
-    "collection": {
-        "dir": "src/collection/",
-        "mask": "src/collection/*.json",
+    "type": {
+        "dir": "src/type/",
+        "mask": "src/type/*.json",
         "licenses": {
-            "spdx": "src/collection/license.spdx.json"
+            "spdx": "src/type/license.spdx.json"
         },
         "languages": {
-            "linguist": "src/collection/language.linguist.json"
+            "linguist": "src/type/language.linguist.json"
         }
     },
     "schema": {
         "dir": "src/schema/",
         "mask": "src/schema/*.json",
         "ver": "src/schema/schemaver.json",
-        "schema": "src/collection/schema.json",
+        "schema": "src/type/schema.json",
         "types": "src/schema/types.json"
     },
     "build": {
