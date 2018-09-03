@@ -44,7 +44,7 @@
         "mask": "src/schema/*.json",
         "ver": "src/schema/schemaver.json",
         "schema": "src/collection/schema.json",
-        "collection": "src/schema/collection.json"
+        "types": "src/schema/types.json"
     },
     "build": {
         "dir": "build",

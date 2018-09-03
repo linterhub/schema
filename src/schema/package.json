@@ -70,7 +70,7 @@
         },
         "urls": {
             "title": "URL",
-            "description": "The URL or collection of URLs",
+            "description": "The URL or array of URLs",
             "oneOf": [
                 {
                     "$ref": "#/definitions/url:complex"
@@ -115,7 +115,7 @@
                 "license": {
                     "title": "License",
                     "description": "The package license",
-                    "$ref": "./collection.json#/definitions/license"
+                    "$ref": "./types.json#/definitions/license"
                 },
                 "license-text": {
                     "title": "License text",

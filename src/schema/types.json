@@ -1,0 +1,22 @@
+{
+    "$schema": "https://schema.linterhub.com/schemaver.json#",
+    "$id": "https://schema.linterhub.com/types.json#",
+    "$version": "0.0.0",
+    "title": "Types",
+    "description": "The container for common types",
+    "type": "object",
+    "definitions": {
+        "language": {
+            "$ref": "./../collection/language.json#"
+        },
+        "license": {
+            "$ref": "./../collection/license.json#"
+        },
+        "manager": {
+            "$ref": "./../collection/manager.json#"
+        },
+        "schema": {
+            "$ref": "./../collection/schema.json#"
+        }
+    }
+}

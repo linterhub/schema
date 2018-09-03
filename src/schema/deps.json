@@ -32,7 +32,7 @@
                 "manager": {
                     "title": "Package manager",
                     "description": "The package manager name",
-                    "$ref": "./collection.json#/definitions/manager"
+                    "$ref": "./types.json#/definitions/manager"
                 },
                 "package": {
                     "title": "Package",

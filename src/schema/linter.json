@@ -39,7 +39,7 @@
                     "type": "array",
                     "default": [],
                     "items": {
-                        "$ref": "./collection.json#/definitions/language"
+                        "$ref": "./types.json#/definitions/language"
                     },
                     "uniqueItems": true
                 },

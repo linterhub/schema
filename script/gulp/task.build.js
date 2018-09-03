@@ -13,9 +13,9 @@ const jsonSchemaBundle = core.amd.jsonSchemaBundle;
 const json2ts = core.amd.json2ts;
 const config = core.cfg;
 
-// Resolve and inline all $ref in collections
+// Resolve and inline all $ref in types
 const bundle = () => gulp
-  .src(config.schema.collection)
+  .src(config.schema.types)
   .pipe(jsonSchemaBundle())
   .pipe(jsonFormat(4))
   .pipe(gulp.dest(config.build.dir));
@@ -24,7 +24,7 @@ const bundle = () => gulp
 const create = () => gulp
   .src([
     config.schema.mask,
-    '!' + config.schema.collection,
+    '!' + config.schema.types,
   ])
   .pipe(gulp.dest(config.build.dir));
 

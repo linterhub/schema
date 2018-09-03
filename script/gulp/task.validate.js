@@ -18,19 +18,19 @@ const validate = (mask, schema) => gulp
         verbose: true,
     }));
 
-// Validate all core schemas according to schemaver
+// Validate all core schemas using schemaver
 const validateCore = () => validate(
     config.schema.mask,
     config.schema.ver
 );
 
-// Validate all collection schemas according to draft schema
+// Validate all type schemas using base schema
 const validateCollection = () => validate(
     config.collection.mask,
     config.schema.schema
 );
 
-// Validate all template schemas according to draft schema
+// Validate all template schemas using base schema
 const validateTemplate = () => validate(
     config.template.mask,
     config.schema.schema
