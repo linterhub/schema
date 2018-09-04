@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://schema.linterhub.com/type/license.spdx.json",
-    "title": "Type: software license",
-    "description": "The set of identifiers of software licenses imported from SPDX catalog",
+    "$id": "https://schema.linterhub.com/type/license/spdx.json#",
+    "title": "License",
+    "description": "The software license name (SPDX)",
     "type": "string",
     "enum": [
         "0BSD",

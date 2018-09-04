@@ -1,15 +1,15 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://schema.linterhub.com/type/license.json",
-    "title": "Licensed object",
-    "description": "The set of software licenses names",
+    "$id": "https://schema.linterhub.com/type/license.json#",
+    "title": "License",
+    "description": "The software license name",
     "type": "string",
     "oneOf": [
         {
-            "$ref": "./license.linter.json"
+            "$ref": "./license/custom.json"
         },
         {
-            "$ref": "./license.spdx.json"
+            "$ref": "./license/spdx.json"
         }
     ]
 }

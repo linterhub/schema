@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://schema.linterhub.com/type/license.linter.json",
-    "title": "Type: software license",
-    "description": "The set of special software licenses",
+    "$id": "https://schema.linterhub.com/type/license/custom.json#",
+    "title": "License",
+    "description": "The software license name (custom)",
     "type": "string",
     "enum": [
         "Custom",

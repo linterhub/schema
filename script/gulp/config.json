@@ -33,10 +33,10 @@
         "dir": "src/type/",
         "mask": "src/type/*.json",
         "licenses": {
-            "spdx": "src/type/license.spdx.json"
+            "spdx": "src/type/license/spdx.json"
         },
         "languages": {
-            "linguist": "src/type/language.linguist.json"
+            "linguist": "src/type/language/linguist.json"
         }
     },
     "schema": {

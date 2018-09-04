@@ -1,15 +1,15 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://schema.linterhub.com/type/manager.json",
-    "title": "Type: Package Manager",
-    "description": "The set of names of package managers",
+    "$id": "https://schema.linterhub.com/type/manager.json#",
+    "title": "Package Manager",
+    "description": "The package manager name",
     "type": "string",
     "oneOf": [
         {
-            "$ref": "./manager.language.json"
+            "$ref": "./manager/language.json#"
         },
         {
-            "$ref": "./manager.system.json"
+            "$ref": "./manager/system.json#"
         }
     ],
     "additionalItems": false
