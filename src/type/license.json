@@ -1,14 +1,43 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
     "$id": "https://schema.linterhub.com/type/license.json#",
-    "title": "Object",
-    "description": "The licensed object",
+    "title": "License",
+    "description": "The license",
+    "type": "string",
     "oneOf": [
         {
-            "$ref": "./license/custom.json"
+            "$ref": "./license/custom.json#"
         },
         {
-            "$ref": "./license/spdx.json"
+            "$ref": "./license/spdx.json#"
         }
-    ]
+    ],
+    "definitions": {
+        "object": {
+            "title": "Object",
+            "description": "The licensed object",
+            "type": "object",
+            "anyOf": [
+                {
+                    "properties": {
+                        "license": {
+                            "$ref": "./license/spdx.json#"
+                        }
+                    }
+                },
+                {
+                    "properties": {
+                        "license": {
+                            "$ref": "./license/custom.json#"
+                        },
+                        "license:text": {
+                            "title": "Text",
+                            "description": "The license text",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }
