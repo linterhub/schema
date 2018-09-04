@@ -6,6 +6,7 @@ const core = global.lhcore;
 // External modules as aliases
 const gulp = core.amd.gulp;
 const gulpData = core.amd.gulpData;
+const rename = core.amd.rename;
 const jsonFormat = core.amd.jsonFormat;
 const config = core.cfg;
 
@@ -25,7 +26,8 @@ const licenses = () => gulp
         return file;
     }))
     .pipe(jsonFormat(4))
-    .pipe(gulp.dest(config.type.dir));
+    .pipe(rename("spdx.json"))
+    .pipe(gulp.dest(config.type.spdx_dir));
 
 // Import languages from linguist
 const languages = () => gulp
@@ -37,7 +39,7 @@ const languages = () => gulp
         template.definitions.language.oneOf = names.map((name) => {
             const item = list[name];
             const language = {
-                enum: [name],
+                const: `${name}`,
             };
             if (item.extensions && item.extensions.length) {
                 language.extensions = item.extensions;
@@ -51,7 +53,8 @@ const languages = () => gulp
         return file;
     }))
     .pipe(jsonFormat(4))
-    .pipe(gulp.dest(config.type.dir));
+    .pipe(rename("linguist.json"))
+    .pipe(gulp.dest(config.type.linguist_dir));
 
 // Tasks
 gulp.task('import:licenses', licenses);

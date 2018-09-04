@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://schema.linterhub.com/type/language/linguist.json#",
+    "$id": "https://schema.linterhub.com/type/language/{name}.json#",
     "title": "Programming Language",
-    "description": "The programming language name and associated metadata (linguist project)",
+    "description": "The programming language name and associated metadata",
     "type": "string",
     "oneOf": [
         {
@@ -13,90 +13,70 @@
     "definitions": {
         "language": {
             "title": "Language",
-            "description": "The programming language name",
+            "description": "The programming language",
             "type": "string",
             "oneOf": [
                 {
-                    "enum": [
-                        "1C Enterprise"
-                    ],
+                    "const": "1C Enterprise",
                     "extensions": [
                         ".bsl",
                         ".os"
                     ]
                 },
                 {
-                    "enum": [
-                        "ABAP"
-                    ],
+                    "const": "ABAP",
                     "extensions": [
                         ".abap"
                     ]
                 },
                 {
-                    "enum": [
-                        "ABNF"
-                    ],
+                    "const": "ABNF",
                     "extensions": [
                         ".abnf"
                     ]
                 },
                 {
-                    "enum": [
-                        "AGS Script"
-                    ],
+                    "const": "AGS Script",
                     "extensions": [
                         ".asc",
                         ".ash"
                     ]
                 },
                 {
-                    "enum": [
-                        "AMPL"
-                    ],
+                    "const": "AMPL",
                     "extensions": [
                         ".ampl",
                         ".mod"
                     ]
                 },
                 {
-                    "enum": [
-                        "ANTLR"
-                    ],
+                    "const": "ANTLR",
                     "extensions": [
                         ".g4"
                     ]
                 },
                 {
-                    "enum": [
-                        "API Blueprint"
-                    ],
+                    "const": "API Blueprint",
                     "extensions": [
                         ".apib"
                     ]
                 },
                 {
-                    "enum": [
-                        "APL"
-                    ],
+                    "const": "APL",
                     "extensions": [
                         ".apl",
                         ".dyalog"
                     ]
                 },
                 {
-                    "enum": [
-                        "ASN.1"
-                    ],
+                    "const": "ASN.1",
                     "extensions": [
                         ".asn",
                         ".asn1"
                     ]
                 },
                 {
-                    "enum": [
-                        "ASP"
-                    ],
+                    "const": "ASP",
                     "extensions": [
                         ".asp",
                         ".asax",
@@ -108,9 +88,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "ATS"
-                    ],
+                    "const": "ATS",
                     "extensions": [
                         ".dats",
                         ".hats",
@@ -118,17 +96,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "ActionScript"
-                    ],
+                    "const": "ActionScript",
                     "extensions": [
                         ".as"
                     ]
                 },
                 {
-                    "enum": [
-                        "Ada"
-                    ],
+                    "const": "Ada",
                     "extensions": [
                         ".adb",
                         ".ada",
@@ -136,59 +110,45 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Adobe Font Metrics"
-                    ],
+                    "const": "Adobe Font Metrics",
                     "extensions": [
                         ".afm"
                     ]
                 },
                 {
-                    "enum": [
-                        "Agda"
-                    ],
+                    "const": "Agda",
                     "extensions": [
                         ".agda"
                     ]
                 },
                 {
-                    "enum": [
-                        "Alloy"
-                    ],
+                    "const": "Alloy",
                     "extensions": [
                         ".als"
                     ]
                 },
                 {
-                    "enum": [
-                        "Alpine Abuild"
-                    ],
+                    "const": "Alpine Abuild",
                     "filenames": [
                         "APKBUILD"
                     ]
                 },
                 {
-                    "enum": [
-                        "AngelScript"
-                    ],
+                    "const": "AngelScript",
                     "extensions": [
                         ".as",
                         ".angelscript"
                     ]
                 },
                 {
-                    "enum": [
-                        "Ant Build System"
-                    ],
+                    "const": "Ant Build System",
                     "filenames": [
                         "ant.xml",
                         "build.xml"
                     ]
                 },
                 {
-                    "enum": [
-                        "ApacheConf"
-                    ],
+                    "const": "ApacheConf",
                     "extensions": [
                         ".apacheconf",
                         ".vhost"
@@ -200,42 +160,32 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Apex"
-                    ],
+                    "const": "Apex",
                     "extensions": [
                         ".cls"
                     ]
                 },
                 {
-                    "enum": [
-                        "Apollo Guidance Computer"
-                    ],
+                    "const": "Apollo Guidance Computer",
                     "extensions": [
                         ".agc"
                     ]
                 },
                 {
-                    "enum": [
-                        "AppleScript"
-                    ],
+                    "const": "AppleScript",
                     "extensions": [
                         ".applescript",
                         ".scpt"
                     ]
                 },
                 {
-                    "enum": [
-                        "Arc"
-                    ],
+                    "const": "Arc",
                     "extensions": [
                         ".arc"
                     ]
                 },
                 {
-                    "enum": [
-                        "AsciiDoc"
-                    ],
+                    "const": "AsciiDoc",
                     "extensions": [
                         ".asciidoc",
                         ".adoc",
@@ -243,17 +193,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "AspectJ"
-                    ],
+                    "const": "AspectJ",
                     "extensions": [
                         ".aj"
                     ]
                 },
                 {
-                    "enum": [
-                        "Assembly"
-                    ],
+                    "const": "Assembly",
                     "extensions": [
                         ".asm",
                         ".a51",
@@ -262,34 +208,26 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Augeas"
-                    ],
+                    "const": "Augeas",
                     "extensions": [
                         ".aug"
                     ]
                 },
                 {
-                    "enum": [
-                        "AutoHotkey"
-                    ],
+                    "const": "AutoHotkey",
                     "extensions": [
                         ".ahk",
                         ".ahkl"
                     ]
                 },
                 {
-                    "enum": [
-                        "AutoIt"
-                    ],
+                    "const": "AutoIt",
                     "extensions": [
                         ".au3"
                     ]
                 },
                 {
-                    "enum": [
-                        "Awk"
-                    ],
+                    "const": "Awk",
                     "extensions": [
                         ".awk",
                         ".auk",
@@ -299,117 +237,89 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Ballerina"
-                    ],
+                    "const": "Ballerina",
                     "extensions": [
                         ".bal"
                     ]
                 },
                 {
-                    "enum": [
-                        "Batchfile"
-                    ],
+                    "const": "Batchfile",
                     "extensions": [
                         ".bat",
                         ".cmd"
                     ]
                 },
                 {
-                    "enum": [
-                        "Befunge"
-                    ],
+                    "const": "Befunge",
                     "extensions": [
                         ".befunge"
                     ]
                 },
                 {
-                    "enum": [
-                        "Bison"
-                    ],
+                    "const": "Bison",
                     "extensions": [
                         ".bison"
                     ]
                 },
                 {
-                    "enum": [
-                        "BitBake"
-                    ],
+                    "const": "BitBake",
                     "extensions": [
                         ".bb"
                     ]
                 },
                 {
-                    "enum": [
-                        "Blade"
-                    ],
+                    "const": "Blade",
                     "extensions": [
                         ".blade",
                         ".blade.php"
                     ]
                 },
                 {
-                    "enum": [
-                        "BlitzBasic"
-                    ],
+                    "const": "BlitzBasic",
                     "extensions": [
                         ".bb",
                         ".decls"
                     ]
                 },
                 {
-                    "enum": [
-                        "BlitzMax"
-                    ],
+                    "const": "BlitzMax",
                     "extensions": [
                         ".bmx"
                     ]
                 },
                 {
-                    "enum": [
-                        "Bluespec"
-                    ],
+                    "const": "Bluespec",
                     "extensions": [
                         ".bsv"
                     ]
                 },
                 {
-                    "enum": [
-                        "Boo"
-                    ],
+                    "const": "Boo",
                     "extensions": [
                         ".boo"
                     ]
                 },
                 {
-                    "enum": [
-                        "Brainfuck"
-                    ],
+                    "const": "Brainfuck",
                     "extensions": [
                         ".b",
                         ".bf"
                     ]
                 },
                 {
-                    "enum": [
-                        "Brightscript"
-                    ],
+                    "const": "Brightscript",
                     "extensions": [
                         ".brs"
                     ]
                 },
                 {
-                    "enum": [
-                        "Bro"
-                    ],
+                    "const": "Bro",
                     "extensions": [
                         ".bro"
                     ]
                 },
                 {
-                    "enum": [
-                        "C"
-                    ],
+                    "const": "C",
                     "extensions": [
                         ".c",
                         ".cats",
@@ -418,9 +328,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "C#"
-                    ],
+                    "const": "C#",
                     "extensions": [
                         ".cs",
                         ".cake",
@@ -429,9 +337,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "C++"
-                    ],
+                    "const": "C++",
                     "extensions": [
                         ".cpp",
                         ".c++",
@@ -453,33 +359,25 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "C-ObjDump"
-                    ],
+                    "const": "C-ObjDump",
                     "extensions": [
                         ".c-objdump"
                     ]
                 },
                 {
-                    "enum": [
-                        "C2hs Haskell"
-                    ],
+                    "const": "C2hs Haskell",
                     "extensions": [
                         ".chs"
                     ]
                 },
                 {
-                    "enum": [
-                        "CLIPS"
-                    ],
+                    "const": "CLIPS",
                     "extensions": [
                         ".clp"
                     ]
                 },
                 {
-                    "enum": [
-                        "CMake"
-                    ],
+                    "const": "CMake",
                     "extensions": [
                         ".cmake",
                         ".cmake.in"
@@ -489,9 +387,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "COBOL"
-                    ],
+                    "const": "COBOL",
                     "extensions": [
                         ".cob",
                         ".cbl",
@@ -501,130 +397,98 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "COLLADA"
-                    ],
+                    "const": "COLLADA",
                     "extensions": [
                         ".dae"
                     ]
                 },
                 {
-                    "enum": [
-                        "CSON"
-                    ],
+                    "const": "CSON",
                     "extensions": [
                         ".cson"
                     ]
                 },
                 {
-                    "enum": [
-                        "CSS"
-                    ],
+                    "const": "CSS",
                     "extensions": [
                         ".css"
                     ]
                 },
                 {
-                    "enum": [
-                        "CSV"
-                    ],
+                    "const": "CSV",
                     "extensions": [
                         ".csv"
                     ]
                 },
                 {
-                    "enum": [
-                        "CWeb"
-                    ],
+                    "const": "CWeb",
                     "extensions": [
                         ".w"
                     ]
                 },
                 {
-                    "enum": [
-                        "Cap'n Proto"
-                    ],
+                    "const": "Cap'n Proto",
                     "extensions": [
                         ".capnp"
                     ]
                 },
                 {
-                    "enum": [
-                        "CartoCSS"
-                    ],
+                    "const": "CartoCSS",
                     "extensions": [
                         ".mss"
                     ]
                 },
                 {
-                    "enum": [
-                        "Ceylon"
-                    ],
+                    "const": "Ceylon",
                     "extensions": [
                         ".ceylon"
                     ]
                 },
                 {
-                    "enum": [
-                        "Chapel"
-                    ],
+                    "const": "Chapel",
                     "extensions": [
                         ".chpl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Charity"
-                    ],
+                    "const": "Charity",
                     "extensions": [
                         ".ch"
                     ]
                 },
                 {
-                    "enum": [
-                        "ChucK"
-                    ],
+                    "const": "ChucK",
                     "extensions": [
                         ".ck"
                     ]
                 },
                 {
-                    "enum": [
-                        "Cirru"
-                    ],
+                    "const": "Cirru",
                     "extensions": [
                         ".cirru"
                     ]
                 },
                 {
-                    "enum": [
-                        "Clarion"
-                    ],
+                    "const": "Clarion",
                     "extensions": [
                         ".clw"
                     ]
                 },
                 {
-                    "enum": [
-                        "Clean"
-                    ],
+                    "const": "Clean",
                     "extensions": [
                         ".icl",
                         ".dcl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Click"
-                    ],
+                    "const": "Click",
                     "extensions": [
                         ".click"
                     ]
                 },
                 {
-                    "enum": [
-                        "Clojure"
-                    ],
+                    "const": "Clojure",
                     "extensions": [
                         ".clj",
                         ".boot",
@@ -641,34 +505,26 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Closure Templates"
-                    ],
+                    "const": "Closure Templates",
                     "extensions": [
                         ".soy"
                     ]
                 },
                 {
-                    "enum": [
-                        "Cloud Firestore Security Rules"
-                    ],
+                    "const": "Cloud Firestore Security Rules",
                     "filenames": [
                         "firestore.rules"
                     ]
                 },
                 {
-                    "enum": [
-                        "CoNLL-U"
-                    ],
+                    "const": "CoNLL-U",
                     "extensions": [
                         ".conllu",
                         ".conll"
                     ]
                 },
                 {
-                    "enum": [
-                        "CoffeeScript"
-                    ],
+                    "const": "CoffeeScript",
                     "extensions": [
                         ".coffee",
                         "._coffee",
@@ -681,26 +537,20 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "ColdFusion"
-                    ],
+                    "const": "ColdFusion",
                     "extensions": [
                         ".cfm",
                         ".cfml"
                     ]
                 },
                 {
-                    "enum": [
-                        "ColdFusion CFC"
-                    ],
+                    "const": "ColdFusion CFC",
                     "extensions": [
                         ".cfc"
                     ]
                 },
                 {
-                    "enum": [
-                        "Common Lisp"
-                    ],
+                    "const": "Common Lisp",
                     "extensions": [
                         ".lisp",
                         ".asd",
@@ -713,43 +563,33 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Common Workflow Language"
-                    ],
+                    "const": "Common Workflow Language",
                     "extensions": [
                         ".cwl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Component Pascal"
-                    ],
+                    "const": "Component Pascal",
                     "extensions": [
                         ".cp",
                         ".cps"
                     ]
                 },
                 {
-                    "enum": [
-                        "Cool"
-                    ],
+                    "const": "Cool",
                     "extensions": [
                         ".cl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Coq"
-                    ],
+                    "const": "Coq",
                     "extensions": [
                         ".coq",
                         ".v"
                     ]
                 },
                 {
-                    "enum": [
-                        "Cpp-ObjDump"
-                    ],
+                    "const": "Cpp-ObjDump",
                     "extensions": [
                         ".cppobjdump",
                         ".c++-objdump",
@@ -759,67 +599,51 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Creole"
-                    ],
+                    "const": "Creole",
                     "extensions": [
                         ".creole"
                     ]
                 },
                 {
-                    "enum": [
-                        "Crystal"
-                    ],
+                    "const": "Crystal",
                     "extensions": [
                         ".cr"
                     ]
                 },
                 {
-                    "enum": [
-                        "Csound"
-                    ],
+                    "const": "Csound",
                     "extensions": [
                         ".orc",
                         ".udo"
                     ]
                 },
                 {
-                    "enum": [
-                        "Csound Document"
-                    ],
+                    "const": "Csound Document",
                     "extensions": [
                         ".csd"
                     ]
                 },
                 {
-                    "enum": [
-                        "Csound Score"
-                    ],
+                    "const": "Csound Score",
                     "extensions": [
                         ".sco"
                     ]
                 },
                 {
-                    "enum": [
-                        "Cuda"
-                    ],
+                    "const": "Cuda",
                     "extensions": [
                         ".cu",
                         ".cuh"
                     ]
                 },
                 {
-                    "enum": [
-                        "Cycript"
-                    ],
+                    "const": "Cycript",
                     "extensions": [
                         ".cy"
                     ]
                 },
                 {
-                    "enum": [
-                        "Cython"
-                    ],
+                    "const": "Cython",
                     "extensions": [
                         ".pyx",
                         ".pxd",
@@ -827,93 +651,71 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "D"
-                    ],
+                    "const": "D",
                     "extensions": [
                         ".d",
                         ".di"
                     ]
                 },
                 {
-                    "enum": [
-                        "D-ObjDump"
-                    ],
+                    "const": "D-ObjDump",
                     "extensions": [
                         ".d-objdump"
                     ]
                 },
                 {
-                    "enum": [
-                        "DIGITAL Command Language"
-                    ],
+                    "const": "DIGITAL Command Language",
                     "extensions": [
                         ".com"
                     ]
                 },
                 {
-                    "enum": [
-                        "DM"
-                    ],
+                    "const": "DM",
                     "extensions": [
                         ".dm"
                     ]
                 },
                 {
-                    "enum": [
-                        "DNS Zone"
-                    ],
+                    "const": "DNS Zone",
                     "extensions": [
                         ".zone",
                         ".arpa"
                     ]
                 },
                 {
-                    "enum": [
-                        "DTrace"
-                    ],
+                    "const": "DTrace",
                     "extensions": [
                         ".d"
                     ]
                 },
                 {
-                    "enum": [
-                        "Darcs Patch"
-                    ],
+                    "const": "Darcs Patch",
                     "extensions": [
                         ".darcspatch",
                         ".dpatch"
                     ]
                 },
                 {
-                    "enum": [
-                        "Dart"
-                    ],
+                    "const": "Dart",
                     "extensions": [
                         ".dart"
                     ]
                 },
                 {
-                    "enum": [
-                        "DataWeave"
-                    ],
+                    "const": "DataWeave",
                     "extensions": [
                         ".dwl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Diff"
-                    ],
+                    "const": "Diff",
                     "extensions": [
                         ".diff",
                         ".patch"
                     ]
                 },
                 {
-                    "enum": [
-                        "Dockerfile"
-                    ],
+                    "const": "Dockerfile",
                     "extensions": [
                         ".dockerfile"
                     ],
@@ -922,17 +724,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Dogescript"
-                    ],
+                    "const": "Dogescript",
                     "extensions": [
                         ".djs"
                     ]
                 },
                 {
-                    "enum": [
-                        "Dylan"
-                    ],
+                    "const": "Dylan",
                     "extensions": [
                         ".dylan",
                         ".dyl",
@@ -941,99 +739,75 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "E"
-                    ],
+                    "const": "E",
                     "extensions": [
                         ".E"
                     ]
                 },
                 {
-                    "enum": [
-                        "EBNF"
-                    ],
+                    "const": "EBNF",
                     "extensions": [
                         ".ebnf"
                     ]
                 },
                 {
-                    "enum": [
-                        "ECL"
-                    ],
+                    "const": "ECL",
                     "extensions": [
                         ".ecl",
                         ".eclxml"
                     ]
                 },
                 {
-                    "enum": [
-                        "ECLiPSe"
-                    ],
+                    "const": "ECLiPSe",
                     "extensions": [
                         ".ecl"
                     ]
                 },
                 {
-                    "enum": [
-                        "EJS"
-                    ],
+                    "const": "EJS",
                     "extensions": [
                         ".ejs"
                     ]
                 },
                 {
-                    "enum": [
-                        "EQ"
-                    ],
+                    "const": "EQ",
                     "extensions": [
                         ".eq"
                     ]
                 },
                 {
-                    "enum": [
-                        "Eagle"
-                    ],
+                    "const": "Eagle",
                     "extensions": [
                         ".sch",
                         ".brd"
                     ]
                 },
                 {
-                    "enum": [
-                        "Easybuild"
-                    ],
+                    "const": "Easybuild",
                     "extensions": [
                         ".eb"
                     ]
                 },
                 {
-                    "enum": [
-                        "Ecere Projects"
-                    ],
+                    "const": "Ecere Projects",
                     "extensions": [
                         ".epj"
                     ]
                 },
                 {
-                    "enum": [
-                        "Edje Data Collection"
-                    ],
+                    "const": "Edje Data Collection",
                     "extensions": [
                         ".edc"
                     ]
                 },
                 {
-                    "enum": [
-                        "Eiffel"
-                    ],
+                    "const": "Eiffel",
                     "extensions": [
                         ".e"
                     ]
                 },
                 {
-                    "enum": [
-                        "Elixir"
-                    ],
+                    "const": "Elixir",
                     "extensions": [
                         ".ex",
                         ".exs"
@@ -1043,17 +817,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Elm"
-                    ],
+                    "const": "Elm",
                     "extensions": [
                         ".elm"
                     ]
                 },
                 {
-                    "enum": [
-                        "Emacs Lisp"
-                    ],
+                    "const": "Emacs Lisp",
                     "extensions": [
                         ".el",
                         ".emacs",
@@ -1073,18 +843,14 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "EmberScript"
-                    ],
+                    "const": "EmberScript",
                     "extensions": [
                         ".em",
                         ".emberscript"
                     ]
                 },
                 {
-                    "enum": [
-                        "Erlang"
-                    ],
+                    "const": "Erlang",
                     "extensions": [
                         ".erl",
                         ".app.src",
@@ -1102,9 +868,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "F#"
-                    ],
+                    "const": "F#",
                     "extensions": [
                         ".fs",
                         ".fsi",
@@ -1112,18 +876,26 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "FLUX"
-                    ],
+                    "const": "F*",
+                    "extensions": [
+                        ".fst"
+                    ]
+                },
+                {
+                    "const": "FIGlet Font",
+                    "extensions": [
+                        ".flf"
+                    ]
+                },
+                {
+                    "const": "FLUX",
                     "extensions": [
                         ".fx",
                         ".flux"
                     ]
                 },
                 {
-                    "enum": [
-                        "Factor"
-                    ],
+                    "const": "Factor",
                     "extensions": [
                         ".factor"
                     ],
@@ -1133,9 +905,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Fancy"
-                    ],
+                    "const": "Fancy",
                     "extensions": [
                         ".fy",
                         ".fancypack"
@@ -1145,42 +915,32 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Fantom"
-                    ],
+                    "const": "Fantom",
                     "extensions": [
                         ".fan"
                     ]
                 },
                 {
-                    "enum": [
-                        "Filebench WML"
-                    ],
+                    "const": "Filebench WML",
                     "extensions": [
                         ".f"
                     ]
                 },
                 {
-                    "enum": [
-                        "Filterscript"
-                    ],
+                    "const": "Filterscript",
                     "extensions": [
                         ".fs"
                     ]
                 },
                 {
-                    "enum": [
-                        "Formatted"
-                    ],
+                    "const": "Formatted",
                     "extensions": [
                         ".for",
                         ".eam.fs"
                     ]
                 },
                 {
-                    "enum": [
-                        "Forth"
-                    ],
+                    "const": "Forth",
                     "extensions": [
                         ".fth",
                         ".4th",
@@ -1193,9 +953,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Fortran"
-                    ],
+                    "const": "Fortran",
                     "extensions": [
                         ".f90",
                         ".f",
@@ -1208,25 +966,19 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "FreeMarker"
-                    ],
+                    "const": "FreeMarker",
                     "extensions": [
                         ".ftl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Frege"
-                    ],
+                    "const": "Frege",
                     "extensions": [
                         ".fr"
                     ]
                 },
                 {
-                    "enum": [
-                        "G-code"
-                    ],
+                    "const": "G-code",
                     "extensions": [
                         ".g",
                         ".gco",
@@ -1234,17 +986,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "GAMS"
-                    ],
+                    "const": "GAMS",
                     "extensions": [
                         ".gms"
                     ]
                 },
                 {
-                    "enum": [
-                        "GAP"
-                    ],
+                    "const": "GAP",
                     "extensions": [
                         ".g",
                         ".gap",
@@ -1254,34 +1002,26 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "GCC Machine Description"
-                    ],
+                    "const": "GCC Machine Description",
                     "extensions": [
                         ".md"
                     ]
                 },
                 {
-                    "enum": [
-                        "GDB"
-                    ],
+                    "const": "GDB",
                     "extensions": [
                         ".gdb",
                         ".gdbinit"
                     ]
                 },
                 {
-                    "enum": [
-                        "GDScript"
-                    ],
+                    "const": "GDScript",
                     "extensions": [
                         ".gd"
                     ]
                 },
                 {
-                    "enum": [
-                        "GLSL"
-                    ],
+                    "const": "GLSL",
                     "extensions": [
                         ".glsl",
                         ".fp",
@@ -1304,9 +1044,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "GN"
-                    ],
+                    "const": "GN",
                     "extensions": [
                         ".gn",
                         ".gni"
@@ -1316,49 +1054,37 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Game Maker Language"
-                    ],
+                    "const": "Game Maker Language",
                     "extensions": [
                         ".gml"
                     ]
                 },
                 {
-                    "enum": [
-                        "Genie"
-                    ],
+                    "const": "Genie",
                     "extensions": [
                         ".gs"
                     ]
                 },
                 {
-                    "enum": [
-                        "Genshi"
-                    ],
+                    "const": "Genshi",
                     "extensions": [
                         ".kid"
                     ]
                 },
                 {
-                    "enum": [
-                        "Gentoo Ebuild"
-                    ],
+                    "const": "Gentoo Ebuild",
                     "extensions": [
                         ".ebuild"
                     ]
                 },
                 {
-                    "enum": [
-                        "Gentoo Eclass"
-                    ],
+                    "const": "Gentoo Eclass",
                     "extensions": [
                         ".eclass"
                     ]
                 },
                 {
-                    "enum": [
-                        "Gerber Image"
-                    ],
+                    "const": "Gerber Image",
                     "extensions": [
                         ".gbr",
                         ".gbl",
@@ -1375,34 +1101,32 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Gettext Catalog"
-                    ],
+                    "const": "Gettext Catalog",
                     "extensions": [
                         ".po",
                         ".pot"
                     ]
                 },
                 {
-                    "enum": [
-                        "Gherkin"
-                    ],
+                    "const": "Gherkin",
                     "extensions": [
                         ".feature"
                     ]
                 },
                 {
-                    "enum": [
-                        "Glyph"
-                    ],
+                    "const": "Glyph",
                     "extensions": [
                         ".glf"
                     ]
                 },
                 {
-                    "enum": [
-                        "Gnuplot"
-                    ],
+                    "const": "Glyph Bitmap Distribution Format",
+                    "extensions": [
+                        ".bdf"
+                    ]
+                },
+                {
+                    "const": "Gnuplot",
                     "extensions": [
                         ".gp",
                         ".gnu",
@@ -1412,25 +1136,19 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Go"
-                    ],
+                    "const": "Go",
                     "extensions": [
                         ".go"
                     ]
                 },
                 {
-                    "enum": [
-                        "Golo"
-                    ],
+                    "const": "Golo",
                     "extensions": [
                         ".golo"
                     ]
                 },
                 {
-                    "enum": [
-                        "Gosu"
-                    ],
+                    "const": "Gosu",
                     "extensions": [
                         ".gs",
                         ".gst",
@@ -1439,59 +1157,45 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Grace"
-                    ],
+                    "const": "Grace",
                     "extensions": [
                         ".grace"
                     ]
                 },
                 {
-                    "enum": [
-                        "Gradle"
-                    ],
+                    "const": "Gradle",
                     "extensions": [
                         ".gradle"
                     ]
                 },
                 {
-                    "enum": [
-                        "Grammatical Framework"
-                    ],
+                    "const": "Grammatical Framework",
                     "extensions": [
                         ".gf"
                     ]
                 },
                 {
-                    "enum": [
-                        "Graph Modeling Language"
-                    ],
+                    "const": "Graph Modeling Language",
                     "extensions": [
                         ".gml"
                     ]
                 },
                 {
-                    "enum": [
-                        "GraphQL"
-                    ],
+                    "const": "GraphQL",
                     "extensions": [
                         ".graphql",
                         ".gql"
                     ]
                 },
                 {
-                    "enum": [
-                        "Graphviz (DOT)"
-                    ],
+                    "const": "Graphviz (DOT)",
                     "extensions": [
                         ".dot",
                         ".gv"
                     ]
                 },
                 {
-                    "enum": [
-                        "Groovy"
-                    ],
+                    "const": "Groovy",
                     "extensions": [
                         ".groovy",
                         ".grt",
@@ -1503,17 +1207,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Groovy Server Pages"
-                    ],
+                    "const": "Groovy Server Pages",
                     "extensions": [
                         ".gsp"
                     ]
                 },
                 {
-                    "enum": [
-                        "HCL"
-                    ],
+                    "const": "HCL",
                     "extensions": [
                         ".hcl",
                         ".tf",
@@ -1521,9 +1221,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "HLSL"
-                    ],
+                    "const": "HLSL",
                     "extensions": [
                         ".hlsl",
                         ".cginc",
@@ -1533,9 +1231,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "HTML"
-                    ],
+                    "const": "HTML",
                     "extensions": [
                         ".html",
                         ".htm",
@@ -1547,9 +1243,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "HTML+Django"
-                    ],
+                    "const": "HTML+Django",
                     "extensions": [
                         ".jinja",
                         ".jinja2",
@@ -1558,155 +1252,120 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "HTML+ECR"
-                    ],
+                    "const": "HTML+ECR",
                     "extensions": [
                         ".ecr"
                     ]
                 },
                 {
-                    "enum": [
-                        "HTML+EEX"
-                    ],
+                    "const": "HTML+EEX",
                     "extensions": [
                         ".eex"
                     ]
                 },
                 {
-                    "enum": [
-                        "HTML+ERB"
-                    ],
+                    "const": "HTML+ERB",
                     "extensions": [
                         ".erb",
                         ".erb.deface"
                     ]
                 },
                 {
-                    "enum": [
-                        "HTML+PHP"
-                    ],
+                    "const": "HTML+PHP",
                     "extensions": [
                         ".phtml"
                     ]
                 },
                 {
-                    "enum": [
-                        "HTTP"
-                    ],
+                    "const": "HTTP",
                     "extensions": [
                         ".http"
                     ]
                 },
                 {
-                    "enum": [
-                        "HXML"
-                    ],
+                    "const": "HXML",
                     "extensions": [
                         ".hxml"
                     ]
                 },
                 {
-                    "enum": [
-                        "Hack"
-                    ],
+                    "const": "Hack",
                     "extensions": [
                         ".hh",
                         ".php"
                     ]
                 },
                 {
-                    "enum": [
-                        "Haml"
-                    ],
+                    "const": "Haml",
                     "extensions": [
                         ".haml",
                         ".haml.deface"
                     ]
                 },
                 {
-                    "enum": [
-                        "Handlebars"
-                    ],
+                    "const": "Handlebars",
                     "extensions": [
                         ".handlebars",
                         ".hbs"
                     ]
                 },
                 {
-                    "enum": [
-                        "Harbour"
-                    ],
+                    "const": "Harbour",
                     "extensions": [
                         ".hb"
                     ]
                 },
                 {
-                    "enum": [
-                        "Haskell"
-                    ],
+                    "const": "Haskell",
                     "extensions": [
                         ".hs",
                         ".hsc"
                     ]
                 },
                 {
-                    "enum": [
-                        "Haxe"
-                    ],
+                    "const": "Haxe",
                     "extensions": [
                         ".hx",
                         ".hxsl"
                     ]
                 },
                 {
-                    "enum": [
-                        "HiveQL"
-                    ],
+                    "const": "HiveQL",
                     "extensions": [
                         ".q"
                     ]
                 },
                 {
-                    "enum": [
-                        "Hy"
-                    ],
+                    "const": "Hy",
                     "extensions": [
                         ".hy"
                     ]
                 },
                 {
-                    "enum": [
-                        "HyPhy"
-                    ],
+                    "const": "HyPhy",
                     "extensions": [
                         ".bf"
                     ]
                 },
                 {
-                    "enum": [
-                        "IDL"
-                    ],
+                    "const": "IDL",
                     "extensions": [
                         ".pro",
                         ".dlm"
                     ]
                 },
                 {
-                    "enum": [
-                        "IGOR Pro"
-                    ],
+                    "const": "IGOR Pro",
                     "extensions": [
                         ".ipf"
                     ]
                 },
                 {
-                    "enum": [
-                        "INI"
-                    ],
+                    "const": "INI",
                     "extensions": [
                         ".ini",
                         ".cfg",
+                        ".lektorproject",
                         ".prefs",
                         ".pro",
                         ".properties"
@@ -1718,93 +1377,71 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "IRC log"
-                    ],
+                    "const": "IRC log",
                     "extensions": [
                         ".irclog",
                         ".weechatlog"
                     ]
                 },
                 {
-                    "enum": [
-                        "Idris"
-                    ],
+                    "const": "Idris",
                     "extensions": [
                         ".idr",
                         ".lidr"
                     ]
                 },
                 {
-                    "enum": [
-                        "Inform 7"
-                    ],
+                    "const": "Inform 7",
                     "extensions": [
                         ".ni",
                         ".i7x"
                     ]
                 },
                 {
-                    "enum": [
-                        "Inno Setup"
-                    ],
+                    "const": "Inno Setup",
                     "extensions": [
                         ".iss"
                     ]
                 },
                 {
-                    "enum": [
-                        "Io"
-                    ],
+                    "const": "Io",
                     "extensions": [
                         ".io"
                     ]
                 },
                 {
-                    "enum": [
-                        "Ioke"
-                    ],
+                    "const": "Ioke",
                     "extensions": [
                         ".ik"
                     ]
                 },
                 {
-                    "enum": [
-                        "Isabelle"
-                    ],
+                    "const": "Isabelle",
                     "extensions": [
                         ".thy"
                     ]
                 },
                 {
-                    "enum": [
-                        "Isabelle ROOT"
-                    ],
+                    "const": "Isabelle ROOT",
                     "filenames": [
                         "ROOT"
                     ]
                 },
                 {
-                    "enum": [
-                        "J"
-                    ],
+                    "const": "J",
                     "extensions": [
                         ".ijs"
                     ]
                 },
                 {
-                    "enum": [
-                        "JFlex"
-                    ],
+                    "const": "JFlex",
                     "extensions": [
                         ".flex",
                         ".jflex"
                     ]
                 },
                 {
-                    "enum": [
-                        "JSON"
-                    ],
+                    "const": "JSON",
                     "extensions": [
                         ".json",
                         ".avsc",
@@ -1816,13 +1453,13 @@
                         ".tfstate.backup",
                         ".topojson",
                         ".webapp",
-                        ".webmanifest"
+                        ".webmanifest",
+                        ".yy",
+                        ".yyp"
                     ],
                     "filenames": [
                         ".arcconfig",
                         ".htmlhintrc",
-                        ".jscsrc",
-                        ".jshintrc",
                         ".tern-config",
                         ".tern-project",
                         "composer.lock",
@@ -1830,69 +1467,75 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "JSON5"
-                    ],
+                    "const": "JSON with Comments",
                     "extensions": [
-                        ".json5"
+                        ".sublime-build",
+                        ".sublime-commands",
+                        ".sublime-completions",
+                        ".sublime-keymap",
+                        ".sublime-macro",
+                        ".sublime-menu",
+                        ".sublime-mousemap",
+                        ".sublime-project",
+                        ".sublime-settings",
+                        ".sublime-theme",
+                        ".sublime-workspace",
+                        ".sublime_metrics",
+                        ".sublime_session"
                     ],
                     "filenames": [
                         ".babelrc",
-                        ".jslintrc"
+                        ".eslintrc.json",
+                        ".jscsrc",
+                        ".jshintrc",
+                        ".jslintrc",
+                        "tsconfig.json"
                     ]
                 },
                 {
-                    "enum": [
-                        "JSONLD"
-                    ],
+                    "const": "JSON5",
+                    "extensions": [
+                        ".json5"
+                    ]
+                },
+                {
+                    "const": "JSONLD",
                     "extensions": [
                         ".jsonld"
                     ]
                 },
                 {
-                    "enum": [
-                        "JSONiq"
-                    ],
+                    "const": "JSONiq",
                     "extensions": [
                         ".jq"
                     ]
                 },
                 {
-                    "enum": [
-                        "JSX"
-                    ],
+                    "const": "JSX",
                     "extensions": [
                         ".jsx"
                     ]
                 },
                 {
-                    "enum": [
-                        "Jasmin"
-                    ],
+                    "const": "Jasmin",
                     "extensions": [
                         ".j"
                     ]
                 },
                 {
-                    "enum": [
-                        "Java"
-                    ],
+                    "const": "Java",
                     "extensions": [
                         ".java"
                     ]
                 },
                 {
-                    "enum": [
-                        "Java Server Pages"
-                    ],
+                    "const": "Java Server Pages",
                     "extensions": [
                         ".jsp"
                     ]
                 },
                 {
-                    "enum": [
-                        "JavaScript"
-                    ],
+                    "const": "JavaScript",
                     "extensions": [
                         ".js",
                         "._js",
@@ -1920,42 +1563,32 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Jison"
-                    ],
+                    "const": "Jison",
                     "extensions": [
                         ".jison"
                     ]
                 },
                 {
-                    "enum": [
-                        "Jison Lex"
-                    ],
+                    "const": "Jison Lex",
                     "extensions": [
                         ".jisonlex"
                     ]
                 },
                 {
-                    "enum": [
-                        "Jolie"
-                    ],
+                    "const": "Jolie",
                     "extensions": [
                         ".ol",
                         ".iol"
                     ]
                 },
                 {
-                    "enum": [
-                        "Julia"
-                    ],
+                    "const": "Julia",
                     "extensions": [
                         ".jl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Jupyter Notebook"
-                    ],
+                    "const": "Jupyter Notebook",
                     "extensions": [
                         ".ipynb"
                     ],
@@ -1964,17 +1597,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "KRL"
-                    ],
+                    "const": "KRL",
                     "extensions": [
                         ".krl"
                     ]
                 },
                 {
-                    "enum": [
-                        "KiCad Layout"
-                    ],
+                    "const": "KiCad Layout",
                     "extensions": [
                         ".kicad_pcb",
                         ".kicad_mod",
@@ -1985,33 +1614,25 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "KiCad Legacy Layout"
-                    ],
+                    "const": "KiCad Legacy Layout",
                     "extensions": [
                         ".brd"
                     ]
                 },
                 {
-                    "enum": [
-                        "KiCad Schematic"
-                    ],
+                    "const": "KiCad Schematic",
                     "extensions": [
                         ".sch"
                     ]
                 },
                 {
-                    "enum": [
-                        "Kit"
-                    ],
+                    "const": "Kit",
                     "extensions": [
                         ".kit"
                     ]
                 },
                 {
-                    "enum": [
-                        "Kotlin"
-                    ],
+                    "const": "Kotlin",
                     "extensions": [
                         ".kt",
                         ".ktm",
@@ -2019,50 +1640,38 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "LFE"
-                    ],
+                    "const": "LFE",
                     "extensions": [
                         ".lfe"
                     ]
                 },
                 {
-                    "enum": [
-                        "LLVM"
-                    ],
+                    "const": "LLVM",
                     "extensions": [
                         ".ll"
                     ]
                 },
                 {
-                    "enum": [
-                        "LOLCODE"
-                    ],
+                    "const": "LOLCODE",
                     "extensions": [
                         ".lol"
                     ]
                 },
                 {
-                    "enum": [
-                        "LSL"
-                    ],
+                    "const": "LSL",
                     "extensions": [
                         ".lsl",
                         ".lslp"
                     ]
                 },
                 {
-                    "enum": [
-                        "LabVIEW"
-                    ],
+                    "const": "LabVIEW",
                     "extensions": [
                         ".lvproj"
                     ]
                 },
                 {
-                    "enum": [
-                        "Lasso"
-                    ],
+                    "const": "Lasso",
                     "extensions": [
                         ".lasso",
                         ".las",
@@ -2072,61 +1681,47 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Latte"
-                    ],
+                    "const": "Latte",
                     "extensions": [
                         ".latte"
                     ]
                 },
                 {
-                    "enum": [
-                        "Lean"
-                    ],
+                    "const": "Lean",
                     "extensions": [
                         ".lean",
                         ".hlean"
                     ]
                 },
                 {
-                    "enum": [
-                        "Less"
-                    ],
+                    "const": "Less",
                     "extensions": [
                         ".less"
                     ]
                 },
                 {
-                    "enum": [
-                        "Lex"
-                    ],
+                    "const": "Lex",
                     "extensions": [
                         ".l",
                         ".lex"
                     ]
                 },
                 {
-                    "enum": [
-                        "LilyPond"
-                    ],
+                    "const": "LilyPond",
                     "extensions": [
                         ".ly",
                         ".ily"
                     ]
                 },
                 {
-                    "enum": [
-                        "Limbo"
-                    ],
+                    "const": "Limbo",
                     "extensions": [
                         ".b",
                         ".m"
                     ]
                 },
                 {
-                    "enum": [
-                        "Linker Script"
-                    ],
+                    "const": "Linker Script",
                     "extensions": [
                         ".ld",
                         ".lds",
@@ -2137,49 +1732,37 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Linux Kernel Module"
-                    ],
+                    "const": "Linux Kernel Module",
                     "extensions": [
                         ".mod"
                     ]
                 },
                 {
-                    "enum": [
-                        "Liquid"
-                    ],
+                    "const": "Liquid",
                     "extensions": [
                         ".liquid"
                     ]
                 },
                 {
-                    "enum": [
-                        "Literate Agda"
-                    ],
+                    "const": "Literate Agda",
                     "extensions": [
                         ".lagda"
                     ]
                 },
                 {
-                    "enum": [
-                        "Literate CoffeeScript"
-                    ],
+                    "const": "Literate CoffeeScript",
                     "extensions": [
                         ".litcoffee"
                     ]
                 },
                 {
-                    "enum": [
-                        "Literate Haskell"
-                    ],
+                    "const": "Literate Haskell",
                     "extensions": [
                         ".lhs"
                     ]
                 },
                 {
-                    "enum": [
-                        "LiveScript"
-                    ],
+                    "const": "LiveScript",
                     "extensions": [
                         ".ls",
                         "._ls"
@@ -2189,9 +1772,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Logos"
-                    ],
+                    "const": "Logos",
                     "extensions": [
                         ".xm",
                         ".x",
@@ -2199,18 +1780,14 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Logtalk"
-                    ],
+                    "const": "Logtalk",
                     "extensions": [
                         ".lgt",
                         ".logtalk"
                     ]
                 },
                 {
-                    "enum": [
-                        "LookML"
-                    ],
+                    "const": "LookML",
                     "extensions": [
                         ".lookml",
                         ".model.lkml",
@@ -2218,17 +1795,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "LoomScript"
-                    ],
+                    "const": "LoomScript",
                     "extensions": [
                         ".ls"
                     ]
                 },
                 {
-                    "enum": [
-                        "Lua"
-                    ],
+                    "const": "Lua",
                     "extensions": [
                         ".lua",
                         ".fcgi",
@@ -2240,26 +1813,20 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "M"
-                    ],
+                    "const": "M",
                     "extensions": [
                         ".mumps",
                         ".m"
                     ]
                 },
                 {
-                    "enum": [
-                        "M4"
-                    ],
+                    "const": "M4",
                     "extensions": [
                         ".m4"
                     ]
                 },
                 {
-                    "enum": [
-                        "M4Sugar"
-                    ],
+                    "const": "M4Sugar",
                     "extensions": [
                         ".m4"
                     ],
@@ -2268,53 +1835,41 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "MAXScript"
-                    ],
+                    "const": "MAXScript",
                     "extensions": [
                         ".ms",
                         ".mcr"
                     ]
                 },
                 {
-                    "enum": [
-                        "MQL4"
-                    ],
+                    "const": "MQL4",
                     "extensions": [
                         ".mq4",
                         ".mqh"
                     ]
                 },
                 {
-                    "enum": [
-                        "MQL5"
-                    ],
+                    "const": "MQL5",
                     "extensions": [
                         ".mq5",
                         ".mqh"
                     ]
                 },
                 {
-                    "enum": [
-                        "MTML"
-                    ],
+                    "const": "MTML",
                     "extensions": [
                         ".mtml"
                     ]
                 },
                 {
-                    "enum": [
-                        "MUF"
-                    ],
+                    "const": "MUF",
                     "extensions": [
                         ".muf",
                         ".m"
                     ]
                 },
                 {
-                    "enum": [
-                        "Makefile"
-                    ],
+                    "const": "Makefile",
                     "extensions": [
                         ".mak",
                         ".d",
@@ -2339,18 +1894,14 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Mako"
-                    ],
+                    "const": "Mako",
                     "extensions": [
                         ".mako",
                         ".mao"
                     ]
                 },
                 {
-                    "enum": [
-                        "Markdown"
-                    ],
+                    "const": "Markdown",
                     "extensions": [
                         ".md",
                         ".markdown",
@@ -2361,28 +1912,25 @@
                         ".mkdown",
                         ".ronn",
                         ".workbook"
+                    ],
+                    "filenames": [
+                        "contents.lr"
                     ]
                 },
                 {
-                    "enum": [
-                        "Marko"
-                    ],
+                    "const": "Marko",
                     "extensions": [
                         ".marko"
                     ]
                 },
                 {
-                    "enum": [
-                        "Mask"
-                    ],
+                    "const": "Mask",
                     "extensions": [
                         ".mask"
                     ]
                 },
                 {
-                    "enum": [
-                        "Mathematica"
-                    ],
+                    "const": "Mathematica",
                     "extensions": [
                         ".mathematica",
                         ".cdf",
@@ -2396,26 +1944,20 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Matlab"
-                    ],
+                    "const": "Matlab",
                     "extensions": [
                         ".matlab",
                         ".m"
                     ]
                 },
                 {
-                    "enum": [
-                        "Maven POM"
-                    ],
+                    "const": "Maven POM",
                     "filenames": [
                         "pom.xml"
                     ]
                 },
                 {
-                    "enum": [
-                        "Max"
-                    ],
+                    "const": "Max",
                     "extensions": [
                         ".maxpat",
                         ".maxhelp",
@@ -2425,52 +1967,40 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "MediaWiki"
-                    ],
+                    "const": "MediaWiki",
                     "extensions": [
                         ".mediawiki",
                         ".wiki"
                     ]
                 },
                 {
-                    "enum": [
-                        "Mercury"
-                    ],
+                    "const": "Mercury",
                     "extensions": [
                         ".m",
                         ".moo"
                     ]
                 },
                 {
-                    "enum": [
-                        "Meson"
-                    ],
+                    "const": "Meson",
                     "filenames": [
                         "meson.build",
                         "meson_options.txt"
                     ]
                 },
                 {
-                    "enum": [
-                        "Metal"
-                    ],
+                    "const": "Metal",
                     "extensions": [
                         ".metal"
                     ]
                 },
                 {
-                    "enum": [
-                        "MiniD"
-                    ],
+                    "const": "MiniD",
                     "extensions": [
                         ".minid"
                     ]
                 },
                 {
-                    "enum": [
-                        "Mirah"
-                    ],
+                    "const": "Mirah",
                     "extensions": [
                         ".druby",
                         ".duby",
@@ -2478,25 +2008,28 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Modelica"
-                    ],
+                    "const": "Modelica",
                     "extensions": [
                         ".mo"
                     ]
                 },
                 {
-                    "enum": [
-                        "Modula-2"
-                    ],
+                    "const": "Modula-2",
                     "extensions": [
                         ".mod"
                     ]
                 },
                 {
-                    "enum": [
-                        "Module Management System"
-                    ],
+                    "const": "Modula-3",
+                    "extensions": [
+                        ".i3",
+                        ".ig",
+                        ".m3",
+                        ".mg"
+                    ]
+                },
+                {
+                    "const": "Module Management System",
                     "extensions": [
                         ".mms",
                         ".mmk"
@@ -2507,110 +2040,84 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Monkey"
-                    ],
+                    "const": "Monkey",
                     "extensions": [
                         ".monkey",
                         ".monkey2"
                     ]
                 },
                 {
-                    "enum": [
-                        "Moocode"
-                    ],
+                    "const": "Moocode",
                     "extensions": [
                         ".moo"
                     ]
                 },
                 {
-                    "enum": [
-                        "MoonScript"
-                    ],
+                    "const": "MoonScript",
                     "extensions": [
                         ".moon"
                     ]
                 },
                 {
-                    "enum": [
-                        "Myghty"
-                    ],
+                    "const": "Myghty",
                     "extensions": [
                         ".myt"
                     ]
                 },
                 {
-                    "enum": [
-                        "NCL"
-                    ],
+                    "const": "NCL",
                     "extensions": [
                         ".ncl"
                     ]
                 },
                 {
-                    "enum": [
-                        "NL"
-                    ],
+                    "const": "NL",
                     "extensions": [
                         ".nl"
                     ]
                 },
                 {
-                    "enum": [
-                        "NSIS"
-                    ],
+                    "const": "NSIS",
                     "extensions": [
                         ".nsi",
                         ".nsh"
                     ]
                 },
                 {
-                    "enum": [
-                        "Nearley"
-                    ],
+                    "const": "Nearley",
                     "extensions": [
                         ".ne",
                         ".nearley"
                     ]
                 },
                 {
-                    "enum": [
-                        "Nemerle"
-                    ],
+                    "const": "Nemerle",
                     "extensions": [
                         ".n"
                     ]
                 },
                 {
-                    "enum": [
-                        "NetLinx"
-                    ],
+                    "const": "NetLinx",
                     "extensions": [
                         ".axs",
                         ".axi"
                     ]
                 },
                 {
-                    "enum": [
-                        "NetLinx+ERB"
-                    ],
+                    "const": "NetLinx+ERB",
                     "extensions": [
                         ".axs.erb",
                         ".axi.erb"
                     ]
                 },
                 {
-                    "enum": [
-                        "NetLogo"
-                    ],
+                    "const": "NetLogo",
                     "extensions": [
                         ".nlogo"
                     ]
                 },
                 {
-                    "enum": [
-                        "NewLisp"
-                    ],
+                    "const": "NewLisp",
                     "extensions": [
                         ".nl",
                         ".lisp",
@@ -2618,9 +2125,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Nextflow"
-                    ],
+                    "const": "Nextflow",
                     "extensions": [
                         ".nf"
                     ],
@@ -2629,9 +2134,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Nginx"
-                    ],
+                    "const": "Nginx",
                     "extensions": [
                         ".nginxconf",
                         ".vhost"
@@ -2641,42 +2144,32 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Nim"
-                    ],
+                    "const": "Nim",
                     "extensions": [
                         ".nim",
                         ".nimrod"
                     ]
                 },
                 {
-                    "enum": [
-                        "Ninja"
-                    ],
+                    "const": "Ninja",
                     "extensions": [
                         ".ninja"
                     ]
                 },
                 {
-                    "enum": [
-                        "Nit"
-                    ],
+                    "const": "Nit",
                     "extensions": [
                         ".nit"
                     ]
                 },
                 {
-                    "enum": [
-                        "Nix"
-                    ],
+                    "const": "Nix",
                     "extensions": [
                         ".nix"
                     ]
                 },
                 {
-                    "enum": [
-                        "Nu"
-                    ],
+                    "const": "Nu",
                     "extensions": [
                         ".nu"
                     ],
@@ -2685,9 +2178,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "NumPy"
-                    ],
+                    "const": "NumPy",
                     "extensions": [
                         ".numpy",
                         ".numpyw",
@@ -2695,9 +2186,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "OCaml"
-                    ],
+                    "const": "OCaml",
                     "extensions": [
                         ".ml",
                         ".eliom",
@@ -2709,76 +2198,58 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "ObjDump"
-                    ],
+                    "const": "ObjDump",
                     "extensions": [
                         ".objdump"
                     ]
                 },
                 {
-                    "enum": [
-                        "Objective-C"
-                    ],
+                    "const": "Objective-C",
                     "extensions": [
                         ".m",
                         ".h"
                     ]
                 },
                 {
-                    "enum": [
-                        "Objective-C++"
-                    ],
+                    "const": "Objective-C++",
                     "extensions": [
                         ".mm"
                     ]
                 },
                 {
-                    "enum": [
-                        "Objective-J"
-                    ],
+                    "const": "Objective-J",
                     "extensions": [
                         ".j",
                         ".sj"
                     ]
                 },
                 {
-                    "enum": [
-                        "Omgrofl"
-                    ],
+                    "const": "Omgrofl",
                     "extensions": [
                         ".omgrofl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Opa"
-                    ],
+                    "const": "Opa",
                     "extensions": [
                         ".opa"
                     ]
                 },
                 {
-                    "enum": [
-                        "Opal"
-                    ],
+                    "const": "Opal",
                     "extensions": [
                         ".opal"
                     ]
                 },
                 {
-                    "enum": [
-                        "OpenCL"
-                    ],
+                    "const": "OpenCL",
                     "extensions": [
                         ".cl",
                         ".opencl"
                     ]
                 },
                 {
-                    "enum": [
-                        "OpenEdge ABL"
-                    ],
+                    "const": "OpenEdge ABL",
                     "extensions": [
                         ".p",
                         ".cls",
@@ -2786,38 +2257,28 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "OpenRC runscript"
-                    ]
+                    "const": "OpenRC runscript"
                 },
                 {
-                    "enum": [
-                        "OpenSCAD"
-                    ],
+                    "const": "OpenSCAD",
                     "extensions": [
                         ".scad"
                     ]
                 },
                 {
-                    "enum": [
-                        "OpenType Feature File"
-                    ],
+                    "const": "OpenType Feature File",
                     "extensions": [
                         ".fea"
                     ]
                 },
                 {
-                    "enum": [
-                        "Org"
-                    ],
+                    "const": "Org",
                     "extensions": [
                         ".org"
                     ]
                 },
                 {
-                    "enum": [
-                        "Ox"
-                    ],
+                    "const": "Ox",
                     "extensions": [
                         ".ox",
                         ".oxh",
@@ -2825,42 +2286,32 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Oxygene"
-                    ],
+                    "const": "Oxygene",
                     "extensions": [
                         ".oxygene"
                     ]
                 },
                 {
-                    "enum": [
-                        "Oz"
-                    ],
+                    "const": "Oz",
                     "extensions": [
                         ".oz"
                     ]
                 },
                 {
-                    "enum": [
-                        "P4"
-                    ],
+                    "const": "P4",
                     "extensions": [
                         ".p4"
                     ]
                 },
                 {
-                    "enum": [
-                        "PAWN"
-                    ],
+                    "const": "PAWN",
                     "extensions": [
                         ".pwn",
                         ".inc"
                     ]
                 },
                 {
-                    "enum": [
-                        "PHP"
-                    ],
+                    "const": "PHP",
                     "extensions": [
                         ".php",
                         ".aw",
@@ -2881,9 +2332,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "PLSQL"
-                    ],
+                    "const": "PLSQL",
                     "extensions": [
                         ".pls",
                         ".bdy",
@@ -2904,66 +2353,50 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "PLpgSQL"
-                    ],
+                    "const": "PLpgSQL",
                     "extensions": [
                         ".sql"
                     ]
                 },
                 {
-                    "enum": [
-                        "POV-Ray SDL"
-                    ],
+                    "const": "POV-Ray SDL",
                     "extensions": [
                         ".pov",
                         ".inc"
                     ]
                 },
                 {
-                    "enum": [
-                        "Pan"
-                    ],
+                    "const": "Pan",
                     "extensions": [
                         ".pan"
                     ]
                 },
                 {
-                    "enum": [
-                        "Papyrus"
-                    ],
+                    "const": "Papyrus",
                     "extensions": [
                         ".psc"
                     ]
                 },
                 {
-                    "enum": [
-                        "Parrot"
-                    ],
+                    "const": "Parrot",
                     "extensions": [
                         ".parrot"
                     ]
                 },
                 {
-                    "enum": [
-                        "Parrot Assembly"
-                    ],
+                    "const": "Parrot Assembly",
                     "extensions": [
                         ".pasm"
                     ]
                 },
                 {
-                    "enum": [
-                        "Parrot Internal Representation"
-                    ],
+                    "const": "Parrot Internal Representation",
                     "extensions": [
                         ".pir"
                     ]
                 },
                 {
-                    "enum": [
-                        "Pascal"
-                    ],
+                    "const": "Pascal",
                     "extensions": [
                         ".pas",
                         ".dfm",
@@ -2975,17 +2408,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Pep8"
-                    ],
+                    "const": "Pep8",
                     "extensions": [
                         ".pep"
                     ]
                 },
                 {
-                    "enum": [
-                        "Perl"
-                    ],
+                    "const": "Perl",
                     "extensions": [
                         ".pl",
                         ".al",
@@ -3006,9 +2435,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Perl 6"
-                    ],
+                    "const": "Perl 6",
                     "extensions": [
                         ".6pl",
                         ".6pm",
@@ -3024,83 +2451,63 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Pic"
-                    ],
+                    "const": "Pic",
                     "extensions": [
                         ".pic",
                         ".chem"
                     ]
                 },
                 {
-                    "enum": [
-                        "Pickle"
-                    ],
+                    "const": "Pickle",
                     "extensions": [
                         ".pkl"
                     ]
                 },
                 {
-                    "enum": [
-                        "PicoLisp"
-                    ],
+                    "const": "PicoLisp",
                     "extensions": [
                         ".l"
                     ]
                 },
                 {
-                    "enum": [
-                        "PigLatin"
-                    ],
+                    "const": "PigLatin",
                     "extensions": [
                         ".pig"
                     ]
                 },
                 {
-                    "enum": [
-                        "Pike"
-                    ],
+                    "const": "Pike",
                     "extensions": [
                         ".pike",
                         ".pmod"
                     ]
                 },
                 {
-                    "enum": [
-                        "Pod"
-                    ],
+                    "const": "Pod",
                     "extensions": [
                         ".pod"
                     ]
                 },
                 {
-                    "enum": [
-                        "PogoScript"
-                    ],
+                    "const": "PogoScript",
                     "extensions": [
                         ".pogo"
                     ]
                 },
                 {
-                    "enum": [
-                        "Pony"
-                    ],
+                    "const": "Pony",
                     "extensions": [
                         ".pony"
                     ]
                 },
                 {
-                    "enum": [
-                        "PostCSS"
-                    ],
+                    "const": "PostCSS",
                     "extensions": [
                         ".pcss"
                     ]
                 },
                 {
-                    "enum": [
-                        "PostScript"
-                    ],
+                    "const": "PostScript",
                     "extensions": [
                         ".ps",
                         ".eps",
@@ -3108,9 +2515,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "PowerBuilder"
-                    ],
+                    "const": "PowerBuilder",
                     "extensions": [
                         ".pbt",
                         ".sra",
@@ -3119,9 +2524,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "PowerShell"
-                    ],
+                    "const": "PowerShell",
                     "extensions": [
                         ".ps1",
                         ".psd1",
@@ -3129,17 +2532,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Processing"
-                    ],
+                    "const": "Processing",
                     "extensions": [
                         ".pde"
                     ]
                 },
                 {
-                    "enum": [
-                        "Prolog"
-                    ],
+                    "const": "Prolog",
                     "extensions": [
                         ".pl",
                         ".pro",
@@ -3148,43 +2547,33 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Propeller Spin"
-                    ],
+                    "const": "Propeller Spin",
                     "extensions": [
                         ".spin"
                     ]
                 },
                 {
-                    "enum": [
-                        "Protocol Buffer"
-                    ],
+                    "const": "Protocol Buffer",
                     "extensions": [
                         ".proto"
                     ]
                 },
                 {
-                    "enum": [
-                        "Public Key"
-                    ],
+                    "const": "Public Key",
                     "extensions": [
                         ".asc",
                         ".pub"
                     ]
                 },
                 {
-                    "enum": [
-                        "Pug"
-                    ],
+                    "const": "Pug",
                     "extensions": [
                         ".jade",
                         ".pug"
                     ]
                 },
                 {
-                    "enum": [
-                        "Puppet"
-                    ],
+                    "const": "Puppet",
                     "extensions": [
                         ".pp"
                     ],
@@ -3193,34 +2582,26 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Pure Data"
-                    ],
+                    "const": "Pure Data",
                     "extensions": [
                         ".pd"
                     ]
                 },
                 {
-                    "enum": [
-                        "PureBasic"
-                    ],
+                    "const": "PureBasic",
                     "extensions": [
                         ".pb",
                         ".pbi"
                     ]
                 },
                 {
-                    "enum": [
-                        "PureScript"
-                    ],
+                    "const": "PureScript",
                     "extensions": [
                         ".purs"
                     ]
                 },
                 {
-                    "enum": [
-                        "Python"
-                    ],
+                    "const": "Python",
                     "extensions": [
                         ".py",
                         ".bzl",
@@ -3254,40 +2635,37 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Python console"
-                    ]
+                    "const": "Python console"
                 },
                 {
-                    "enum": [
-                        "Python traceback"
-                    ],
+                    "const": "Python traceback",
                     "extensions": [
                         ".pytb"
                     ]
                 },
                 {
-                    "enum": [
-                        "QML"
-                    ],
+                    "const": "QML",
                     "extensions": [
                         ".qml",
                         ".qbs"
                     ]
                 },
                 {
-                    "enum": [
-                        "QMake"
-                    ],
+                    "const": "QMake",
                     "extensions": [
                         ".pro",
                         ".pri"
                     ]
                 },
                 {
-                    "enum": [
-                        "R"
-                    ],
+                    "const": "Quake",
+                    "filenames": [
+                        "m3makefile",
+                        "m3overrides"
+                    ]
+                },
+                {
+                    "const": "R",
                     "extensions": [
                         ".r",
                         ".rd",
@@ -3299,25 +2677,19 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "RAML"
-                    ],
+                    "const": "RAML",
                     "extensions": [
                         ".raml"
                     ]
                 },
                 {
-                    "enum": [
-                        "RDoc"
-                    ],
+                    "const": "RDoc",
                     "extensions": [
                         ".rdoc"
                     ]
                 },
                 {
-                    "enum": [
-                        "REALbasic"
-                    ],
+                    "const": "REALbasic",
                     "extensions": [
                         ".rbbas",
                         ".rbfrm",
@@ -3328,9 +2700,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "REXX"
-                    ],
+                    "const": "REXX",
                     "extensions": [
                         ".rexx",
                         ".pprx",
@@ -3338,50 +2708,38 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "RHTML"
-                    ],
+                    "const": "RHTML",
                     "extensions": [
                         ".rhtml"
                     ]
                 },
                 {
-                    "enum": [
-                        "RMarkdown"
-                    ],
+                    "const": "RMarkdown",
                     "extensions": [
                         ".rmd"
                     ]
                 },
                 {
-                    "enum": [
-                        "RPC"
-                    ],
+                    "const": "RPC",
                     "extensions": [
                         ".x"
                     ]
                 },
                 {
-                    "enum": [
-                        "RPM Spec"
-                    ],
+                    "const": "RPM Spec",
                     "extensions": [
                         ".spec"
                     ]
                 },
                 {
-                    "enum": [
-                        "RUNOFF"
-                    ],
+                    "const": "RUNOFF",
                     "extensions": [
                         ".rnh",
                         ".rno"
                     ]
                 },
                 {
-                    "enum": [
-                        "Racket"
-                    ],
+                    "const": "Racket",
                     "extensions": [
                         ".rkt",
                         ".rktd",
@@ -3390,42 +2748,32 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Ragel"
-                    ],
+                    "const": "Ragel",
                     "extensions": [
                         ".rl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Rascal"
-                    ],
+                    "const": "Rascal",
                     "extensions": [
                         ".rsc"
                     ]
                 },
                 {
-                    "enum": [
-                        "Raw token data"
-                    ],
+                    "const": "Raw token data",
                     "extensions": [
                         ".raw"
                     ]
                 },
                 {
-                    "enum": [
-                        "Reason"
-                    ],
+                    "const": "Reason",
                     "extensions": [
                         ".re",
                         ".rei"
                     ]
                 },
                 {
-                    "enum": [
-                        "Rebol"
-                    ],
+                    "const": "Rebol",
                     "extensions": [
                         ".reb",
                         ".r",
@@ -3435,70 +2783,54 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Red"
-                    ],
+                    "const": "Red",
                     "extensions": [
                         ".red",
                         ".reds"
                     ]
                 },
                 {
-                    "enum": [
-                        "Redcode"
-                    ],
+                    "const": "Redcode",
                     "extensions": [
                         ".cw"
                     ]
                 },
                 {
-                    "enum": [
-                        "Regular Expression"
-                    ],
+                    "const": "Regular Expression",
                     "extensions": [
                         ".regexp",
                         ".regex"
                     ]
                 },
                 {
-                    "enum": [
-                        "Ren'Py"
-                    ],
+                    "const": "Ren'Py",
                     "extensions": [
                         ".rpy"
                     ]
                 },
                 {
-                    "enum": [
-                        "RenderScript"
-                    ],
+                    "const": "RenderScript",
                     "extensions": [
                         ".rs",
                         ".rsh"
                     ]
                 },
                 {
-                    "enum": [
-                        "Ring"
-                    ],
+                    "const": "Ring",
                     "extensions": [
                         ".ring"
                     ]
                 },
                 {
-                    "enum": [
-                        "RobotFramework"
-                    ],
+                    "const": "RobotFramework",
                     "extensions": [
                         ".robot"
                     ]
                 },
                 {
-                    "enum": [
-                        "Roff"
-                    ],
+                    "const": "Roff",
                     "extensions": [
-                        ".man",
+                        ".roff",
                         ".1",
                         ".1in",
                         ".1m",
@@ -3516,12 +2848,13 @@
                         ".8",
                         ".9",
                         ".l",
+                        ".man",
+                        ".mdoc",
                         ".me",
                         ".ms",
                         ".n",
                         ".nr",
                         ".rno",
-                        ".roff",
                         ".tmac"
                     ],
                     "filenames": [
@@ -3530,17 +2863,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Rouge"
-                    ],
+                    "const": "Rouge",
                     "extensions": [
                         ".rg"
                     ]
                 },
                 {
-                    "enum": [
-                        "Ruby"
-                    ],
+                    "const": "Ruby",
                     "extensions": [
                         ".rb",
                         ".builder",
@@ -3589,61 +2918,47 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Rust"
-                    ],
+                    "const": "Rust",
                     "extensions": [
                         ".rs",
                         ".rs.in"
                     ]
                 },
                 {
-                    "enum": [
-                        "SAS"
-                    ],
+                    "const": "SAS",
                     "extensions": [
                         ".sas"
                     ]
                 },
                 {
-                    "enum": [
-                        "SCSS"
-                    ],
+                    "const": "SCSS",
                     "extensions": [
                         ".scss"
                     ]
                 },
                 {
-                    "enum": [
-                        "SMT"
-                    ],
+                    "const": "SMT",
                     "extensions": [
                         ".smt2",
                         ".smt"
                     ]
                 },
                 {
-                    "enum": [
-                        "SPARQL"
-                    ],
+                    "const": "SPARQL",
                     "extensions": [
                         ".sparql",
                         ".rq"
                     ]
                 },
                 {
-                    "enum": [
-                        "SQF"
-                    ],
+                    "const": "SQF",
                     "extensions": [
                         ".sqf",
                         ".hqf"
                     ]
                 },
                 {
-                    "enum": [
-                        "SQL"
-                    ],
+                    "const": "SQL",
                     "extensions": [
                         ".sql",
                         ".cql",
@@ -3657,67 +2972,51 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "SQLPL"
-                    ],
+                    "const": "SQLPL",
                     "extensions": [
                         ".sql",
                         ".db2"
                     ]
                 },
                 {
-                    "enum": [
-                        "SRecode Template"
-                    ],
+                    "const": "SRecode Template",
                     "extensions": [
                         ".srt"
                     ]
                 },
                 {
-                    "enum": [
-                        "STON"
-                    ],
+                    "const": "STON",
                     "extensions": [
                         ".ston"
                     ]
                 },
                 {
-                    "enum": [
-                        "SVG"
-                    ],
+                    "const": "SVG",
                     "extensions": [
                         ".svg"
                     ]
                 },
                 {
-                    "enum": [
-                        "Sage"
-                    ],
+                    "const": "Sage",
                     "extensions": [
                         ".sage",
                         ".sagews"
                     ]
                 },
                 {
-                    "enum": [
-                        "SaltStack"
-                    ],
+                    "const": "SaltStack",
                     "extensions": [
                         ".sls"
                     ]
                 },
                 {
-                    "enum": [
-                        "Sass"
-                    ],
+                    "const": "Sass",
                     "extensions": [
                         ".sass"
                     ]
                 },
                 {
-                    "enum": [
-                        "Scala"
-                    ],
+                    "const": "Scala",
                     "extensions": [
                         ".scala",
                         ".kojo",
@@ -3726,17 +3025,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Scaml"
-                    ],
+                    "const": "Scaml",
                     "extensions": [
                         ".scaml"
                     ]
                 },
                 {
-                    "enum": [
-                        "Scheme"
-                    ],
+                    "const": "Scheme",
                     "extensions": [
                         ".scm",
                         ".sch",
@@ -3747,9 +3042,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Scilab"
-                    ],
+                    "const": "Scilab",
                     "extensions": [
                         ".sci",
                         ".sce",
@@ -3757,25 +3050,19 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Self"
-                    ],
+                    "const": "Self",
                     "extensions": [
                         ".self"
                     ]
                 },
                 {
-                    "enum": [
-                        "ShaderLab"
-                    ],
+                    "const": "ShaderLab",
                     "extensions": [
                         ".shader"
                     ]
                 },
                 {
-                    "enum": [
-                        "Shell"
-                    ],
+                    "const": "Shell",
                     "extensions": [
                         ".sh",
                         ".bash",
@@ -3820,71 +3107,53 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "ShellSession"
-                    ],
+                    "const": "ShellSession",
                     "extensions": [
                         ".sh-session"
                     ]
                 },
                 {
-                    "enum": [
-                        "Shen"
-                    ],
+                    "const": "Shen",
                     "extensions": [
                         ".shen"
                     ]
                 },
                 {
-                    "enum": [
-                        "Slash"
-                    ],
+                    "const": "Slash",
                     "extensions": [
                         ".sl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Slim"
-                    ],
+                    "const": "Slim",
                     "extensions": [
                         ".slim"
                     ]
                 },
                 {
-                    "enum": [
-                        "Smali"
-                    ],
+                    "const": "Smali",
                     "extensions": [
                         ".smali"
                     ]
                 },
                 {
-                    "enum": [
-                        "Smalltalk"
-                    ],
+                    "const": "Smalltalk",
                     "extensions": [
                         ".st",
                         ".cs"
                     ]
                 },
                 {
-                    "enum": [
-                        "Smarty"
-                    ],
+                    "const": "Smarty",
                     "extensions": [
                         ".tpl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Solidity"
-                    ]
+                    "const": "Solidity"
                 },
                 {
-                    "enum": [
-                        "SourcePawn"
-                    ],
+                    "const": "SourcePawn",
                     "extensions": [
                         ".sp",
                         ".inc",
@@ -3892,33 +3161,25 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Spline Font Database"
-                    ],
+                    "const": "Spline Font Database",
                     "extensions": [
                         ".sfd"
                     ]
                 },
                 {
-                    "enum": [
-                        "Squirrel"
-                    ],
+                    "const": "Squirrel",
                     "extensions": [
                         ".nut"
                     ]
                 },
                 {
-                    "enum": [
-                        "Stan"
-                    ],
+                    "const": "Stan",
                     "extensions": [
                         ".stan"
                     ]
                 },
                 {
-                    "enum": [
-                        "Standard ML"
-                    ],
+                    "const": "Standard ML",
                     "extensions": [
                         ".ML",
                         ".fun",
@@ -3927,9 +3188,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Stata"
-                    ],
+                    "const": "Stata",
                     "extensions": [
                         ".do",
                         ".ado",
@@ -3941,70 +3200,38 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Stylus"
-                    ],
+                    "const": "Stylus",
                     "extensions": [
                         ".styl"
                     ]
                 },
                 {
-                    "enum": [
-                        "SubRip Text"
-                    ],
+                    "const": "SubRip Text",
                     "extensions": [
                         ".srt"
                     ]
                 },
                 {
-                    "enum": [
-                        "Sublime Text Config"
-                    ],
-                    "extensions": [
-                        ".sublime-build",
-                        ".sublime-commands",
-                        ".sublime-completions",
-                        ".sublime-keymap",
-                        ".sublime-macro",
-                        ".sublime-menu",
-                        ".sublime-mousemap",
-                        ".sublime-project",
-                        ".sublime-settings",
-                        ".sublime-theme",
-                        ".sublime-workspace",
-                        ".sublime_metrics",
-                        ".sublime_session"
-                    ]
-                },
-                {
-                    "enum": [
-                        "SugarSS"
-                    ],
+                    "const": "SugarSS",
                     "extensions": [
                         ".sss"
                     ]
                 },
                 {
-                    "enum": [
-                        "SuperCollider"
-                    ],
+                    "const": "SuperCollider",
                     "extensions": [
                         ".sc",
                         ".scd"
                     ]
                 },
                 {
-                    "enum": [
-                        "Swift"
-                    ],
+                    "const": "Swift",
                     "extensions": [
                         ".swift"
                     ]
                 },
                 {
-                    "enum": [
-                        "SystemVerilog"
-                    ],
+                    "const": "SystemVerilog",
                     "extensions": [
                         ".sv",
                         ".svh",
@@ -4012,9 +3239,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "TI Program"
-                    ],
+                    "const": "TI Program",
                     "extensions": [
                         ".8xp",
                         ".8xk",
@@ -4023,17 +3248,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "TLA"
-                    ],
+                    "const": "TLA",
                     "extensions": [
                         ".tla"
                     ]
                 },
                 {
-                    "enum": [
-                        "TOML"
-                    ],
+                    "const": "TOML",
                     "extensions": [
                         ".toml"
                     ],
@@ -4043,17 +3264,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "TXL"
-                    ],
+                    "const": "TXL",
                     "extensions": [
                         ".txl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Tcl"
-                    ],
+                    "const": "Tcl",
                     "extensions": [
                         ".tcl",
                         ".adp",
@@ -4065,18 +3282,14 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Tcsh"
-                    ],
+                    "const": "Tcsh",
                     "extensions": [
                         ".tcsh",
                         ".csh"
                     ]
                 },
                 {
-                    "enum": [
-                        "TeX"
-                    ],
+                    "const": "TeX",
                     "extensions": [
                         ".tex",
                         ".aux",
@@ -4096,25 +3309,19 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Tea"
-                    ],
+                    "const": "Tea",
                     "extensions": [
                         ".tea"
                     ]
                 },
                 {
-                    "enum": [
-                        "Terra"
-                    ],
+                    "const": "Terra",
                     "extensions": [
                         ".t"
                     ]
                 },
                 {
-                    "enum": [
-                        "Text"
-                    ],
+                    "const": "Text",
                     "extensions": [
                         ".txt",
                         ".fr",
@@ -4144,75 +3351,57 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Textile"
-                    ],
+                    "const": "Textile",
                     "extensions": [
                         ".textile"
                     ]
                 },
                 {
-                    "enum": [
-                        "Thrift"
-                    ],
+                    "const": "Thrift",
                     "extensions": [
                         ".thrift"
                     ]
                 },
                 {
-                    "enum": [
-                        "Turing"
-                    ],
+                    "const": "Turing",
                     "extensions": [
                         ".t",
                         ".tu"
                     ]
                 },
                 {
-                    "enum": [
-                        "Turtle"
-                    ],
+                    "const": "Turtle",
                     "extensions": [
                         ".ttl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Twig"
-                    ],
+                    "const": "Twig",
                     "extensions": [
                         ".twig"
                     ]
                 },
                 {
-                    "enum": [
-                        "Type Language"
-                    ],
+                    "const": "Type Language",
                     "extensions": [
                         ".tl"
                     ]
                 },
                 {
-                    "enum": [
-                        "TypeScript"
-                    ],
+                    "const": "TypeScript",
                     "extensions": [
                         ".ts",
                         ".tsx"
                     ]
                 },
                 {
-                    "enum": [
-                        "Unified Parallel C"
-                    ],
+                    "const": "Unified Parallel C",
                     "extensions": [
                         ".upc"
                     ]
                 },
                 {
-                    "enum": [
-                        "Unity3D Asset"
-                    ],
+                    "const": "Unity3D Asset",
                     "extensions": [
                         ".anim",
                         ".asset",
@@ -4223,51 +3412,39 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Unix Assembly"
-                    ],
+                    "const": "Unix Assembly",
                     "extensions": [
                         ".s",
                         ".ms"
                     ]
                 },
                 {
-                    "enum": [
-                        "Uno"
-                    ],
+                    "const": "Uno",
                     "extensions": [
                         ".uno"
                     ]
                 },
                 {
-                    "enum": [
-                        "UnrealScript"
-                    ],
+                    "const": "UnrealScript",
                     "extensions": [
                         ".uc"
                     ]
                 },
                 {
-                    "enum": [
-                        "UrWeb"
-                    ],
+                    "const": "UrWeb",
                     "extensions": [
                         ".ur",
                         ".urs"
                     ]
                 },
                 {
-                    "enum": [
-                        "VCL"
-                    ],
+                    "const": "VCL",
                     "extensions": [
                         ".vcl"
                     ]
                 },
                 {
-                    "enum": [
-                        "VHDL"
-                    ],
+                    "const": "VHDL",
                     "extensions": [
                         ".vhdl",
                         ".vhd",
@@ -4280,27 +3457,21 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Vala"
-                    ],
+                    "const": "Vala",
                     "extensions": [
                         ".vala",
                         ".vapi"
                     ]
                 },
                 {
-                    "enum": [
-                        "Verilog"
-                    ],
+                    "const": "Verilog",
                     "extensions": [
                         ".v",
                         ".veo"
                     ]
                 },
                 {
-                    "enum": [
-                        "Vim script"
-                    ],
+                    "const": "Vim script",
                     "extensions": [
                         ".vim"
                     ],
@@ -4315,9 +3486,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Visual Basic"
-                    ],
+                    "const": "Visual Basic",
                     "extensions": [
                         ".vb",
                         ".bas",
@@ -4330,107 +3499,96 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Volt"
-                    ],
+                    "const": "Volt",
                     "extensions": [
                         ".volt"
                     ]
                 },
                 {
-                    "enum": [
-                        "Vue"
-                    ],
+                    "const": "Vue",
                     "extensions": [
                         ".vue"
                     ]
                 },
                 {
-                    "enum": [
-                        "Wavefront Material"
-                    ],
+                    "const": "Wavefront Material",
                     "extensions": [
                         ".mtl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Wavefront Object"
-                    ],
+                    "const": "Wavefront Object",
                     "extensions": [
                         ".obj"
                     ]
                 },
                 {
-                    "enum": [
-                        "Web Ontology Language"
-                    ],
+                    "const": "Web Ontology Language",
                     "extensions": [
                         ".owl"
                     ]
                 },
                 {
-                    "enum": [
-                        "WebAssembly"
-                    ],
+                    "const": "WebAssembly",
                     "extensions": [
                         ".wast",
                         ".wat"
                     ]
                 },
                 {
-                    "enum": [
-                        "WebIDL"
-                    ],
+                    "const": "WebIDL",
                     "extensions": [
                         ".webidl"
                     ]
                 },
                 {
-                    "enum": [
-                        "World of Warcraft Addon Data"
-                    ],
+                    "const": "Windows Registry Entries",
+                    "extensions": [
+                        ".reg"
+                    ]
+                },
+                {
+                    "const": "World of Warcraft Addon Data",
                     "extensions": [
                         ".toc"
                     ]
                 },
                 {
-                    "enum": [
-                        "X BitMap"
-                    ],
+                    "const": "X BitMap",
                     "extensions": [
                         ".xbm"
                     ]
                 },
                 {
-                    "enum": [
-                        "X PixMap"
-                    ],
+                    "const": "X Font Directory Index",
+                    "filenames": [
+                        "encodings.dir",
+                        "fonts.alias",
+                        "fonts.dir",
+                        "fonts.scale"
+                    ]
+                },
+                {
+                    "const": "X PixMap",
                     "extensions": [
                         ".xpm",
                         ".pm"
                     ]
                 },
                 {
-                    "enum": [
-                        "X10"
-                    ],
+                    "const": "X10",
                     "extensions": [
                         ".x10"
                     ]
                 },
                 {
-                    "enum": [
-                        "XC"
-                    ],
+                    "const": "XC",
                     "extensions": [
                         ".xc"
                     ]
                 },
                 {
-                    "enum": [
-                        "XCompose"
-                    ],
+                    "const": "XCompose",
                     "filenames": [
                         ".XCompose",
                         "XCompose",
@@ -4438,9 +3596,7 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "XML"
-                    ],
+                    "const": "XML",
                     "extensions": [
                         ".xml",
                         ".adml",
@@ -4468,6 +3624,7 @@
                         ".fxml",
                         ".glade",
                         ".gml",
+                        ".gmx",
                         ".grxml",
                         ".iml",
                         ".ivy",
@@ -4481,6 +3638,7 @@
                         ".mod",
                         ".mxml",
                         ".natvis",
+                        ".ncl",
                         ".ndproj",
                         ".nproj",
                         ".nuspec",
@@ -4557,27 +3715,21 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "XPages"
-                    ],
+                    "const": "XPages",
                     "extensions": [
                         ".xsp-config",
                         ".xsp.metadata"
                     ]
                 },
                 {
-                    "enum": [
-                        "XProc"
-                    ],
+                    "const": "XProc",
                     "extensions": [
                         ".xpl",
                         ".xproc"
                     ]
                 },
                 {
-                    "enum": [
-                        "XQuery"
-                    ],
+                    "const": "XQuery",
                     "extensions": [
                         ".xquery",
                         ".xq",
@@ -4587,26 +3739,20 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "XS"
-                    ],
+                    "const": "XS",
                     "extensions": [
                         ".xs"
                     ]
                 },
                 {
-                    "enum": [
-                        "XSLT"
-                    ],
+                    "const": "XSLT",
                     "extensions": [
                         ".xslt",
                         ".xsl"
                     ]
                 },
                 {
-                    "enum": [
-                        "Xojo"
-                    ],
+                    "const": "Xojo",
                     "extensions": [
                         ".xojo_code",
                         ".xojo_menu",
@@ -4617,17 +3763,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Xtend"
-                    ],
+                    "const": "Xtend",
                     "extensions": [
                         ".xtend"
                     ]
                 },
                 {
-                    "enum": [
-                        "YAML"
-                    ],
+                    "const": "YAML",
                     "extensions": [
                         ".yml",
                         ".mir",
@@ -4647,26 +3789,26 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "YANG"
-                    ],
+                    "const": "YANG",
                     "extensions": [
                         ".yang"
                     ]
                 },
                 {
-                    "enum": [
-                        "YARA"
-                    ],
+                    "const": "YARA",
                     "extensions": [
                         ".yar",
                         ".yara"
                     ]
                 },
                 {
-                    "enum": [
-                        "Yacc"
-                    ],
+                    "const": "YASnippet",
+                    "extensions": [
+                        ".yasnippet"
+                    ]
+                },
+                {
+                    "const": "Yacc",
                     "extensions": [
                         ".y",
                         ".yacc",
@@ -4674,17 +3816,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "Zephir"
-                    ],
+                    "const": "Zephir",
                     "extensions": [
                         ".zep"
                     ]
                 },
                 {
-                    "enum": [
-                        "Zimpl"
-                    ],
+                    "const": "Zimpl",
                     "extensions": [
                         ".zimpl",
                         ".zmpl",
@@ -4692,75 +3830,57 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "desktop"
-                    ],
+                    "const": "desktop",
                     "extensions": [
                         ".desktop",
                         ".desktop.in"
                     ]
                 },
                 {
-                    "enum": [
-                        "eC"
-                    ],
+                    "const": "eC",
                     "extensions": [
                         ".ec",
                         ".eh"
                     ]
                 },
                 {
-                    "enum": [
-                        "edn"
-                    ],
+                    "const": "edn",
                     "extensions": [
                         ".edn"
                     ]
                 },
                 {
-                    "enum": [
-                        "fish"
-                    ],
+                    "const": "fish",
                     "extensions": [
                         ".fish"
                     ]
                 },
                 {
-                    "enum": [
-                        "mupad"
-                    ],
+                    "const": "mupad",
                     "extensions": [
                         ".mu"
                     ]
                 },
                 {
-                    "enum": [
-                        "nesC"
-                    ],
+                    "const": "nesC",
                     "extensions": [
                         ".nc"
                     ]
                 },
                 {
-                    "enum": [
-                        "ooc"
-                    ],
+                    "const": "ooc",
                     "extensions": [
                         ".ooc"
                     ]
                 },
                 {
-                    "enum": [
-                        "q"
-                    ],
+                    "const": "q",
                     "extensions": [
                         ".q"
                     ]
                 },
                 {
-                    "enum": [
-                        "reStructuredText"
-                    ],
+                    "const": "reStructuredText",
                     "extensions": [
                         ".rst",
                         ".rest",
@@ -4769,33 +3889,25 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "sed"
-                    ],
+                    "const": "sed",
                     "extensions": [
                         ".sed"
                     ]
                 },
                 {
-                    "enum": [
-                        "wdl"
-                    ],
+                    "const": "wdl",
                     "extensions": [
                         ".wdl"
                     ]
                 },
                 {
-                    "enum": [
-                        "wisp"
-                    ],
+                    "const": "wisp",
                     "extensions": [
                         ".wisp"
                     ]
                 },
                 {
-                    "enum": [
-                        "xBase"
-                    ],
+                    "const": "xBase",
                     "extensions": [
                         ".prg",
                         ".ch",

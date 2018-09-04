@@ -1,12 +1,21 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
     "$id": "https://schema.linterhub.com/type/license/custom.json#",
-    "title": "License",
-    "description": "The software license name (custom)",
+    "title": "Software License",
+    "description": "The software license identifier",
     "type": "string",
     "enum": [
-        "Custom",
-        "Unknown"
+        {
+            "$ref": "#/definitions/not-spdx"
+        }
     ],
-    "additionalItems": false
+    "additionalItems": false,
+    "definitions": {
+        "not-spdx": {
+            "title": "License",
+            "description": "The not-SPDX license name",
+            "type": "string",
+            "const": "NOT-SPDX"
+        }
+    }
 }

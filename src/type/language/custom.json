@@ -15,41 +15,31 @@
             "description": "The programming language name",
             "oneOf": [
                 {
-                    "enum": [
-                        "OOCSS"
-                    ],
+                    "const": "OOCSS",
                     "extensions": [
                         ".css"
                     ]
                 },
                 {
-                    "enum": [
-                        "Jade"
-                    ],
+                    "const": "Jade",
                     "extensions": [
                         ".jade"
                     ]
                 },
                 {
-                    "enum": [
-                        "JSP"
-                    ],
+                    "const": "JSP",
                     "extensions": [
                         ".jsp"
                     ]
                 },
                 {
-                    "enum": [
-                        "Apache Velocity"
-                    ],
+                    "const": "Apache Velocity",
                     "extensions": [
                         ".vm"
                     ]
                 },
                 {
-                    "enum": [
-                        "CoffeeCup"
-                    ],
+                    "const": "CoffeeCup",
                     "extensions": [
                         ".сtf",
                         ".rsd",
@@ -61,17 +51,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "JEDI"
-                    ],
+                    "const": "JEDI",
                     "extensions": [
                         ".jedi"
                     ]
                 },
                 {
-                    "enum": [
-                        "TTCN-3"
-                    ],
+                    "const": "TTCN-3",
                     "extensions": [
                         ".ttcn"
                     ]

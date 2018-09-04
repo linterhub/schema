@@ -25,18 +25,21 @@
         "message": "Deployment commit"
     },
     "template": {
-        "mask": "src/template/*.json",
-        "linguist": "src/template/language.linguist.json",
-        "spdx": "src/template/license.spdx.json"
+        "mask": "src/type/**/template.json",
+        "linguist": "src/type/language/template.json",
+        "spdx": "src/type/license/template.json"
     },
     "type": {
         "dir": "src/type/",
         "mask": "src/type/*.json",
+        "spdx_dir": "src/type/license/",
+        "linguist_dir": "src/type/language/",
         "licenses": {
             "spdx": "src/type/license/spdx.json"
         },
         "languages": {
             "linguist": "src/type/language/linguist.json"
+
         }
     },
     "schema": {
