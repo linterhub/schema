@@ -1,6 +1,6 @@
 {
-    "$schema": "https://schema.linterhub.com/schemaver.json",
-    "$id": "https://schema.linterhub.com/args.json",
+    "$schema": "https://schema.linterhub.com/schemaver.json#",
+    "$id": "https://schema.linterhub.com/args.json#,",
     "$version": "0.0.0",
     "title": "Arguments schema",
     "description": "The schema of package arguments",
@@ -121,7 +121,7 @@
         },
         "arg:delimiter": {
             "title": "Delimiter",
-            "description": "The character used as separator between arguments",
+            "description": "The character used as separator between argument name and value",
             "type": "string",
             "default": " "
         },
@@ -168,39 +168,5 @@
                 "package"
             ]
         }
-    },
-    "examples": [
-        {
-            "$schema": "https://schema.linterhub.com/args.json",
-            "$id": "https://hub.linterhub.com/example/args.json",
-            "$version": "1.0.0",
-            "package": "https://hub.linterhub.com/example/package.json",
-            "description": "The example of arguments schema instance",
-            "allOf": [
-                {
-                    "$ref": "./schemaver.json"
-                },
-                {
-                    "$ref": "#/definitions/object"
-                }
-            ],
-            "definitions": {
-                "object": {
-                    "properties": {
-                        "test": {
-                            "description": "test",
-                            "type": "boolean"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "$schema": "https://hub.linterhub.com/example/args.json",
-            "$id": "https://hub.linterhub.com/example/config.json",
-            "$version": "1.0.0",
-            "description": "The example of default configuration for arguments",
-            "test": false
-        }
-    ]
+    }
 }

@@ -1,7 +1,7 @@
 {
-    "$schema": "https://schema.linterhub.com/schemaver.json",
+    "$schema": "https://schema.linterhub.com/schemaver.json#",
+    "$id": "https://schema.linterhub.com/package.json#",
     "$version": "0.0.0",
-    "$id": "https://schema.linterhub.com/package.json",
     "title": "Package meta-information",
     "description": "The schema of package meta information",
     "type": "object",
@@ -14,77 +14,7 @@
         }
     ],
     "definitions": {
-        "url:uri": {
-            "title": "URL",
-            "description": "The URL in URI format",
-            "type": "string",
-            "format": "uri"
-        },
-        "url:type": {
-            "title": "URL type",
-            "description": "The allowed URL types",
-            "type": "string",
-            "default": "homepage",
-            "enum": [
-                "documentation",
-                "download",
-                "issues",
-                "repository",
-                "manager",
-                "homepage",
-                "unknown"
-            ]
-        },
-        "url:typed": {
-            "title": "URL (Typed)",
-            "description": "The URL with type specified",
-            "type": "object",
-            "properties": {
-                "url": {
-                    "title": "URL",
-                    "description": "The URL in URI format",
-                    "$ref": "#/definitions/url:uri"
-                },
-                "type": {
-                    "title": "Type",
-                    "description": "The type of url",
-                    "$ref": "#/definitions/url:type"
-                }
-            },
-            "required": [
-                "url"
-            ],
-            "additionalProperties": false
-        },
-        "url:complex": {
-            "title": "URL",
-            "description": "The URL in one of acceptable formats",
-            "oneOf": [
-                {
-                    "$ref": "#/definitions/url:uri"
-                },
-                {
-                    "$ref": "#/definitions/url:typed"
-                }
-            ]
-        },
-        "urls": {
-            "title": "URL",
-            "description": "The URL or array of URLs",
-            "oneOf": [
-                {
-                    "$ref": "#/definitions/url:complex"
-                },
-                {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/url:complex"
-                    },
-                    "additionalProperties": false
-                }
-            ]
-        },
-        "object": {
+        "base": {
             "properties": {
                 "package": {
                     "title": "Package",
@@ -97,35 +27,37 @@
                     "description": "The original name of the package",
                     "type": "string"
                 },
-                "version": {
-                    "title": "Version",
-                    "description": "The package version in a format it was originally specified",
-                    "type": "string"
-                },
                 "description": {
                     "title": "Description",
                     "description": "The textual description of the package",
                     "type": "string"
                 },
+                "version": {
+                    "title": "Version",
+                    "description": "The package version in a format it was originally specified",
+                    "type": "string"
+                },
                 "url": {
                     "title": "URL",
                     "description": "The package homepage (website, online documentation or repository)",
-                    "$ref": "#/definitions/urls"
-                },
-                "license": {
-                    "title": "License",
-                    "description": "The package license",
-                    "$ref": "./types.json#/definitions/license"
-                },
-                "license-text": {
-                    "title": "License text",
-                    "description": "The package license text",
-                    "type": "string"
+                    "$ref": "./types.json#/definitions/url"
                 }
             },
             "required": [
                 "package",
-                "name",
+                "name"
+            ]
+        },
+        "object": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/base"
+                },
+                {
+                    "$ref": "./types.json#/definitions/license"
+                }
+            ],
+            "required": [
                 "license"
             ]
         }

@@ -1,7 +1,7 @@
 {
-    "$schema": "https://schema.linterhub.com/schemaver.json",
+    "$schema": "https://schema.linterhub.com/schemaver.json#",
+    "$id": "https://schema.linterhub.com/deps.json#",
     "$version": "0.0.0",
-    "$id": "https://schema.linterhub.com/deps.json",
     "title": "Package dependencies",
     "description": "The schema of dependencies that extends package",
     "type": "object",
@@ -19,7 +19,7 @@
             "description": "The array of required packages",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/package"
+                "$ref": "#/definitions/dependency:manager-package"
             },
             "minItems": 1,
             "uniqueItems": true
@@ -29,11 +29,6 @@
             "description": "The definition of required package, later it should be converted to linterhub package reference",
             "type": "object",
             "properties": {
-                "manager": {
-                    "title": "Package manager",
-                    "description": "The package manager name",
-                    "$ref": "./types.json#/definitions/manager"
-                },
                 "package": {
                     "title": "Package",
                     "description": "The package name in a format accepted by package manager",
@@ -52,10 +47,21 @@
                 }
             },
             "required": [
-                "manager",
                 "package"
             ],
             "additionalProperties": false
+        },
+        "dependency:manager-package": {
+            "title": "Package",
+            "description": "The definition of package as dependency",
+            "allOf": [
+                {
+                    "$ref": "./types.json#/definitions/manager"
+                },
+                {
+                    "$ref": "#/definitions/package"
+                }
+            ]
         },
         "object": {
             "properties": {

@@ -17,6 +17,9 @@
         },
         "schema": {
             "$ref": "./../type/schema.json#"
+        },
+        "url": {
+            "$ref": "./../type/url.json#"
         }
     }
 }
