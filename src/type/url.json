@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://schema.linterhub.com/type/url.json#",
+    "title": "URL",
+    "description": "The URL object",
+    "type": "object",
+    "oneOf": [
+        {
+            "$ref": "#/definitions/urls"
+        }
+    ],
+    "additionalItems": false,
+    "definitions": {
+        "url:uri": {
+            "title": "URL",
+            "description": "The URL in URI format",
+            "type": "string",
+            "format": "uri"
+        },
+        "url:type": {
+            "title": "URL type",
+            "description": "The type of URL",
+            "type": "string",
+            "default": "homepage",
+            "enum": [
+                "documentation",
+                "download",
+                "issues",
+                "source",
+                "repository",
+                "homepage",
+                "unknown"
+            ]
+        },
+        "url:typed": {
+            "title": "URL (Typed)",
+            "description": "The URL with type specified",
+            "type": "object",
+            "properties": {
+                "url": {
+                    "title": "URL",
+                    "description": "The URL in URI format",
+                    "$ref": "#/definitions/url:uri"
+                },
+                "type": {
+                    "title": "Type",
+                    "description": "The type of url",
+                    "$ref": "#/definitions/url:type"
+                }
+            },
+            "required": [
+                "url"
+            ],
+            "additionalProperties": false
+        },
+        "url:complex": {
+            "title": "URL",
+            "description": "The URL in one of acceptable formats",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/url:uri"
+                },
+                {
+                    "$ref": "#/definitions/url:typed"
+                }
+            ]
+        },
+        "urls": {
+            "title": "URL",
+            "description": "The URL or collection of URLs",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/url:complex"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/url:complex"
+                    },
+                    "additionalProperties": false
+                }
+            ]
+        }
+    }
+}

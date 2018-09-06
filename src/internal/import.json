@@ -1,32 +1,32 @@
 {
-    "$schema": "https://schema.linterhub.com/schemaver.json#",
+    "$schema": "https://schema.linterhub.com/schemaver.json",
     "$id": "https://schema.linterhub.com/import.json",
     "$version": "0.0.0",
     "title": "Import schema",
-    "description": "The schema for import linters with meta-information",
+    "description": "The list of packages and theirs versions to import from external package manager",
     "type": "object",
     "allOf": [
         {
             "$ref": "./schemaver.json#/definitions/object"
         },
         {
-            "$ref": "#/definitions/object"
+            "$ref": "#/definitions/import"
         }
     ],
     "definitions": {
-        "source": {
-            "title": "Source",
-            "description": "The information of package manager",
+        "manager": {
+            "title": "Manager",
+            "description": "The information about package manager",
             "type": "object",
             "properties": {
                 "name": {
                     "title": "Name",
-                    "description": "Name of package manager",
+                    "description": "The name of package manager",
                     "$ref": "./types.json#/definitions/manager"
                 },
                 "version": {
                     "title": "Version",
-                    "description": "Recommendation version of package manager",
+                    "description": "The recommended version of package manager",
                     "type": "string"
                 }
             },
@@ -35,55 +35,51 @@
             ],
             "additionalProperties": false
         },
-        "linter:name": {
+        "package:name": {
             "title": "Name",
-            "description": "Name of linter",
+            "description": "The name of package",
             "type": "string"
         },
-        "linter:version": {
+        "package:version": {
             "title": "Version",
-            "description": "Version of linter",
+            "description": "The version of package",
             "type": "string"
         },
-        "linter:versions": {
+        "package:versions": {
             "title": "Versions",
-            "description": "Array versions of linter",
+            "description": "The array of package versions",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/linter:version"
+                "$ref": "#/definitions/package:version"
             },
             "minItems": 1,
             "uniqueItems": true
         },
-        "linter:complex": {
-            "title": "Linter",
-            "description": "Full data of linter",
+        "package": {
+            "title": "Package",
+            "description": "The package for import",
             "type": "object",
             "properties": {
                 "name": {
-                    "title": "Name",
-                    "description": "Name of linter",
-                    "$ref": "#/definitions/linter:name"
+                    "$ref": "#/definitions/package:name"
                 },
                 "version": {
-                    "title": "Version",
-                    "description": "Version of linter",
                     "oneOf": [
                         {
-                            "$ref": "#/definitions/linter:version"
+                            "$ref": "#/definitions/package:version"
                         },
                         {
-                            "$ref": "#/definitions/linter:versions"
+                            "$ref": "#/definitions/package:versions"
                         }
                     ]
                 },
                 "languages": {
                     "title": "Languages",
-                    "description": "The list of supported languages",
+                    "description": "The array of supported languages, if not set then assumed that all text files are supported",
                     "type": "array",
                     "default": [],
                     "items": {
-                        "$ref": "./types.json#/definitions/language"
+                        "$ref": "./type.json#/definitions/language"
                     },
                     "uniqueItems": true
                 },
@@ -135,11 +131,11 @@
             },
             "minItems": 1
         },
-        "object": {
+        "import": {
             "properties": {
                 "source": {
                     "title": "Source",
-                    "description": "The information of package manager",
+                    "description": "The information about package manager",
                     "$ref": "#/definitions/source"
                 },
                 "linters": {

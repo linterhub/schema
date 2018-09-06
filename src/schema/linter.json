@@ -1,7 +1,7 @@
 {
-    "$schema": "https://schema.linterhub.com/schemaver.json",
-    "$version": "0.0.0",
+    "$schema": "https://schema.linterhub.com/schemaver.json#",
     "$id": "https://schema.linterhub.com/linter.json",
+    "$version": "0.0.0",
     "title": "Linter meta-information",
     "description": "The schema of linter meta-information that extends package",
     "type": "object",

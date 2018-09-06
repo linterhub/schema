@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.linterhub.com/schemaver.json#",
-    "$id": "https://schema.linterhub.com/package.json#",
+    "$id": "https://schema.linterhub.com/package.json",
     "$version": "0.0.0",
     "title": "Package meta-information",
     "description": "The schema of package meta information",
@@ -11,10 +11,16 @@
         },
         {
             "$ref": "#/definitions/object"
+        },
+        {
+            "$ref": "./types.json#/definitions/license"
         }
     ],
+    "required": [
+        "license"
+    ],
     "definitions": {
-        "base": {
+        "object": {
             "properties": {
                 "package": {
                     "title": "Package",
@@ -46,19 +52,6 @@
             "required": [
                 "package",
                 "name"
-            ]
-        },
-        "object": {
-            "allOf": [
-                {
-                    "$ref": "#/definitions/base"
-                },
-                {
-                    "$ref": "./types.json#/definitions/license"
-                }
-            ],
-            "required": [
-                "license"
             ]
         }
     }

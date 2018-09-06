@@ -9,6 +9,9 @@
         },
         "documentation": "**/*.md"
     },
+    "doc": {
+        "schema": "docs/schema"
+    },
     "configs": {
         "eslint": ".eslintrc.json",
         "markdownlint": "config/.mdlrc.json"
