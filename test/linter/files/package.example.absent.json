@@ -1,5 +1,5 @@
 {
-    "$schema": "https://schema.linterhub.com/linter.json",
+    "$schema": "https://schema.linterhub.com/linter.json#",
     "$version": "1.0.0",
     "languages": [
         "Text"

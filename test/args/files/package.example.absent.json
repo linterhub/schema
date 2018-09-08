@@ -1,5 +1,5 @@
 {
-    "$schema": "https://schema.linterhub.com/args.json",
+    "$schema": "https://schema.linterhub.com/args.json#",
     "$id": "https://hub.linterhub.com/example/args.json",
     "$version": "1.0.0",
     "description": "The example of arguments schema instance",

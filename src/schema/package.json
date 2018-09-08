@@ -47,6 +47,11 @@
                     "title": "URL",
                     "description": "The package homepage (website, online documentation or repository)",
                     "$ref": "./types.json#/definitions/url"
+                },
+                "manager": {
+                    "title": "Manager",
+                    "description": "The package manager of package",
+                    "$ref": "./types.json#/definitions/manager"
                 }
             },
             "required": [

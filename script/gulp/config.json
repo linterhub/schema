@@ -2,7 +2,7 @@
     "src": {
         "dir": "src",
         "js": "**/*.js",
-        "json": "src/**/*.json",
+        "json": "src/**/**.json",
         "exclude": {
             "node": "!**/node_modules/**",
             "ext": "!ext/**"

@@ -23,6 +23,7 @@ const bundle = () => gulp
 // Copy to build all schemas
 const create = () => gulp
   .src([
+    config.internal.mask,
     config.schema.mask,
     '!' + config.schema.types,
   ])
@@ -30,8 +31,11 @@ const create = () => gulp
 
 // Generate typings
 const typings = () => gulp
-  .src(config.schema.mask)
-  .pipe(gulpData(function(file) {
+  .src([
+    config.internal.mask,
+    config.schema.mask,
+  ])
+  .pipe(gulpData((file) => {
     return json2ts.compile(
       JSON.parse(file.contents.toString()),
       file.path,
@@ -48,7 +52,7 @@ const typings = () => gulp
         log.error(e);
       });
   }))
-  .pipe(rename(function(path) {
+  .pipe(rename((path) => {
     path.extname = '.d.ts';
   }))
   .pipe(gulp.dest(config.typings.dir));
