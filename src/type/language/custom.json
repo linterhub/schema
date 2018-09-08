@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://schema.linterhub.com/collection/language.linter.json",
-    "title": "Collection: programming language and extension",
-    "description": "The set of special programming languages and extensions",
+    "$id": "https://schema.linterhub.com/type/language/custom.json#",
+    "title": "Programming Language",
+    "description": "The programming language name and associated metadata",
     "type": "string",
     "oneOf": [
         {
@@ -15,41 +15,31 @@
             "description": "The programming language name",
             "oneOf": [
                 {
-                    "enum": [
-                        "OOCSS"
-                    ],
+                    "const": "OOCSS",
                     "extensions": [
                         ".css"
                     ]
                 },
                 {
-                    "enum": [
-                        "Jade"
-                    ],
+                    "const": "Jade",
                     "extensions": [
                         ".jade"
                     ]
                 },
                 {
-                    "enum": [
-                        "JSP"
-                    ],
+                    "const": "JSP",
                     "extensions": [
                         ".jsp"
                     ]
                 },
                 {
-                    "enum": [
-                        "Apache Velocity"
-                    ],
+                    "const": "Apache Velocity",
                     "extensions": [
                         ".vm"
                     ]
                 },
                 {
-                    "enum": [
-                        "CoffeeCup"
-                    ],
+                    "const": "CoffeeCup",
                     "extensions": [
                         ".сtf",
                         ".rsd",
@@ -61,17 +51,13 @@
                     ]
                 },
                 {
-                    "enum": [
-                        "JEDI"
-                    ],
+                    "const": "JEDI",
                     "extensions": [
                         ".jedi"
                     ]
                 },
                 {
-                    "enum": [
-                        "TTCN-3"
-                    ],
+                    "const": "TTCN-3",
                     "extensions": [
                         ".ttcn"
                     ]

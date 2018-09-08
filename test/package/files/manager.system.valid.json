@@ -4,10 +4,13 @@
     "package": "uri://uri",
     "name": "name",
     "description": "description",
-    "url": {
-        "url": "url",
-        "type": "homepage"
-    },
+    "url": [
+        {
+            "url": "url://url",
+            "type": "homepage"
+        }
+    ],
+    "manager": "os",
     "license": "NOT-SPDX",
     "license:text": "License text"
 }

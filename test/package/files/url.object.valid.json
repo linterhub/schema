@@ -1,5 +1,5 @@
 {
-    "$schema": "https://schema.linterhub.com/package.json",
+    "$schema": "https://schema.linterhub.com/package.json#",
     "$version": "1.0.0",
     "package": "uri://uri",
     "name": "name",
@@ -8,6 +8,6 @@
         "url": "url://url",
         "type": "homepage"
     },
-    "license": "Custom",
-    "copying": "copying"
+    "license": "NOT-SPDX",
+    "license:text": "License text"
 }

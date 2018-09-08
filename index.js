@@ -1,5 +1,5 @@
 exports = module.exports = {
-    collection: require('./dist/collection.json'),
+    types: require('./dist/types.json'),
     schemaver: require('./dist/schemaver.json'),
     package: require('./dist/package.json'),
     linter: require('./dist/linter.json'),

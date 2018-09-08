@@ -4,9 +4,9 @@
 const core = global.lhcore;
 
 // External modules as aliases
+const config = core.cfg;
 const gulp = core.amd.gulp;
 const jsonSchema = core.amd.jsonSchema;
-const config = core.cfg;
 
 // Validate all schemas
 const validate = (mask, schema) => gulp
@@ -18,30 +18,38 @@ const validate = (mask, schema) => gulp
         verbose: true,
     }));
 
-// Validate all core schemas according to schemaver
+// Validate all internal schema using schemaver
+const validateInternal = () => validate(
+    config.internal.mask,
+    config.schema.ver
+);
+
+// Validate all core schemas using schemaver
 const validateCore = () => validate(
     config.schema.mask,
     config.schema.ver
 );
 
-// Validate all collection schemas according to draft schema
-const validateCollection = () => validate(
-    config.collection.mask,
+// Validate all type schemas using base schema
+const validateType = () => validate(
+    config.type.mask,
     config.schema.schema
 );
 
-// Validate all template schemas according to draft schema
+// Validate all template schemas using base schema
 const validateTemplate = () => validate(
     config.template.mask,
     config.schema.schema
 );
 
 // Tasks
+gulp.task('validate:type', validateType);
 gulp.task('validate:core', validateCore);
 gulp.task('validate:template', validateTemplate);
-gulp.task('validate:collection', validateCollection);
+gulp.task('validate:internal', validateInternal);
 gulp.task('validate:all', gulp.parallel(
     'validate:core',
+    'validate:type',
     'validate:template',
-    'validate:collection'
+    'validate:internal'
 ));

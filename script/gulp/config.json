@@ -1,13 +1,16 @@
 {
     "src": {
         "dir": "src",
-        "mask": "src/**/*.json",
         "js": "**/*.js",
+        "json": "src/**/**.json",
         "exclude": {
             "node": "!**/node_modules/**",
             "ext": "!ext/**"
         },
         "documentation": "**/*.md"
+    },
+    "doc": {
+        "schema": "docs/schema"
     },
     "configs": {
         "eslint": ".eslintrc.json",
@@ -24,27 +27,43 @@
         },
         "message": "Deployment commit"
     },
-    "template": {
-        "mask": "src/template/*.json",
-        "linguist": "src/template/language.linguist.json",
-        "spdx": "src/template/license.spdx.json"
+    "internal": {
+        "mask": "src/internal/*.json",
+        "test": "src/internal/test.json",
+        "import": "src/internal/import.json"
     },
-    "collection": {
-        "dir": "src/collection/",
-        "mask": "src/collection/*.json",
+    "template": {
+        "mask": "src/type/**/template.json",
+        "spdx": "src/type/license/template.json",
+        "linguist": "src/type/language/template.json"
+    },
+    "type": {
+        "dir": "src/type/",
+        "mask": "src/type/**/**.json",
+        "spdx_dir": "src/type/license/",
+        "linguist_dir": "src/type/language/",
         "licenses": {
-            "spdx": "src/collection/license.spdx.json"
+            "mask": "src/type/license/*.json",
+            "spdx": "src/type/license/spdx.json",
+            "custom": "src/type/license/custom.json"
         },
         "languages": {
-            "linguist": "src/collection/language.linguist.json"
+            "mask": "src/type/language/*.json",
+            "custom": "src/type/language/custom.json",
+            "linguist": "src/type/language/linguist.json"
+        },
+        "managers": {
+            "mask": "src/type/manager/*.json",
+            "system": "src/type/manager/system.json",
+            "language": "src/type/manager/language.json"
         }
     },
     "schema": {
         "dir": "src/schema/",
         "mask": "src/schema/*.json",
         "ver": "src/schema/schemaver.json",
-        "schema": "src/collection/schema.json",
-        "collection": "src/schema/collection.json"
+        "schema": "src/type/schema.json",
+        "types": "src/schema/types.json"
     },
     "build": {
         "dir": "build",
@@ -55,8 +74,14 @@
         "mask": "test/**/test.json"
     },
     "ext": {
-        "linguist": "ext/github/linguist/lib/linguist/languages.yml",
-        "spdx": "ext/spdx/license-list-data/json/licenses.json"
+        "linguist": {
+            "name": "linguist",
+            "$ref": "ext/github/linguist/lib/linguist/languages.yml"
+        },
+        "spdx": {
+            "name": "spdx",
+            "$ref": "ext/spdx/license-list-data/json/licenses.json"
+        }
     },
     "release": {
         "dir": "dist",

@@ -1,9 +1,8 @@
 {
-    "$schema": "https://schema.linterhub.com/package.json",
+    "$schema": "https://schema.linterhub.com/package.json#",
     "$version": "1.0.0",
     "$id": "uri://uri",
     "name": "name",
     "description": "description",
-    "url": "url://url",
-    "copying": "copying"
+    "url": "url://url"
 }

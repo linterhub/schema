@@ -15,7 +15,7 @@ hubRegistry([
 ]);
 
 /**
- * Validate all core and collection schemas
+ * Validate all schemas
  *
  * @task {validate}
  */

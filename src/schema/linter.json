@@ -1,7 +1,7 @@
 {
-    "$schema": "https://schema.linterhub.com/schemaver.json",
+    "$schema": "https://schema.linterhub.com/schemaver.json#",
+    "$id": "https://schema.linterhub.com/linter.json#",
     "$version": "0.0.0",
-    "$id": "https://schema.linterhub.com/linter.json",
     "title": "Linter meta-information",
     "description": "The schema of linter meta-information that extends package",
     "type": "object",
@@ -39,7 +39,7 @@
                     "type": "array",
                     "default": [],
                     "items": {
-                        "$ref": "./collection.json#/definitions/language"
+                        "$ref": "./types.json#/definitions/language"
                     },
                     "uniqueItems": true
                 },

@@ -55,7 +55,7 @@ Test: Add missing tests for a linter (#456)
 
 Adding missing tests for the linter:
 - with full data
-- incorrect collection of languages
+- incorrect array of languages
 
 Closes #456
 ```
