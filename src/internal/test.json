@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.linterhub.com/schemaver.json",
-    "$id": "https://schema.linterhub.com/test.json",
+    "$id": "https://schema.linterhub.com/test.json#",
     "$version": "0.0.0",
     "title": "Test schema",
     "description": "The schema of test",

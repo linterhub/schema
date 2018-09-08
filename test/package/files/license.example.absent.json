@@ -4,6 +4,5 @@
     "$id": "uri://uri",
     "name": "name",
     "description": "description",
-    "url": "url://url",
-    "copying": "copying"
+    "url": "url://url"
 }

@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.linterhub.com/schemaver.json#",
-    "$id": "https://schema.linterhub.com/types.json",
+    "$id": "https://schema.linterhub.com/types.json#",
     "$version": "0.0.0",
     "title": "Types",
     "description": "The container for common types",

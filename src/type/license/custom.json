@@ -4,14 +4,14 @@
     "title": "License",
     "description": "The software license identifier",
     "type": "string",
-    "enum": [
+    "oneOf": [
         {
-            "$ref": "#/definitions/not-spdx"
+            "$ref": "#/definitions/not:spdx"
         }
     ],
     "additionalItems": false,
     "definitions": {
-        "not-spdx": {
+        "not:spdx": {
             "title": "License",
             "description": "The not-SPDX license name",
             "type": "string",

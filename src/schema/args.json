@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.linterhub.com/schemaver.json#",
-    "$id": "https://schema.linterhub.com/args.json",
+    "$id": "https://schema.linterhub.com/args.json#",
     "$version": "0.0.0",
     "title": "Arguments schema",
     "description": "The schema of package arguments",
@@ -63,7 +63,7 @@
                 },
                 "glob": {
                     "title": "glob",
-                    "description": "Not editable and visible: filesysyem path or mask which are calculated at runtime",
+                    "description": "Not editable and visible: file system path or mask which are calculated at runtime",
                     "type": "string",
                     "const": "glob"
                 },

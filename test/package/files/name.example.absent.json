@@ -4,6 +4,6 @@
     "$id": "uri://uri",
     "description": "description",
     "url": "url://url",
-    "license": "Custom",
-    "copying": "copying"
+    "license": "NOT-SPDX",
+    "license:text": "License text"
 }

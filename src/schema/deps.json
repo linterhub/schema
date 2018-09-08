@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.linterhub.com/schemaver.json#",
-    "$id": "https://schema.linterhub.com/deps.json",
+    "$id": "https://schema.linterhub.com/deps.json#",
     "$version": "0.0.0",
     "title": "Package dependencies",
     "description": "The schema of dependencies that extends package",
@@ -48,19 +48,25 @@
             },
             "required": [
                 "package"
-            ],
-            "additionalProperties": false
+            ]
         },
         "dependency:manager-package": {
             "title": "Package",
             "description": "The definition of package as dependency",
             "allOf": [
                 {
-                    "$ref": "./types.json#/definitions/manager"
+                    "properties": {
+                        "manager": {
+                            "$ref": "./types.json#/definitions/manager"
+                        }
+                    }
                 },
                 {
                     "$ref": "#/definitions/package"
                 }
+            ],
+            "required": [
+                "manager"
             ]
         },
         "object": {

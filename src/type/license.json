@@ -3,8 +3,11 @@
     "$id": "https://schema.linterhub.com/type/license.json#",
     "title": "License",
     "description": "The license",
-    "type": "string",
+    "type": "object",
     "oneOf": [
+        {
+            "$ref": "#/definitions/object"
+        },
         {
             "$ref": "./license/custom.json#"
         },
@@ -12,6 +15,7 @@
             "$ref": "./license/spdx.json#"
         }
     ],
+    "additionalItems": false,
     "definitions": {
         "object": {
             "title": "Object",

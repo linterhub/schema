@@ -8,6 +8,6 @@
         "url": "url://url",
         "type": "homepage"
     },
-    "license": "Custom",
-    "copying": "copying"
+    "license": "NOT-SPDX",
+    "license:text": "License text"
 }

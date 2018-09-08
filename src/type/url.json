@@ -3,7 +3,6 @@
     "$id": "https://schema.linterhub.com/type/url.json#",
     "title": "URL",
     "description": "The URL object",
-    "type": "object",
     "oneOf": [
         {
             "$ref": "#/definitions/urls"
@@ -32,8 +31,8 @@
                 "unknown"
             ]
         },
-        "url:typed": {
-            "title": "URL (Typed)",
+        "url:object": {
+            "title": "URL (Object)",
             "description": "The URL with type specified",
             "type": "object",
             "properties": {
@@ -61,7 +60,7 @@
                     "$ref": "#/definitions/url:uri"
                 },
                 {
-                    "$ref": "#/definitions/url:typed"
+                    "$ref": "#/definitions/url:object"
                 }
             ]
         },

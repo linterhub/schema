@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://schema.linterhub.com/schemaver.json",
+    "$id": "https://schema.linterhub.com/schemaver.json#",
     "$version": "0.0.0",
     "title": "Versioned Schema",
     "description": "The meta-schema of versioned JSON schema",

@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.linterhub.com/schemaver.json",
-    "$id": "https://schema.linterhub.com/import.json",
+    "$id": "https://schema.linterhub.com/import.json#",
     "$version": "0.0.0",
     "title": "Import schema",
     "description": "The list of packages and theirs versions to import from external package manager",

@@ -5,6 +5,5 @@
     "name": "name",
     "description": "description",
     "url": "url://url",
-    "license": "MIT",
-    "copying": "copying"
+    "license": "MIT"
 }

@@ -15,15 +15,11 @@ const readJson = core.fnc.readJson;
 const readYaml = core.fnc.readYaml;
 const toBuffer = core.fnc.jsonToBuffer;
 
-// Const
-const importName = 'linguist';
-const spdx = 'spdx';
-
 // Import licenses from spdx
 const licenses = () => gulp
     .src(config.template.spdx)
     .pipe(gulpData((file) => {
-        const list = readJson(config.ext.spdx);
+        const list = readJson(config.ext.spdx.$ref);
         const template = readJson(file.path);
         template.$id = template.$id.replace('{name}', spdx);
         template.enum = list.licenses.map((l) => l.licenseId);
@@ -31,14 +27,14 @@ const licenses = () => gulp
         return file;
     }))
     .pipe(jsonFormat(4))
-    .pipe(rename(`${spdx}.json`))
+    .pipe(rename(`${config.ext.spdx.name}.json`))
     .pipe(gulp.dest(config.type.spdx_dir));
 
 // Import languages from linguist
 const languages = () => gulp
     .src(config.template.linguist)
     .pipe(gulpData((file) => {
-        const list = readYaml(config.ext.linguist);
+        const list = readYaml(config.ext.linguist.$ref);
         const template = readJson(file.path);
         const names = Object.keys(list);
         template.definitions.language.oneOf = names.map((name) => {
@@ -54,12 +50,12 @@ const languages = () => gulp
             }
             return language;
         });
-        template.$id = template.$id.replace('{name}', importName);
+        template.$id = template.$id.replace('{name}', config.ext.linguist.name);
         file.contents = toBuffer(template);
         return file;
     }))
     .pipe(jsonFormat(4))
-    .pipe(rename(`${importName}.json`))
+    .pipe(rename(`${config.ext.linguist.name}.json`))
     .pipe(gulp.dest(config.type.linguist_dir));
 
 // Tasks
