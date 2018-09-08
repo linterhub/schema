@@ -27,7 +27,7 @@
     "gulp": "./node_modules/gulp/bin/gulp.js",
     "eslint": "./node_modules/.bin/eslint",
     "conduct": "./node_modules/.bin/covgen conduct@linterhub.com ./.github/CODE_OF_CONDUCT.md",
-    "doc": "mkdir -p docs/schema && jsonschema2md -o docs/schema -d build/ -e json -s build/schemaver.json -x docs/example",
+    "doc": "./node_modules/.bin/jsonschema2md -o docs/schema -d build -e json -s build/schemaver.json -x docs/example",
     "test": "gulp test",
     "semantic-release": "semantic-release"
   },
