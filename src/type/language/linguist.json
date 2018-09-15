@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://schema.linterhub.com/type/language/linguist.json#",
+    "$id": "https://schema.linterhub.com/language/linguist.json",
     "title": "Programming Language",
     "description": "The programming language name and associated metadata",
     "type": "string",
@@ -11,6 +11,7 @@
     ],
     "additionalItems": false,
     "definitions": {
+        
         "language": {
             "title": "Language",
             "description": "The programming language",
@@ -18,6 +19,11 @@
             "oneOf": [
                 {
                     "const": "1C Enterprise",
+                    "properties": {
+                        "extensions": {
+                            "const": []
+                        }
+                    },
                     "extensions": [
                         ".bsl",
                         ".os"

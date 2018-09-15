@@ -15,6 +15,9 @@
         "manager": {
             "$ref": "./../type/manager.json#"
         },
+        "platform": {
+            "$ref": "./../type/platform.json#"
+        },
         "url": {
             "$ref": "./../type/url.json#"
         }

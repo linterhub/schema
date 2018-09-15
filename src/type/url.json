@@ -10,13 +10,13 @@
     ],
     "additionalItems": false,
     "definitions": {
-        "url:uri": {
+        "uri": {
             "title": "URL",
             "description": "The URL in URI format",
             "type": "string",
             "format": "uri"
         },
-        "url:type": {
+        "type": {
             "title": "URL type",
             "description": "The type of URL",
             "type": "string",
@@ -31,20 +31,20 @@
                 "unknown"
             ]
         },
-        "url:object": {
-            "title": "URL (Object)",
+        "object": {
+            "title": "URL object",
             "description": "The URL with type specified",
             "type": "object",
             "properties": {
                 "url": {
                     "title": "URL",
                     "description": "The URL in URI format",
-                    "$ref": "#/definitions/url:uri"
+                    "$ref": "#/definitions/uri"
                 },
                 "type": {
                     "title": "Type",
                     "description": "The type of url",
-                    "$ref": "#/definitions/url:type"
+                    "$ref": "#/definitions/type"
                 }
             },
             "required": [
@@ -52,29 +52,31 @@
             ],
             "additionalProperties": false
         },
-        "url:complex": {
+        "complex": {
             "title": "URL",
-            "description": "The URL in one of acceptable formats",
+            "description": "The URL as URI or as URI and type",
             "oneOf": [
                 {
-                    "$ref": "#/definitions/url:uri"
+                    "$ref": "#/definitions/uri"
                 },
                 {
-                    "$ref": "#/definitions/url:object"
+                    "$ref": "#/definitions/object"
                 }
             ]
         },
         "urls": {
-            "title": "URL",
-            "description": "The URL or collection of URLs",
+            "title": "URL(s)",
+            "description": "The URL or array of URLs",
             "oneOf": [
                 {
-                    "$ref": "#/definitions/url:complex"
+                    "$ref": "#/definitions/complex"
                 },
                 {
+                    "title": "URLs",
+                    "description": "The array of URLs",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/url:complex"
+                        "$ref": "#/definitions/complex"
                     },
                     "additionalProperties": false
                 }

@@ -2,50 +2,53 @@
     "$schema": "https://schema.linterhub.com/schemaver.json#",
     "$id": "https://schema.linterhub.com/linter.json#",
     "$version": "0.0.0",
-    "title": "Linter meta-information",
-    "description": "The schema of linter meta-information that extends package",
+    "title": "Linter",
+    "description": "The meta information about linter",
     "type": "object",
     "allOf": [
         {
             "$ref": "./schemaver.json#/definitions/object"
         },
         {
-            "$ref": "#/definitions/object"
+            "$ref": "#/definitions/linter"
         }
     ],
     "definitions": {
-        "config": {
-            "title": "Config",
-            "description": "The config extension",
+        "glob": {
+            "title": "Glob",
+            "description": "The pattern that specify sets of filenames with wildcard characters",
             "type": "string"
         },
         "extension": {
+            "$ref": "#/definitions/glob",
             "title": "Extension",
             "description": "The filename extension",
             "type": "string",
             "pattern": "^\\..*"
         },
-        "object": {
+        "linter": {
+            "title": "Linter",
+            "description": "The meta information about linter",
+            "type": "object",
             "properties": {
-                "package": {
-                    "title": "Package",
-                    "description": "The package unique identifier in URI form which points to current version of package file",
-                    "type": "string",
-                    "format": "uri"
+                "id": {
+                    "$ref": "./package.json#/definitions/id"
                 },
-                "languages": {
-                    "title": "Languages",
-                    "description": "The list of supported languages",
+                "language": {
+                    "title": "Language",
+                    "description": "The array of supported languages",
                     "type": "array",
-                    "default": [],
+                    "default": [
+                        "All"
+                    ],
                     "items": {
                         "$ref": "./types.json#/definitions/language"
                     },
                     "uniqueItems": true
                 },
-                "extensions": {
-                    "title": "Extensions",
-                    "description": "The list of supported extensions, by default corresponding extensions for linter languages are used",
+                "extension": {
+                    "title": "Extension",
+                    "description": "The array of supported file extensions",
                     "type": "array",
                     "default": [],
                     "items": {
@@ -53,19 +56,19 @@
                     },
                     "uniqueItems": true
                 },
-                "configs": {
-                    "title": "Configuration files",
-                    "description": "List of file names or masks which could be treated as linter configuration file",
+                "config": {
+                    "title": "Configuration",
+                    "description": "The array of glo patters of config file",
                     "type": "array",
                     "default": [],
                     "items": {
-                        "$ref": "#/definitions/config"
+                        "$ref": "#/definitions/glob"
                     },
                     "uniqueItems": true
                 }
             },
             "required": [
-                "package"
+                "id"
             ]
         }
     }

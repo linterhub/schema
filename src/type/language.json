@@ -1,16 +1,32 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://schema.linterhub.com/type/language.json#",
+    "$id": "https://schema.linterhub.com/type/language.json",
     "title": "Programming Language",
     "description": "The programming language name and associated metadata",
     "type": "string",
     "oneOf": [
         {
-            "$ref": "./language/custom.json#"
-        },
-        {
-            "$ref": "./language/linguist.json#"
+            "$ref": "#/definitions/name"
         }
     ],
-    "additionalItems": false
+    "additionalItems": false,
+    "definitions": {
+        "name": {
+            "$id": "https://schema.linterhub.com/type/language.json",
+            "title": "Name",
+            "description": "The name of the language",
+            "type": "string",
+            "oneOf": [
+                {
+                    "$ref": "language/special.json#"
+                },
+                {
+                    "$ref": "language/custom.json"
+                },
+                {
+                    "$ref": "language/linguist.json"
+                }
+            ]
+        }
+    }
 }

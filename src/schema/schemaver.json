@@ -14,11 +14,36 @@
         }
     ],
     "definitions": {
+        "reference": {
+            "title": "Reference",
+            "description": "The reference in URI format",
+            "type": "string",
+            "format": "uri"
+        },
+        "version": {
+            "title": "Version",
+            "description": "The version",
+            "type": "string",
+            "examples": [
+                "0.0.1",
+                "beta",
+                "sierra",
+                "1.0.0"
+            ]
+        },
+        "semantic": {
+            "$ref": "#/definitions/version",
+            "description": "The semantic version",
+            "pattern": "^[0-9]+.[0-9]+.[0-9]+$",
+            "examples": [
+                "1.0.0",
+                "2.2.2"
+            ]
+        },
         "schema": {
+            "$ref": "http://json-schema.org/draft-06/schema#",
             "title": "JSON Schema",
-            "description": "The meta-schema of JSON schema",
-            "type": "object",
-            "$ref": "http://json-schema.org/draft-06/schema#"
+            "description": "The meta-schema of JSON schema"
         },
         "object": {
             "title": "Versioned Object",
@@ -26,16 +51,12 @@
             "type": "object",
             "properties": {
                 "$version": {
-                    "title": "Version",
-                    "description": "The version value",
-                    "type": "string",
-                    "pattern": "^[0-9]+.[0-9]+.[0-9]+$"
+                    "$ref": "#/definitions/semantic"
                 },
                 "$schema": {
+                    "$ref": "#/definitions/reference",
                     "title": "Schema",
-                    "description": "The parent schema uri",
-                    "type": "string",
-                    "format": "uri"
+                    "description": "The parent schema uri"
                 }
             },
             "required": [

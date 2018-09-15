@@ -24,6 +24,7 @@
     "access": "public"
   },
   "scripts": {
+    "ajv": "./node_modules/.bin/ajv",
     "gulp": "./node_modules/gulp/bin/gulp.js",
     "eslint": "./node_modules/.bin/eslint",
     "conduct": "./node_modules/.bin/covgen conduct@linterhub.com ./.github/CODE_OF_CONDUCT.md",
@@ -44,6 +45,7 @@
     "@semantic-release/changelog": "^2.0.2",
     "@semantic-release/exec": "^2.2.4",
     "@semantic-release/git": "^5.0.0",
+    "ajv-cli": "^3.0.0",
     "covgen": "^3.1.0",
     "del": "^3.0.0",
     "eslint": "^5.0.0",

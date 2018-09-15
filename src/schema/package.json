@@ -2,15 +2,15 @@
     "$schema": "https://schema.linterhub.com/schemaver.json#",
     "$id": "https://schema.linterhub.com/package.json#",
     "$version": "0.0.0",
-    "title": "Package meta-information",
-    "description": "The schema of package meta information",
+    "title": "Software package",
+    "description": "The meta information about software package",
     "type": "object",
     "allOf": [
         {
             "$ref": "./schemaver.json#/definitions/object"
         },
         {
-            "$ref": "#/definitions/object"
+            "$ref": "#/definitions/meta"
         },
         {
             "$ref": "./types.json#/definitions/license"
@@ -20,18 +20,29 @@
         "license"
     ],
     "definitions": {
-        "object": {
+        "id": {
+            "$ref": "./schemaver.json#/definitions/referece",
+            "title": "Id",
+            "description": "The unique identifier of software package",
+            "examples": [
+                "https://catalog.literhub.com/dummy/package.json"
+            ]
+        },
+        "name": {
+            "title": "Name",
+            "description": "The name of the software package",
+            "type": "string"
+        },
+        "meta": {
+            "title": "Software metapackage",
+            "description": "The meta information about software package",
+            "type": "object",
             "properties": {
-                "package": {
-                    "title": "Package",
-                    "description": "The package unique identifier in URI form which points to current version of package file",
-                    "type": "string",
-                    "format": "uri"
+                "id": {
+                    "$ref": "#/definitions/id"
                 },
                 "name": {
-                    "title": "Name",
-                    "description": "The original name of the package",
-                    "type": "string"
+                    "$ref": "#/definitions/name"
                 },
                 "description": {
                     "title": "Description",
@@ -39,19 +50,53 @@
                     "type": "string"
                 },
                 "version": {
-                    "title": "Version",
-                    "description": "The package version in a format it was originally specified",
-                    "type": "string"
+                    "$ref": "./schemaver.json#/definitions/version"
                 },
                 "url": {
                     "title": "URL",
-                    "description": "The package homepage (website, online documentation or repository)",
+                    "description": "The web page of the package",
                     "$ref": "./types.json#/definitions/url"
                 }
             },
             "required": [
-                "package",
+                "id",
                 "name"
+            ]
+        },
+        "ref": {
+            "title": "Reference",
+            "description": "The reference to software package",
+            "type": "object",
+            "properties": {
+                "manager": {
+                    "$ref": "./types.json#/definitions/manager",
+                    "title": "Manager",
+                    "description": "The name of package manager"
+                },
+                "package": {
+                    "$ref": "#/definitions/name"
+                },
+                "version": {
+                    "title": "Version(s)",
+                    "description": "The version or array of versions",
+                    "oneOf": [
+                        {
+                            "$ref": "./schemaver.json#/definitions/version"
+                        },
+                        {
+                            "title": "Versions",
+                            "description": "The array of versions",
+                            "type": "array",
+                            "items": {
+                                "$ref": "./schemaver.json#/definitions/version"
+                            }
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "manager",
+                "package"
             ]
         }
     }

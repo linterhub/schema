@@ -43,10 +43,18 @@ const languages = () => gulp
                 const: `${name}`,
             };
             if (item.extensions && item.extensions.length) {
-                language.extensions = item.extensions;
+                language.properties = {
+                    extensions: {
+                        const: item.extensions
+                    }
+                };
             }
             if (item.filenames && item.filenames.length) {
-                language.filenames = item.filenames;
+                language.properties = {
+                    filenames: {
+                        const: item.filenames
+                    }
+                };
             }
             return language;
         });

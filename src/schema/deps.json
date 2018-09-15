@@ -2,96 +2,79 @@
     "$schema": "https://schema.linterhub.com/schemaver.json#",
     "$id": "https://schema.linterhub.com/deps.json#",
     "$version": "0.0.0",
-    "title": "Package dependencies",
-    "description": "The schema of dependencies that extends package",
+    "title": "Software package dependencies",
+    "description": "The dependencies of the software package",
     "type": "object",
     "allOf": [
         {
             "$ref": "./schemaver.json#/definitions/object"
         },
         {
-            "$ref": "#/definitions/object"
+            "$ref": "#/definitions/deps"
         }
     ],
     "definitions": {
-        "dependency": {
-            "title": "Dependency",
-            "description": "The array of required packages",
+        "deps": {
+            "title": "Dependencies",
+            "description": "The dependencies of software package",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "$ref": "./package.json#/definitions/id"
+                },
+                "oneOf": {
+                    "$ref": "#/definitions/oneOf"
+                }
+            },
+            "required": [
+                "id",
+                "oneOf"
+            ]
+        },
+        "oneOf": {
+            "title": "Any",
+            "description": "The array of conditions where at least one should pass",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/dependency:manager-package"
+                "$ref": "#/definitions/allOf"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+        },
+        "allOf": {
+            "title": "All",
+            "description": "The array of conditions where all should pass",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/condition"
             },
             "minItems": 1,
             "uniqueItems": true
         },
-        "package": {
-            "title": "Package",
-            "description": "The definition of required package, later it should be converted to linterhub package reference",
+        "condition": {
+            "title": "Condition",
+            "description": "The generic container for conditions",
             "type": "object",
-            "properties": {
-                "package": {
-                    "title": "Package",
-                    "description": "The package name in a format accepted by package manager",
-                    "type": "string"
-                },
-                "version": {
-                    "title": "Version",
-                    "description": "The package version in a format accepted by package manager, if not specified the latest version is assumed",
-                    "type": "string"
-                },
-                "target": {
-                    "title": "Target",
-                    "description": "The flag indicating whether the package is the target itself",
-                    "type": "boolean",
-                    "default": false
-                }
-            },
-            "required": [
-                "package"
-            ]
-        },
-        "dependency:manager-package": {
-            "title": "Package",
-            "description": "The definition of package as dependency",
-            "allOf": [
+            "oneOf": [
                 {
-                    "properties": {
-                        "manager": {
-                            "$ref": "./types.json#/definitions/manager"
-                        }
-                    }
+                    "$ref": "#/definitions/condition:platform"
                 },
                 {
-                    "$ref": "#/definitions/package"
+                    "$ref": "#/definitions/condition:manager"
+                },
+                {
+                    "$ref": "#/definitions/condition:package"
                 }
-            ],
-            "required": [
-                "manager"
             ]
         },
-        "object": {
-            "properties": {
-                "package": {
-                    "title": "Package",
-                    "description": "The package unique identifier in URI form which points to current version of package file",
-                    "type": "string",
-                    "format": "uri"
-                },
-                "dependencies": {
-                    "title": "Dependencies",
-                    "description": "The array of linter dependencies, where each dependency is an array of required packages",
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/dependency"
-                    },
-                    "minItems": 1,
-                    "uniqueItems": true
-                }
-            },
-            "required": [
-                "package",
-                "dependencies"
-            ]
+        "condition:platform": {
+            "$ref": "./types.json#/platform#/definitions/ref"
+        },
+        "condition:manager": {
+            "$ref": "./types.json#/manager#/definitions/ref"
+        },
+        "condition:package": {
+            "$ref": "./package.json#/definitions/ref"
         }
     }
 }

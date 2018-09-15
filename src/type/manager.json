@@ -6,11 +6,43 @@
     "type": "string",
     "oneOf": [
         {
-            "$ref": "./manager/language.json#"
-        },
-        {
-            "$ref": "./manager/system.json#"
+            "$ref": "#/definitions/name"
         }
     ],
-    "additionalItems": false
+    "additionalItems": false,
+    "definitions": {
+        "name": {
+            "title": "Name",
+            "description": "The name of software package manager",
+            "type": "string",
+            "oneOf": [
+                {
+                    "$ref": "./manager/language.json#"
+                },
+                {
+                    "$ref": "./manager/system.json#"
+                }
+            ]
+        },
+        "ref": {
+            "title": "Reference",
+            "description": "The reference to package manager",
+            "type": "object",
+            "properties": {
+                "manager": {
+                    "$ref": "#/definitions/name",
+                    "title": "Manager"
+                },
+                "version": {
+                    "title": "Version",
+                    "description": "The version of software package manager",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "manager",
+                "version"
+            ]
+        }
+    }
 }

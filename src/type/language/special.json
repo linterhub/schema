@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://schema.linterhub.com/language/special.json",
+    "title": "Special Language",
+    "description": "The special language type",
+    "type": "string",
+    "oneOf": [
+        {
+            "$ref": "#/definitions/language"
+        }
+    ],
+    "definitions": {
+        "language": {
+            "title": "Special Language",
+            "description": "The special language type",
+            "type": "string",
+            "enum": [
+                "All"
+            ]
+        }
+    }
+}
