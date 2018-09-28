@@ -1,0 +1,16 @@
+{
+    "$schema": "https://schema.linterhub.com/package.json#",
+    "$version": "1.0.0",
+    "package": "uri://uri",
+    "name": "name",
+    "description": "description",
+    "url": [
+        {
+            "url": "url://url",
+            "type": "homepage"
+        }
+    ],
+    "manager": "11",
+    "license": "NOT-SPDX",
+    "license:text": "License text"
+}

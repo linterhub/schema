@@ -1,0 +1,13 @@
+{
+    "$schema": "https://schema.linterhub.com/import.json#",
+    "$version": "0.0.0",
+    "source": {
+        "name": "npm",
+        "version": "0.9.0"
+    },
+    "linters": [
+       {
+           "name": "name"
+       }
+    ]
+}

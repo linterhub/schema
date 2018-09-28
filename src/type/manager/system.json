@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://schema.linterhub.com/type/manager/system.json#",
+    "title": "Package Manager",
+    "description": "The package manager name (system)",
+    "type": "string",
+    "enum": [
+        "os",
+        "url",
+        "platform",
+        "pacman",
+        "chocolatey"
+    ],
+    "additionalItems": false
+}

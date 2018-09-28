@@ -37,3 +37,10 @@ travis
 arg
 gh-pages
 .css
+Args
+args
+boolean
+mdlrc
+eslintrc
+img
+svg

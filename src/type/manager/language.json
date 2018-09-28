@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://schema.linterhub.com/type/manager/language.json#",
+    "title": "Package Manager",
+    "description": "The package manager name (language)",
+    "type": "string",
+    "enum": [
+        "bower",
+        "composer",
+        "npm",
+        "pip",
+        "yarn",
+        "gem"
+    ],
+    "additionalItems": false
+}

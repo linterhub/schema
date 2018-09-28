@@ -47,6 +47,20 @@
             "valid": true
         },
         {
+            "description": "with language manager",
+            "data": {
+                "$ref": "test/package/files/manager.language.valid.json"
+            },
+            "valid": true
+        },
+        {
+            "description": "with system manager",
+            "data": {
+                "$ref": "test/package/files/manager.system.valid.json"
+            },
+            "valid": true
+        },
+        {
             "description": "incorrect license",
             "data": {
                 "$ref" : "test/package/files/license.example.incorrect.json"
@@ -78,6 +92,13 @@
             "description": "incorrect url type",
             "data": {
                 "$ref" : "test/package/files/url.type.incorrect.json"
+            },
+            "valid": false
+        },
+        {
+            "description": "incorrect manager",
+            "data": {
+                "$ref": "test/package/files/manager.example.incorrect.json"
             },
             "valid": false
         },

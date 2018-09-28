@@ -13,9 +13,9 @@ const jsonSchemaBundle = core.amd.jsonSchemaBundle;
 const json2ts = core.amd.json2ts;
 const config = core.cfg;
 
-// Resolve and inline all $ref in collections
+// Resolve and inline all $ref in types
 const bundle = () => gulp
-  .src(config.schema.collection)
+  .src(config.schema.types)
   .pipe(jsonSchemaBundle())
   .pipe(jsonFormat(4))
   .pipe(gulp.dest(config.build.dir));
@@ -23,15 +23,19 @@ const bundle = () => gulp
 // Copy to build all schemas
 const create = () => gulp
   .src([
+    config.internal.mask,
     config.schema.mask,
-    '!' + config.schema.collection,
+    '!' + config.schema.types,
   ])
   .pipe(gulp.dest(config.build.dir));
 
 // Generate typings
 const typings = () => gulp
-  .src(config.schema.mask)
-  .pipe(gulpData(function(file) {
+  .src([
+    config.internal.mask,
+    config.schema.mask,
+  ])
+  .pipe(gulpData((file) => {
     return json2ts.compile(
       JSON.parse(file.contents.toString()),
       file.path,
@@ -48,7 +52,7 @@ const typings = () => gulp
         log.error(e);
       });
   }))
-  .pipe(rename(function(path) {
+  .pipe(rename((path) => {
     path.extname = '.d.ts';
   }))
   .pipe(gulp.dest(config.typings.dir));

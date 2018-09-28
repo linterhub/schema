@@ -26,14 +26,14 @@
             "valid": true
         },
         {
-            "description": "with collection of languages",
+            "description": "with array of languages",
             "data": {
                 "$ref" : "test/linter/files/language.collection.valid.json"
             },
             "valid": true
         },
         {
-            "description": "incorrect collection of languages",
+            "description": "incorrect array of languages",
             "data": {
                 "$ref" : "test/linter/files/language.collection.incorrect.json"
             },

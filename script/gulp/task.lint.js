@@ -28,7 +28,7 @@ const js = () => gulp
 
 // Lint and auto-fix all json files
 const json = () => gulp
-    .src(config.src.mask)
+    .src(config.src.json)
     .pipe(jsonFormat(4))
     .pipe(gulp.dest(config.src.dir));
 

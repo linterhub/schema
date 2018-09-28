@@ -1,0 +1,3920 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://schema.linterhub.com/type/language/linguist.json#",
+    "title": "Programming Language",
+    "description": "The programming language name and associated metadata",
+    "type": "string",
+    "oneOf": [
+        {
+            "$ref": "#/definitions/language"
+        }
+    ],
+    "additionalItems": false,
+    "definitions": {
+        "language": {
+            "title": "Language",
+            "description": "The programming language",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "1C Enterprise",
+                    "extensions": [
+                        ".bsl",
+                        ".os"
+                    ]
+                },
+                {
+                    "const": "ABAP",
+                    "extensions": [
+                        ".abap"
+                    ]
+                },
+                {
+                    "const": "ABNF",
+                    "extensions": [
+                        ".abnf"
+                    ]
+                },
+                {
+                    "const": "AGS Script",
+                    "extensions": [
+                        ".asc",
+                        ".ash"
+                    ]
+                },
+                {
+                    "const": "AMPL",
+                    "extensions": [
+                        ".ampl",
+                        ".mod"
+                    ]
+                },
+                {
+                    "const": "ANTLR",
+                    "extensions": [
+                        ".g4"
+                    ]
+                },
+                {
+                    "const": "API Blueprint",
+                    "extensions": [
+                        ".apib"
+                    ]
+                },
+                {
+                    "const": "APL",
+                    "extensions": [
+                        ".apl",
+                        ".dyalog"
+                    ]
+                },
+                {
+                    "const": "ASN.1",
+                    "extensions": [
+                        ".asn",
+                        ".asn1"
+                    ]
+                },
+                {
+                    "const": "ASP",
+                    "extensions": [
+                        ".asp",
+                        ".asax",
+                        ".ascx",
+                        ".ashx",
+                        ".asmx",
+                        ".aspx",
+                        ".axd"
+                    ]
+                },
+                {
+                    "const": "ATS",
+                    "extensions": [
+                        ".dats",
+                        ".hats",
+                        ".sats"
+                    ]
+                },
+                {
+                    "const": "ActionScript",
+                    "extensions": [
+                        ".as"
+                    ]
+                },
+                {
+                    "const": "Ada",
+                    "extensions": [
+                        ".adb",
+                        ".ada",
+                        ".ads"
+                    ]
+                },
+                {
+                    "const": "Adobe Font Metrics",
+                    "extensions": [
+                        ".afm"
+                    ]
+                },
+                {
+                    "const": "Agda",
+                    "extensions": [
+                        ".agda"
+                    ]
+                },
+                {
+                    "const": "Alloy",
+                    "extensions": [
+                        ".als"
+                    ]
+                },
+                {
+                    "const": "Alpine Abuild",
+                    "filenames": [
+                        "APKBUILD"
+                    ]
+                },
+                {
+                    "const": "AngelScript",
+                    "extensions": [
+                        ".as",
+                        ".angelscript"
+                    ]
+                },
+                {
+                    "const": "Ant Build System",
+                    "filenames": [
+                        "ant.xml",
+                        "build.xml"
+                    ]
+                },
+                {
+                    "const": "ApacheConf",
+                    "extensions": [
+                        ".apacheconf",
+                        ".vhost"
+                    ],
+                    "filenames": [
+                        ".htaccess",
+                        "apache2.conf",
+                        "httpd.conf"
+                    ]
+                },
+                {
+                    "const": "Apex",
+                    "extensions": [
+                        ".cls"
+                    ]
+                },
+                {
+                    "const": "Apollo Guidance Computer",
+                    "extensions": [
+                        ".agc"
+                    ]
+                },
+                {
+                    "const": "AppleScript",
+                    "extensions": [
+                        ".applescript",
+                        ".scpt"
+                    ]
+                },
+                {
+                    "const": "Arc",
+                    "extensions": [
+                        ".arc"
+                    ]
+                },
+                {
+                    "const": "AsciiDoc",
+                    "extensions": [
+                        ".asciidoc",
+                        ".adoc",
+                        ".asc"
+                    ]
+                },
+                {
+                    "const": "AspectJ",
+                    "extensions": [
+                        ".aj"
+                    ]
+                },
+                {
+                    "const": "Assembly",
+                    "extensions": [
+                        ".asm",
+                        ".a51",
+                        ".inc",
+                        ".nasm"
+                    ]
+                },
+                {
+                    "const": "Augeas",
+                    "extensions": [
+                        ".aug"
+                    ]
+                },
+                {
+                    "const": "AutoHotkey",
+                    "extensions": [
+                        ".ahk",
+                        ".ahkl"
+                    ]
+                },
+                {
+                    "const": "AutoIt",
+                    "extensions": [
+                        ".au3"
+                    ]
+                },
+                {
+                    "const": "Awk",
+                    "extensions": [
+                        ".awk",
+                        ".auk",
+                        ".gawk",
+                        ".mawk",
+                        ".nawk"
+                    ]
+                },
+                {
+                    "const": "Ballerina",
+                    "extensions": [
+                        ".bal"
+                    ]
+                },
+                {
+                    "const": "Batchfile",
+                    "extensions": [
+                        ".bat",
+                        ".cmd"
+                    ]
+                },
+                {
+                    "const": "Befunge",
+                    "extensions": [
+                        ".befunge"
+                    ]
+                },
+                {
+                    "const": "Bison",
+                    "extensions": [
+                        ".bison"
+                    ]
+                },
+                {
+                    "const": "BitBake",
+                    "extensions": [
+                        ".bb"
+                    ]
+                },
+                {
+                    "const": "Blade",
+                    "extensions": [
+                        ".blade",
+                        ".blade.php"
+                    ]
+                },
+                {
+                    "const": "BlitzBasic",
+                    "extensions": [
+                        ".bb",
+                        ".decls"
+                    ]
+                },
+                {
+                    "const": "BlitzMax",
+                    "extensions": [
+                        ".bmx"
+                    ]
+                },
+                {
+                    "const": "Bluespec",
+                    "extensions": [
+                        ".bsv"
+                    ]
+                },
+                {
+                    "const": "Boo",
+                    "extensions": [
+                        ".boo"
+                    ]
+                },
+                {
+                    "const": "Brainfuck",
+                    "extensions": [
+                        ".b",
+                        ".bf"
+                    ]
+                },
+                {
+                    "const": "Brightscript",
+                    "extensions": [
+                        ".brs"
+                    ]
+                },
+                {
+                    "const": "Bro",
+                    "extensions": [
+                        ".bro"
+                    ]
+                },
+                {
+                    "const": "C",
+                    "extensions": [
+                        ".c",
+                        ".cats",
+                        ".h",
+                        ".idc"
+                    ]
+                },
+                {
+                    "const": "C#",
+                    "extensions": [
+                        ".cs",
+                        ".cake",
+                        ".cshtml",
+                        ".csx"
+                    ]
+                },
+                {
+                    "const": "C++",
+                    "extensions": [
+                        ".cpp",
+                        ".c++",
+                        ".cc",
+                        ".cp",
+                        ".cxx",
+                        ".h",
+                        ".h++",
+                        ".hh",
+                        ".hpp",
+                        ".hxx",
+                        ".inc",
+                        ".inl",
+                        ".ino",
+                        ".ipp",
+                        ".re",
+                        ".tcc",
+                        ".tpp"
+                    ]
+                },
+                {
+                    "const": "C-ObjDump",
+                    "extensions": [
+                        ".c-objdump"
+                    ]
+                },
+                {
+                    "const": "C2hs Haskell",
+                    "extensions": [
+                        ".chs"
+                    ]
+                },
+                {
+                    "const": "CLIPS",
+                    "extensions": [
+                        ".clp"
+                    ]
+                },
+                {
+                    "const": "CMake",
+                    "extensions": [
+                        ".cmake",
+                        ".cmake.in"
+                    ],
+                    "filenames": [
+                        "CMakeLists.txt"
+                    ]
+                },
+                {
+                    "const": "COBOL",
+                    "extensions": [
+                        ".cob",
+                        ".cbl",
+                        ".ccp",
+                        ".cobol",
+                        ".cpy"
+                    ]
+                },
+                {
+                    "const": "COLLADA",
+                    "extensions": [
+                        ".dae"
+                    ]
+                },
+                {
+                    "const": "CSON",
+                    "extensions": [
+                        ".cson"
+                    ]
+                },
+                {
+                    "const": "CSS",
+                    "extensions": [
+                        ".css"
+                    ]
+                },
+                {
+                    "const": "CSV",
+                    "extensions": [
+                        ".csv"
+                    ]
+                },
+                {
+                    "const": "CWeb",
+                    "extensions": [
+                        ".w"
+                    ]
+                },
+                {
+                    "const": "Cap'n Proto",
+                    "extensions": [
+                        ".capnp"
+                    ]
+                },
+                {
+                    "const": "CartoCSS",
+                    "extensions": [
+                        ".mss"
+                    ]
+                },
+                {
+                    "const": "Ceylon",
+                    "extensions": [
+                        ".ceylon"
+                    ]
+                },
+                {
+                    "const": "Chapel",
+                    "extensions": [
+                        ".chpl"
+                    ]
+                },
+                {
+                    "const": "Charity",
+                    "extensions": [
+                        ".ch"
+                    ]
+                },
+                {
+                    "const": "ChucK",
+                    "extensions": [
+                        ".ck"
+                    ]
+                },
+                {
+                    "const": "Cirru",
+                    "extensions": [
+                        ".cirru"
+                    ]
+                },
+                {
+                    "const": "Clarion",
+                    "extensions": [
+                        ".clw"
+                    ]
+                },
+                {
+                    "const": "Clean",
+                    "extensions": [
+                        ".icl",
+                        ".dcl"
+                    ]
+                },
+                {
+                    "const": "Click",
+                    "extensions": [
+                        ".click"
+                    ]
+                },
+                {
+                    "const": "Clojure",
+                    "extensions": [
+                        ".clj",
+                        ".boot",
+                        ".cl2",
+                        ".cljc",
+                        ".cljs",
+                        ".cljs.hl",
+                        ".cljscm",
+                        ".cljx",
+                        ".hic"
+                    ],
+                    "filenames": [
+                        "riemann.config"
+                    ]
+                },
+                {
+                    "const": "Closure Templates",
+                    "extensions": [
+                        ".soy"
+                    ]
+                },
+                {
+                    "const": "Cloud Firestore Security Rules",
+                    "filenames": [
+                        "firestore.rules"
+                    ]
+                },
+                {
+                    "const": "CoNLL-U",
+                    "extensions": [
+                        ".conllu",
+                        ".conll"
+                    ]
+                },
+                {
+                    "const": "CoffeeScript",
+                    "extensions": [
+                        ".coffee",
+                        "._coffee",
+                        ".cake",
+                        ".cjsx",
+                        ".iced"
+                    ],
+                    "filenames": [
+                        "Cakefile"
+                    ]
+                },
+                {
+                    "const": "ColdFusion",
+                    "extensions": [
+                        ".cfm",
+                        ".cfml"
+                    ]
+                },
+                {
+                    "const": "ColdFusion CFC",
+                    "extensions": [
+                        ".cfc"
+                    ]
+                },
+                {
+                    "const": "Common Lisp",
+                    "extensions": [
+                        ".lisp",
+                        ".asd",
+                        ".cl",
+                        ".l",
+                        ".lsp",
+                        ".ny",
+                        ".podsl",
+                        ".sexp"
+                    ]
+                },
+                {
+                    "const": "Common Workflow Language",
+                    "extensions": [
+                        ".cwl"
+                    ]
+                },
+                {
+                    "const": "Component Pascal",
+                    "extensions": [
+                        ".cp",
+                        ".cps"
+                    ]
+                },
+                {
+                    "const": "Cool",
+                    "extensions": [
+                        ".cl"
+                    ]
+                },
+                {
+                    "const": "Coq",
+                    "extensions": [
+                        ".coq",
+                        ".v"
+                    ]
+                },
+                {
+                    "const": "Cpp-ObjDump",
+                    "extensions": [
+                        ".cppobjdump",
+                        ".c++-objdump",
+                        ".c++objdump",
+                        ".cpp-objdump",
+                        ".cxx-objdump"
+                    ]
+                },
+                {
+                    "const": "Creole",
+                    "extensions": [
+                        ".creole"
+                    ]
+                },
+                {
+                    "const": "Crystal",
+                    "extensions": [
+                        ".cr"
+                    ]
+                },
+                {
+                    "const": "Csound",
+                    "extensions": [
+                        ".orc",
+                        ".udo"
+                    ]
+                },
+                {
+                    "const": "Csound Document",
+                    "extensions": [
+                        ".csd"
+                    ]
+                },
+                {
+                    "const": "Csound Score",
+                    "extensions": [
+                        ".sco"
+                    ]
+                },
+                {
+                    "const": "Cuda",
+                    "extensions": [
+                        ".cu",
+                        ".cuh"
+                    ]
+                },
+                {
+                    "const": "Cycript",
+                    "extensions": [
+                        ".cy"
+                    ]
+                },
+                {
+                    "const": "Cython",
+                    "extensions": [
+                        ".pyx",
+                        ".pxd",
+                        ".pxi"
+                    ]
+                },
+                {
+                    "const": "D",
+                    "extensions": [
+                        ".d",
+                        ".di"
+                    ]
+                },
+                {
+                    "const": "D-ObjDump",
+                    "extensions": [
+                        ".d-objdump"
+                    ]
+                },
+                {
+                    "const": "DIGITAL Command Language",
+                    "extensions": [
+                        ".com"
+                    ]
+                },
+                {
+                    "const": "DM",
+                    "extensions": [
+                        ".dm"
+                    ]
+                },
+                {
+                    "const": "DNS Zone",
+                    "extensions": [
+                        ".zone",
+                        ".arpa"
+                    ]
+                },
+                {
+                    "const": "DTrace",
+                    "extensions": [
+                        ".d"
+                    ]
+                },
+                {
+                    "const": "Darcs Patch",
+                    "extensions": [
+                        ".darcspatch",
+                        ".dpatch"
+                    ]
+                },
+                {
+                    "const": "Dart",
+                    "extensions": [
+                        ".dart"
+                    ]
+                },
+                {
+                    "const": "DataWeave",
+                    "extensions": [
+                        ".dwl"
+                    ]
+                },
+                {
+                    "const": "Diff",
+                    "extensions": [
+                        ".diff",
+                        ".patch"
+                    ]
+                },
+                {
+                    "const": "Dockerfile",
+                    "extensions": [
+                        ".dockerfile"
+                    ],
+                    "filenames": [
+                        "Dockerfile"
+                    ]
+                },
+                {
+                    "const": "Dogescript",
+                    "extensions": [
+                        ".djs"
+                    ]
+                },
+                {
+                    "const": "Dylan",
+                    "extensions": [
+                        ".dylan",
+                        ".dyl",
+                        ".intr",
+                        ".lid"
+                    ]
+                },
+                {
+                    "const": "E",
+                    "extensions": [
+                        ".E"
+                    ]
+                },
+                {
+                    "const": "EBNF",
+                    "extensions": [
+                        ".ebnf"
+                    ]
+                },
+                {
+                    "const": "ECL",
+                    "extensions": [
+                        ".ecl",
+                        ".eclxml"
+                    ]
+                },
+                {
+                    "const": "ECLiPSe",
+                    "extensions": [
+                        ".ecl"
+                    ]
+                },
+                {
+                    "const": "EJS",
+                    "extensions": [
+                        ".ejs"
+                    ]
+                },
+                {
+                    "const": "EQ",
+                    "extensions": [
+                        ".eq"
+                    ]
+                },
+                {
+                    "const": "Eagle",
+                    "extensions": [
+                        ".sch",
+                        ".brd"
+                    ]
+                },
+                {
+                    "const": "Easybuild",
+                    "extensions": [
+                        ".eb"
+                    ]
+                },
+                {
+                    "const": "Ecere Projects",
+                    "extensions": [
+                        ".epj"
+                    ]
+                },
+                {
+                    "const": "Edje Data Collection",
+                    "extensions": [
+                        ".edc"
+                    ]
+                },
+                {
+                    "const": "Eiffel",
+                    "extensions": [
+                        ".e"
+                    ]
+                },
+                {
+                    "const": "Elixir",
+                    "extensions": [
+                        ".ex",
+                        ".exs"
+                    ],
+                    "filenames": [
+                        "mix.lock"
+                    ]
+                },
+                {
+                    "const": "Elm",
+                    "extensions": [
+                        ".elm"
+                    ]
+                },
+                {
+                    "const": "Emacs Lisp",
+                    "extensions": [
+                        ".el",
+                        ".emacs",
+                        ".emacs.desktop"
+                    ],
+                    "filenames": [
+                        ".abbrev_defs",
+                        ".emacs",
+                        ".emacs.desktop",
+                        ".gnus",
+                        ".spacemacs",
+                        ".viper",
+                        "Cask",
+                        "Project.ede",
+                        "_emacs",
+                        "abbrev_defs"
+                    ]
+                },
+                {
+                    "const": "EmberScript",
+                    "extensions": [
+                        ".em",
+                        ".emberscript"
+                    ]
+                },
+                {
+                    "const": "Erlang",
+                    "extensions": [
+                        ".erl",
+                        ".app.src",
+                        ".es",
+                        ".escript",
+                        ".hrl",
+                        ".xrl",
+                        ".yrl"
+                    ],
+                    "filenames": [
+                        "Emakefile",
+                        "rebar.config",
+                        "rebar.config.lock",
+                        "rebar.lock"
+                    ]
+                },
+                {
+                    "const": "F#",
+                    "extensions": [
+                        ".fs",
+                        ".fsi",
+                        ".fsx"
+                    ]
+                },
+                {
+                    "const": "F*",
+                    "extensions": [
+                        ".fst"
+                    ]
+                },
+                {
+                    "const": "FIGlet Font",
+                    "extensions": [
+                        ".flf"
+                    ]
+                },
+                {
+                    "const": "FLUX",
+                    "extensions": [
+                        ".fx",
+                        ".flux"
+                    ]
+                },
+                {
+                    "const": "Factor",
+                    "extensions": [
+                        ".factor"
+                    ],
+                    "filenames": [
+                        ".factor-boot-rc",
+                        ".factor-rc"
+                    ]
+                },
+                {
+                    "const": "Fancy",
+                    "extensions": [
+                        ".fy",
+                        ".fancypack"
+                    ],
+                    "filenames": [
+                        "Fakefile"
+                    ]
+                },
+                {
+                    "const": "Fantom",
+                    "extensions": [
+                        ".fan"
+                    ]
+                },
+                {
+                    "const": "Filebench WML",
+                    "extensions": [
+                        ".f"
+                    ]
+                },
+                {
+                    "const": "Filterscript",
+                    "extensions": [
+                        ".fs"
+                    ]
+                },
+                {
+                    "const": "Formatted",
+                    "extensions": [
+                        ".for",
+                        ".eam.fs"
+                    ]
+                },
+                {
+                    "const": "Forth",
+                    "extensions": [
+                        ".fth",
+                        ".4th",
+                        ".f",
+                        ".for",
+                        ".forth",
+                        ".fr",
+                        ".frt",
+                        ".fs"
+                    ]
+                },
+                {
+                    "const": "Fortran",
+                    "extensions": [
+                        ".f90",
+                        ".f",
+                        ".f03",
+                        ".f08",
+                        ".f77",
+                        ".f95",
+                        ".for",
+                        ".fpp"
+                    ]
+                },
+                {
+                    "const": "FreeMarker",
+                    "extensions": [
+                        ".ftl"
+                    ]
+                },
+                {
+                    "const": "Frege",
+                    "extensions": [
+                        ".fr"
+                    ]
+                },
+                {
+                    "const": "G-code",
+                    "extensions": [
+                        ".g",
+                        ".gco",
+                        ".gcode"
+                    ]
+                },
+                {
+                    "const": "GAMS",
+                    "extensions": [
+                        ".gms"
+                    ]
+                },
+                {
+                    "const": "GAP",
+                    "extensions": [
+                        ".g",
+                        ".gap",
+                        ".gd",
+                        ".gi",
+                        ".tst"
+                    ]
+                },
+                {
+                    "const": "GCC Machine Description",
+                    "extensions": [
+                        ".md"
+                    ]
+                },
+                {
+                    "const": "GDB",
+                    "extensions": [
+                        ".gdb",
+                        ".gdbinit"
+                    ]
+                },
+                {
+                    "const": "GDScript",
+                    "extensions": [
+                        ".gd"
+                    ]
+                },
+                {
+                    "const": "GLSL",
+                    "extensions": [
+                        ".glsl",
+                        ".fp",
+                        ".frag",
+                        ".frg",
+                        ".fs",
+                        ".fsh",
+                        ".fshader",
+                        ".geo",
+                        ".geom",
+                        ".glslv",
+                        ".gshader",
+                        ".shader",
+                        ".tesc",
+                        ".tese",
+                        ".vert",
+                        ".vrx",
+                        ".vsh",
+                        ".vshader"
+                    ]
+                },
+                {
+                    "const": "GN",
+                    "extensions": [
+                        ".gn",
+                        ".gni"
+                    ],
+                    "filenames": [
+                        ".gn"
+                    ]
+                },
+                {
+                    "const": "Game Maker Language",
+                    "extensions": [
+                        ".gml"
+                    ]
+                },
+                {
+                    "const": "Genie",
+                    "extensions": [
+                        ".gs"
+                    ]
+                },
+                {
+                    "const": "Genshi",
+                    "extensions": [
+                        ".kid"
+                    ]
+                },
+                {
+                    "const": "Gentoo Ebuild",
+                    "extensions": [
+                        ".ebuild"
+                    ]
+                },
+                {
+                    "const": "Gentoo Eclass",
+                    "extensions": [
+                        ".eclass"
+                    ]
+                },
+                {
+                    "const": "Gerber Image",
+                    "extensions": [
+                        ".gbr",
+                        ".gbl",
+                        ".gbo",
+                        ".gbp",
+                        ".gbs",
+                        ".gko",
+                        ".gpb",
+                        ".gpt",
+                        ".gtl",
+                        ".gto",
+                        ".gtp",
+                        ".gts"
+                    ]
+                },
+                {
+                    "const": "Gettext Catalog",
+                    "extensions": [
+                        ".po",
+                        ".pot"
+                    ]
+                },
+                {
+                    "const": "Gherkin",
+                    "extensions": [
+                        ".feature"
+                    ]
+                },
+                {
+                    "const": "Glyph",
+                    "extensions": [
+                        ".glf"
+                    ]
+                },
+                {
+                    "const": "Glyph Bitmap Distribution Format",
+                    "extensions": [
+                        ".bdf"
+                    ]
+                },
+                {
+                    "const": "Gnuplot",
+                    "extensions": [
+                        ".gp",
+                        ".gnu",
+                        ".gnuplot",
+                        ".plot",
+                        ".plt"
+                    ]
+                },
+                {
+                    "const": "Go",
+                    "extensions": [
+                        ".go"
+                    ]
+                },
+                {
+                    "const": "Golo",
+                    "extensions": [
+                        ".golo"
+                    ]
+                },
+                {
+                    "const": "Gosu",
+                    "extensions": [
+                        ".gs",
+                        ".gst",
+                        ".gsx",
+                        ".vark"
+                    ]
+                },
+                {
+                    "const": "Grace",
+                    "extensions": [
+                        ".grace"
+                    ]
+                },
+                {
+                    "const": "Gradle",
+                    "extensions": [
+                        ".gradle"
+                    ]
+                },
+                {
+                    "const": "Grammatical Framework",
+                    "extensions": [
+                        ".gf"
+                    ]
+                },
+                {
+                    "const": "Graph Modeling Language",
+                    "extensions": [
+                        ".gml"
+                    ]
+                },
+                {
+                    "const": "GraphQL",
+                    "extensions": [
+                        ".graphql",
+                        ".gql"
+                    ]
+                },
+                {
+                    "const": "Graphviz (DOT)",
+                    "extensions": [
+                        ".dot",
+                        ".gv"
+                    ]
+                },
+                {
+                    "const": "Groovy",
+                    "extensions": [
+                        ".groovy",
+                        ".grt",
+                        ".gtpl",
+                        ".gvy"
+                    ],
+                    "filenames": [
+                        "Jenkinsfile"
+                    ]
+                },
+                {
+                    "const": "Groovy Server Pages",
+                    "extensions": [
+                        ".gsp"
+                    ]
+                },
+                {
+                    "const": "HCL",
+                    "extensions": [
+                        ".hcl",
+                        ".tf",
+                        ".tfvars"
+                    ]
+                },
+                {
+                    "const": "HLSL",
+                    "extensions": [
+                        ".hlsl",
+                        ".cginc",
+                        ".fx",
+                        ".fxh",
+                        ".hlsli"
+                    ]
+                },
+                {
+                    "const": "HTML",
+                    "extensions": [
+                        ".html",
+                        ".htm",
+                        ".html.hl",
+                        ".inc",
+                        ".st",
+                        ".xht",
+                        ".xhtml"
+                    ]
+                },
+                {
+                    "const": "HTML+Django",
+                    "extensions": [
+                        ".jinja",
+                        ".jinja2",
+                        ".mustache",
+                        ".njk"
+                    ]
+                },
+                {
+                    "const": "HTML+ECR",
+                    "extensions": [
+                        ".ecr"
+                    ]
+                },
+                {
+                    "const": "HTML+EEX",
+                    "extensions": [
+                        ".eex"
+                    ]
+                },
+                {
+                    "const": "HTML+ERB",
+                    "extensions": [
+                        ".erb",
+                        ".erb.deface"
+                    ]
+                },
+                {
+                    "const": "HTML+PHP",
+                    "extensions": [
+                        ".phtml"
+                    ]
+                },
+                {
+                    "const": "HTTP",
+                    "extensions": [
+                        ".http"
+                    ]
+                },
+                {
+                    "const": "HXML",
+                    "extensions": [
+                        ".hxml"
+                    ]
+                },
+                {
+                    "const": "Hack",
+                    "extensions": [
+                        ".hh",
+                        ".php"
+                    ]
+                },
+                {
+                    "const": "Haml",
+                    "extensions": [
+                        ".haml",
+                        ".haml.deface"
+                    ]
+                },
+                {
+                    "const": "Handlebars",
+                    "extensions": [
+                        ".handlebars",
+                        ".hbs"
+                    ]
+                },
+                {
+                    "const": "Harbour",
+                    "extensions": [
+                        ".hb"
+                    ]
+                },
+                {
+                    "const": "Haskell",
+                    "extensions": [
+                        ".hs",
+                        ".hsc"
+                    ]
+                },
+                {
+                    "const": "Haxe",
+                    "extensions": [
+                        ".hx",
+                        ".hxsl"
+                    ]
+                },
+                {
+                    "const": "HiveQL",
+                    "extensions": [
+                        ".q"
+                    ]
+                },
+                {
+                    "const": "Hy",
+                    "extensions": [
+                        ".hy"
+                    ]
+                },
+                {
+                    "const": "HyPhy",
+                    "extensions": [
+                        ".bf"
+                    ]
+                },
+                {
+                    "const": "IDL",
+                    "extensions": [
+                        ".pro",
+                        ".dlm"
+                    ]
+                },
+                {
+                    "const": "IGOR Pro",
+                    "extensions": [
+                        ".ipf"
+                    ]
+                },
+                {
+                    "const": "INI",
+                    "extensions": [
+                        ".ini",
+                        ".cfg",
+                        ".lektorproject",
+                        ".prefs",
+                        ".pro",
+                        ".properties"
+                    ],
+                    "filenames": [
+                        ".editorconfig",
+                        ".gitconfig",
+                        "buildozer.spec"
+                    ]
+                },
+                {
+                    "const": "IRC log",
+                    "extensions": [
+                        ".irclog",
+                        ".weechatlog"
+                    ]
+                },
+                {
+                    "const": "Idris",
+                    "extensions": [
+                        ".idr",
+                        ".lidr"
+                    ]
+                },
+                {
+                    "const": "Inform 7",
+                    "extensions": [
+                        ".ni",
+                        ".i7x"
+                    ]
+                },
+                {
+                    "const": "Inno Setup",
+                    "extensions": [
+                        ".iss"
+                    ]
+                },
+                {
+                    "const": "Io",
+                    "extensions": [
+                        ".io"
+                    ]
+                },
+                {
+                    "const": "Ioke",
+                    "extensions": [
+                        ".ik"
+                    ]
+                },
+                {
+                    "const": "Isabelle",
+                    "extensions": [
+                        ".thy"
+                    ]
+                },
+                {
+                    "const": "Isabelle ROOT",
+                    "filenames": [
+                        "ROOT"
+                    ]
+                },
+                {
+                    "const": "J",
+                    "extensions": [
+                        ".ijs"
+                    ]
+                },
+                {
+                    "const": "JFlex",
+                    "extensions": [
+                        ".flex",
+                        ".jflex"
+                    ]
+                },
+                {
+                    "const": "JSON",
+                    "extensions": [
+                        ".json",
+                        ".avsc",
+                        ".geojson",
+                        ".gltf",
+                        ".JSON-tmLanguage",
+                        ".jsonl",
+                        ".tfstate",
+                        ".tfstate.backup",
+                        ".topojson",
+                        ".webapp",
+                        ".webmanifest",
+                        ".yy",
+                        ".yyp"
+                    ],
+                    "filenames": [
+                        ".arcconfig",
+                        ".htmlhintrc",
+                        ".tern-config",
+                        ".tern-project",
+                        "composer.lock",
+                        "mcmod.info"
+                    ]
+                },
+                {
+                    "const": "JSON with Comments",
+                    "extensions": [
+                        ".sublime-build",
+                        ".sublime-commands",
+                        ".sublime-completions",
+                        ".sublime-keymap",
+                        ".sublime-macro",
+                        ".sublime-menu",
+                        ".sublime-mousemap",
+                        ".sublime-project",
+                        ".sublime-settings",
+                        ".sublime-theme",
+                        ".sublime-workspace",
+                        ".sublime_metrics",
+                        ".sublime_session"
+                    ],
+                    "filenames": [
+                        ".babelrc",
+                        ".eslintrc.json",
+                        ".jscsrc",
+                        ".jshintrc",
+                        ".jslintrc",
+                        "tsconfig.json"
+                    ]
+                },
+                {
+                    "const": "JSON5",
+                    "extensions": [
+                        ".json5"
+                    ]
+                },
+                {
+                    "const": "JSONLD",
+                    "extensions": [
+                        ".jsonld"
+                    ]
+                },
+                {
+                    "const": "JSONiq",
+                    "extensions": [
+                        ".jq"
+                    ]
+                },
+                {
+                    "const": "JSX",
+                    "extensions": [
+                        ".jsx"
+                    ]
+                },
+                {
+                    "const": "Jasmin",
+                    "extensions": [
+                        ".j"
+                    ]
+                },
+                {
+                    "const": "Java",
+                    "extensions": [
+                        ".java"
+                    ]
+                },
+                {
+                    "const": "Java Server Pages",
+                    "extensions": [
+                        ".jsp"
+                    ]
+                },
+                {
+                    "const": "JavaScript",
+                    "extensions": [
+                        ".js",
+                        "._js",
+                        ".bones",
+                        ".es",
+                        ".es6",
+                        ".frag",
+                        ".gs",
+                        ".jake",
+                        ".jsb",
+                        ".jscad",
+                        ".jsfl",
+                        ".jsm",
+                        ".jss",
+                        ".mjs",
+                        ".njs",
+                        ".pac",
+                        ".sjs",
+                        ".ssjs",
+                        ".xsjs",
+                        ".xsjslib"
+                    ],
+                    "filenames": [
+                        "Jakefile"
+                    ]
+                },
+                {
+                    "const": "Jison",
+                    "extensions": [
+                        ".jison"
+                    ]
+                },
+                {
+                    "const": "Jison Lex",
+                    "extensions": [
+                        ".jisonlex"
+                    ]
+                },
+                {
+                    "const": "Jolie",
+                    "extensions": [
+                        ".ol",
+                        ".iol"
+                    ]
+                },
+                {
+                    "const": "Julia",
+                    "extensions": [
+                        ".jl"
+                    ]
+                },
+                {
+                    "const": "Jupyter Notebook",
+                    "extensions": [
+                        ".ipynb"
+                    ],
+                    "filenames": [
+                        "Notebook"
+                    ]
+                },
+                {
+                    "const": "KRL",
+                    "extensions": [
+                        ".krl"
+                    ]
+                },
+                {
+                    "const": "KiCad Layout",
+                    "extensions": [
+                        ".kicad_pcb",
+                        ".kicad_mod",
+                        ".kicad_wks"
+                    ],
+                    "filenames": [
+                        "fp-lib-table"
+                    ]
+                },
+                {
+                    "const": "KiCad Legacy Layout",
+                    "extensions": [
+                        ".brd"
+                    ]
+                },
+                {
+                    "const": "KiCad Schematic",
+                    "extensions": [
+                        ".sch"
+                    ]
+                },
+                {
+                    "const": "Kit",
+                    "extensions": [
+                        ".kit"
+                    ]
+                },
+                {
+                    "const": "Kotlin",
+                    "extensions": [
+                        ".kt",
+                        ".ktm",
+                        ".kts"
+                    ]
+                },
+                {
+                    "const": "LFE",
+                    "extensions": [
+                        ".lfe"
+                    ]
+                },
+                {
+                    "const": "LLVM",
+                    "extensions": [
+                        ".ll"
+                    ]
+                },
+                {
+                    "const": "LOLCODE",
+                    "extensions": [
+                        ".lol"
+                    ]
+                },
+                {
+                    "const": "LSL",
+                    "extensions": [
+                        ".lsl",
+                        ".lslp"
+                    ]
+                },
+                {
+                    "const": "LabVIEW",
+                    "extensions": [
+                        ".lvproj"
+                    ]
+                },
+                {
+                    "const": "Lasso",
+                    "extensions": [
+                        ".lasso",
+                        ".las",
+                        ".lasso8",
+                        ".lasso9",
+                        ".ldml"
+                    ]
+                },
+                {
+                    "const": "Latte",
+                    "extensions": [
+                        ".latte"
+                    ]
+                },
+                {
+                    "const": "Lean",
+                    "extensions": [
+                        ".lean",
+                        ".hlean"
+                    ]
+                },
+                {
+                    "const": "Less",
+                    "extensions": [
+                        ".less"
+                    ]
+                },
+                {
+                    "const": "Lex",
+                    "extensions": [
+                        ".l",
+                        ".lex"
+                    ]
+                },
+                {
+                    "const": "LilyPond",
+                    "extensions": [
+                        ".ly",
+                        ".ily"
+                    ]
+                },
+                {
+                    "const": "Limbo",
+                    "extensions": [
+                        ".b",
+                        ".m"
+                    ]
+                },
+                {
+                    "const": "Linker Script",
+                    "extensions": [
+                        ".ld",
+                        ".lds",
+                        ".x"
+                    ],
+                    "filenames": [
+                        "ld.script"
+                    ]
+                },
+                {
+                    "const": "Linux Kernel Module",
+                    "extensions": [
+                        ".mod"
+                    ]
+                },
+                {
+                    "const": "Liquid",
+                    "extensions": [
+                        ".liquid"
+                    ]
+                },
+                {
+                    "const": "Literate Agda",
+                    "extensions": [
+                        ".lagda"
+                    ]
+                },
+                {
+                    "const": "Literate CoffeeScript",
+                    "extensions": [
+                        ".litcoffee"
+                    ]
+                },
+                {
+                    "const": "Literate Haskell",
+                    "extensions": [
+                        ".lhs"
+                    ]
+                },
+                {
+                    "const": "LiveScript",
+                    "extensions": [
+                        ".ls",
+                        "._ls"
+                    ],
+                    "filenames": [
+                        "Slakefile"
+                    ]
+                },
+                {
+                    "const": "Logos",
+                    "extensions": [
+                        ".xm",
+                        ".x",
+                        ".xi"
+                    ]
+                },
+                {
+                    "const": "Logtalk",
+                    "extensions": [
+                        ".lgt",
+                        ".logtalk"
+                    ]
+                },
+                {
+                    "const": "LookML",
+                    "extensions": [
+                        ".lookml",
+                        ".model.lkml",
+                        ".view.lkml"
+                    ]
+                },
+                {
+                    "const": "LoomScript",
+                    "extensions": [
+                        ".ls"
+                    ]
+                },
+                {
+                    "const": "Lua",
+                    "extensions": [
+                        ".lua",
+                        ".fcgi",
+                        ".nse",
+                        ".p8",
+                        ".pd_lua",
+                        ".rbxs",
+                        ".wlua"
+                    ]
+                },
+                {
+                    "const": "M",
+                    "extensions": [
+                        ".mumps",
+                        ".m"
+                    ]
+                },
+                {
+                    "const": "M4",
+                    "extensions": [
+                        ".m4"
+                    ]
+                },
+                {
+                    "const": "M4Sugar",
+                    "extensions": [
+                        ".m4"
+                    ],
+                    "filenames": [
+                        "configure.ac"
+                    ]
+                },
+                {
+                    "const": "MAXScript",
+                    "extensions": [
+                        ".ms",
+                        ".mcr"
+                    ]
+                },
+                {
+                    "const": "MQL4",
+                    "extensions": [
+                        ".mq4",
+                        ".mqh"
+                    ]
+                },
+                {
+                    "const": "MQL5",
+                    "extensions": [
+                        ".mq5",
+                        ".mqh"
+                    ]
+                },
+                {
+                    "const": "MTML",
+                    "extensions": [
+                        ".mtml"
+                    ]
+                },
+                {
+                    "const": "MUF",
+                    "extensions": [
+                        ".muf",
+                        ".m"
+                    ]
+                },
+                {
+                    "const": "Makefile",
+                    "extensions": [
+                        ".mak",
+                        ".d",
+                        ".make",
+                        ".mk",
+                        ".mkfile"
+                    ],
+                    "filenames": [
+                        "BSDmakefile",
+                        "GNUmakefile",
+                        "Kbuild",
+                        "Makefile",
+                        "Makefile.am",
+                        "Makefile.boot",
+                        "Makefile.frag",
+                        "Makefile.in",
+                        "Makefile.inc",
+                        "Makefile.wat",
+                        "makefile",
+                        "makefile.sco",
+                        "mkfile"
+                    ]
+                },
+                {
+                    "const": "Mako",
+                    "extensions": [
+                        ".mako",
+                        ".mao"
+                    ]
+                },
+                {
+                    "const": "Markdown",
+                    "extensions": [
+                        ".md",
+                        ".markdown",
+                        ".mdown",
+                        ".mdwn",
+                        ".mkd",
+                        ".mkdn",
+                        ".mkdown",
+                        ".ronn",
+                        ".workbook"
+                    ],
+                    "filenames": [
+                        "contents.lr"
+                    ]
+                },
+                {
+                    "const": "Marko",
+                    "extensions": [
+                        ".marko"
+                    ]
+                },
+                {
+                    "const": "Mask",
+                    "extensions": [
+                        ".mask"
+                    ]
+                },
+                {
+                    "const": "Mathematica",
+                    "extensions": [
+                        ".mathematica",
+                        ".cdf",
+                        ".m",
+                        ".ma",
+                        ".mt",
+                        ".nb",
+                        ".nbp",
+                        ".wl",
+                        ".wlt"
+                    ]
+                },
+                {
+                    "const": "Matlab",
+                    "extensions": [
+                        ".matlab",
+                        ".m"
+                    ]
+                },
+                {
+                    "const": "Maven POM",
+                    "filenames": [
+                        "pom.xml"
+                    ]
+                },
+                {
+                    "const": "Max",
+                    "extensions": [
+                        ".maxpat",
+                        ".maxhelp",
+                        ".maxproj",
+                        ".mxt",
+                        ".pat"
+                    ]
+                },
+                {
+                    "const": "MediaWiki",
+                    "extensions": [
+                        ".mediawiki",
+                        ".wiki"
+                    ]
+                },
+                {
+                    "const": "Mercury",
+                    "extensions": [
+                        ".m",
+                        ".moo"
+                    ]
+                },
+                {
+                    "const": "Meson",
+                    "filenames": [
+                        "meson.build",
+                        "meson_options.txt"
+                    ]
+                },
+                {
+                    "const": "Metal",
+                    "extensions": [
+                        ".metal"
+                    ]
+                },
+                {
+                    "const": "MiniD",
+                    "extensions": [
+                        ".minid"
+                    ]
+                },
+                {
+                    "const": "Mirah",
+                    "extensions": [
+                        ".druby",
+                        ".duby",
+                        ".mirah"
+                    ]
+                },
+                {
+                    "const": "Modelica",
+                    "extensions": [
+                        ".mo"
+                    ]
+                },
+                {
+                    "const": "Modula-2",
+                    "extensions": [
+                        ".mod"
+                    ]
+                },
+                {
+                    "const": "Modula-3",
+                    "extensions": [
+                        ".i3",
+                        ".ig",
+                        ".m3",
+                        ".mg"
+                    ]
+                },
+                {
+                    "const": "Module Management System",
+                    "extensions": [
+                        ".mms",
+                        ".mmk"
+                    ],
+                    "filenames": [
+                        "descrip.mmk",
+                        "descrip.mms"
+                    ]
+                },
+                {
+                    "const": "Monkey",
+                    "extensions": [
+                        ".monkey",
+                        ".monkey2"
+                    ]
+                },
+                {
+                    "const": "Moocode",
+                    "extensions": [
+                        ".moo"
+                    ]
+                },
+                {
+                    "const": "MoonScript",
+                    "extensions": [
+                        ".moon"
+                    ]
+                },
+                {
+                    "const": "Myghty",
+                    "extensions": [
+                        ".myt"
+                    ]
+                },
+                {
+                    "const": "NCL",
+                    "extensions": [
+                        ".ncl"
+                    ]
+                },
+                {
+                    "const": "NL",
+                    "extensions": [
+                        ".nl"
+                    ]
+                },
+                {
+                    "const": "NSIS",
+                    "extensions": [
+                        ".nsi",
+                        ".nsh"
+                    ]
+                },
+                {
+                    "const": "Nearley",
+                    "extensions": [
+                        ".ne",
+                        ".nearley"
+                    ]
+                },
+                {
+                    "const": "Nemerle",
+                    "extensions": [
+                        ".n"
+                    ]
+                },
+                {
+                    "const": "NetLinx",
+                    "extensions": [
+                        ".axs",
+                        ".axi"
+                    ]
+                },
+                {
+                    "const": "NetLinx+ERB",
+                    "extensions": [
+                        ".axs.erb",
+                        ".axi.erb"
+                    ]
+                },
+                {
+                    "const": "NetLogo",
+                    "extensions": [
+                        ".nlogo"
+                    ]
+                },
+                {
+                    "const": "NewLisp",
+                    "extensions": [
+                        ".nl",
+                        ".lisp",
+                        ".lsp"
+                    ]
+                },
+                {
+                    "const": "Nextflow",
+                    "extensions": [
+                        ".nf"
+                    ],
+                    "filenames": [
+                        "nextflow.config"
+                    ]
+                },
+                {
+                    "const": "Nginx",
+                    "extensions": [
+                        ".nginxconf",
+                        ".vhost"
+                    ],
+                    "filenames": [
+                        "nginx.conf"
+                    ]
+                },
+                {
+                    "const": "Nim",
+                    "extensions": [
+                        ".nim",
+                        ".nimrod"
+                    ]
+                },
+                {
+                    "const": "Ninja",
+                    "extensions": [
+                        ".ninja"
+                    ]
+                },
+                {
+                    "const": "Nit",
+                    "extensions": [
+                        ".nit"
+                    ]
+                },
+                {
+                    "const": "Nix",
+                    "extensions": [
+                        ".nix"
+                    ]
+                },
+                {
+                    "const": "Nu",
+                    "extensions": [
+                        ".nu"
+                    ],
+                    "filenames": [
+                        "Nukefile"
+                    ]
+                },
+                {
+                    "const": "NumPy",
+                    "extensions": [
+                        ".numpy",
+                        ".numpyw",
+                        ".numsc"
+                    ]
+                },
+                {
+                    "const": "OCaml",
+                    "extensions": [
+                        ".ml",
+                        ".eliom",
+                        ".eliomi",
+                        ".ml4",
+                        ".mli",
+                        ".mll",
+                        ".mly"
+                    ]
+                },
+                {
+                    "const": "ObjDump",
+                    "extensions": [
+                        ".objdump"
+                    ]
+                },
+                {
+                    "const": "Objective-C",
+                    "extensions": [
+                        ".m",
+                        ".h"
+                    ]
+                },
+                {
+                    "const": "Objective-C++",
+                    "extensions": [
+                        ".mm"
+                    ]
+                },
+                {
+                    "const": "Objective-J",
+                    "extensions": [
+                        ".j",
+                        ".sj"
+                    ]
+                },
+                {
+                    "const": "Omgrofl",
+                    "extensions": [
+                        ".omgrofl"
+                    ]
+                },
+                {
+                    "const": "Opa",
+                    "extensions": [
+                        ".opa"
+                    ]
+                },
+                {
+                    "const": "Opal",
+                    "extensions": [
+                        ".opal"
+                    ]
+                },
+                {
+                    "const": "OpenCL",
+                    "extensions": [
+                        ".cl",
+                        ".opencl"
+                    ]
+                },
+                {
+                    "const": "OpenEdge ABL",
+                    "extensions": [
+                        ".p",
+                        ".cls",
+                        ".w"
+                    ]
+                },
+                {
+                    "const": "OpenRC runscript"
+                },
+                {
+                    "const": "OpenSCAD",
+                    "extensions": [
+                        ".scad"
+                    ]
+                },
+                {
+                    "const": "OpenType Feature File",
+                    "extensions": [
+                        ".fea"
+                    ]
+                },
+                {
+                    "const": "Org",
+                    "extensions": [
+                        ".org"
+                    ]
+                },
+                {
+                    "const": "Ox",
+                    "extensions": [
+                        ".ox",
+                        ".oxh",
+                        ".oxo"
+                    ]
+                },
+                {
+                    "const": "Oxygene",
+                    "extensions": [
+                        ".oxygene"
+                    ]
+                },
+                {
+                    "const": "Oz",
+                    "extensions": [
+                        ".oz"
+                    ]
+                },
+                {
+                    "const": "P4",
+                    "extensions": [
+                        ".p4"
+                    ]
+                },
+                {
+                    "const": "PAWN",
+                    "extensions": [
+                        ".pwn",
+                        ".inc"
+                    ]
+                },
+                {
+                    "const": "PHP",
+                    "extensions": [
+                        ".php",
+                        ".aw",
+                        ".ctp",
+                        ".fcgi",
+                        ".inc",
+                        ".php3",
+                        ".php4",
+                        ".php5",
+                        ".phps",
+                        ".phpt"
+                    ],
+                    "filenames": [
+                        ".php",
+                        ".php_cs",
+                        ".php_cs.dist",
+                        "Phakefile"
+                    ]
+                },
+                {
+                    "const": "PLSQL",
+                    "extensions": [
+                        ".pls",
+                        ".bdy",
+                        ".ddl",
+                        ".fnc",
+                        ".pck",
+                        ".pkb",
+                        ".pks",
+                        ".plb",
+                        ".plsql",
+                        ".prc",
+                        ".spc",
+                        ".sql",
+                        ".tpb",
+                        ".tps",
+                        ".trg",
+                        ".vw"
+                    ]
+                },
+                {
+                    "const": "PLpgSQL",
+                    "extensions": [
+                        ".sql"
+                    ]
+                },
+                {
+                    "const": "POV-Ray SDL",
+                    "extensions": [
+                        ".pov",
+                        ".inc"
+                    ]
+                },
+                {
+                    "const": "Pan",
+                    "extensions": [
+                        ".pan"
+                    ]
+                },
+                {
+                    "const": "Papyrus",
+                    "extensions": [
+                        ".psc"
+                    ]
+                },
+                {
+                    "const": "Parrot",
+                    "extensions": [
+                        ".parrot"
+                    ]
+                },
+                {
+                    "const": "Parrot Assembly",
+                    "extensions": [
+                        ".pasm"
+                    ]
+                },
+                {
+                    "const": "Parrot Internal Representation",
+                    "extensions": [
+                        ".pir"
+                    ]
+                },
+                {
+                    "const": "Pascal",
+                    "extensions": [
+                        ".pas",
+                        ".dfm",
+                        ".dpr",
+                        ".inc",
+                        ".lpr",
+                        ".pascal",
+                        ".pp"
+                    ]
+                },
+                {
+                    "const": "Pep8",
+                    "extensions": [
+                        ".pep"
+                    ]
+                },
+                {
+                    "const": "Perl",
+                    "extensions": [
+                        ".pl",
+                        ".al",
+                        ".cgi",
+                        ".fcgi",
+                        ".perl",
+                        ".ph",
+                        ".plx",
+                        ".pm",
+                        ".psgi",
+                        ".t"
+                    ],
+                    "filenames": [
+                        "Makefile.PL",
+                        "Rexfile",
+                        "ack",
+                        "cpanfile"
+                    ]
+                },
+                {
+                    "const": "Perl 6",
+                    "extensions": [
+                        ".6pl",
+                        ".6pm",
+                        ".nqp",
+                        ".p6",
+                        ".p6l",
+                        ".p6m",
+                        ".pl",
+                        ".pl6",
+                        ".pm",
+                        ".pm6",
+                        ".t"
+                    ]
+                },
+                {
+                    "const": "Pic",
+                    "extensions": [
+                        ".pic",
+                        ".chem"
+                    ]
+                },
+                {
+                    "const": "Pickle",
+                    "extensions": [
+                        ".pkl"
+                    ]
+                },
+                {
+                    "const": "PicoLisp",
+                    "extensions": [
+                        ".l"
+                    ]
+                },
+                {
+                    "const": "PigLatin",
+                    "extensions": [
+                        ".pig"
+                    ]
+                },
+                {
+                    "const": "Pike",
+                    "extensions": [
+                        ".pike",
+                        ".pmod"
+                    ]
+                },
+                {
+                    "const": "Pod",
+                    "extensions": [
+                        ".pod"
+                    ]
+                },
+                {
+                    "const": "PogoScript",
+                    "extensions": [
+                        ".pogo"
+                    ]
+                },
+                {
+                    "const": "Pony",
+                    "extensions": [
+                        ".pony"
+                    ]
+                },
+                {
+                    "const": "PostCSS",
+                    "extensions": [
+                        ".pcss"
+                    ]
+                },
+                {
+                    "const": "PostScript",
+                    "extensions": [
+                        ".ps",
+                        ".eps",
+                        ".pfa"
+                    ]
+                },
+                {
+                    "const": "PowerBuilder",
+                    "extensions": [
+                        ".pbt",
+                        ".sra",
+                        ".sru",
+                        ".srw"
+                    ]
+                },
+                {
+                    "const": "PowerShell",
+                    "extensions": [
+                        ".ps1",
+                        ".psd1",
+                        ".psm1"
+                    ]
+                },
+                {
+                    "const": "Processing",
+                    "extensions": [
+                        ".pde"
+                    ]
+                },
+                {
+                    "const": "Prolog",
+                    "extensions": [
+                        ".pl",
+                        ".pro",
+                        ".prolog",
+                        ".yap"
+                    ]
+                },
+                {
+                    "const": "Propeller Spin",
+                    "extensions": [
+                        ".spin"
+                    ]
+                },
+                {
+                    "const": "Protocol Buffer",
+                    "extensions": [
+                        ".proto"
+                    ]
+                },
+                {
+                    "const": "Public Key",
+                    "extensions": [
+                        ".asc",
+                        ".pub"
+                    ]
+                },
+                {
+                    "const": "Pug",
+                    "extensions": [
+                        ".jade",
+                        ".pug"
+                    ]
+                },
+                {
+                    "const": "Puppet",
+                    "extensions": [
+                        ".pp"
+                    ],
+                    "filenames": [
+                        "Modulefile"
+                    ]
+                },
+                {
+                    "const": "Pure Data",
+                    "extensions": [
+                        ".pd"
+                    ]
+                },
+                {
+                    "const": "PureBasic",
+                    "extensions": [
+                        ".pb",
+                        ".pbi"
+                    ]
+                },
+                {
+                    "const": "PureScript",
+                    "extensions": [
+                        ".purs"
+                    ]
+                },
+                {
+                    "const": "Python",
+                    "extensions": [
+                        ".py",
+                        ".bzl",
+                        ".cgi",
+                        ".fcgi",
+                        ".gyp",
+                        ".gypi",
+                        ".lmi",
+                        ".py3",
+                        ".pyde",
+                        ".pyi",
+                        ".pyp",
+                        ".pyt",
+                        ".pyw",
+                        ".rpy",
+                        ".spec",
+                        ".tac",
+                        ".wsgi",
+                        ".xpy"
+                    ],
+                    "filenames": [
+                        ".gclient",
+                        "BUCK",
+                        "BUILD",
+                        "BUILD.bazel",
+                        "SConscript",
+                        "SConstruct",
+                        "Snakefile",
+                        "WORKSPACE",
+                        "wscript"
+                    ]
+                },
+                {
+                    "const": "Python console"
+                },
+                {
+                    "const": "Python traceback",
+                    "extensions": [
+                        ".pytb"
+                    ]
+                },
+                {
+                    "const": "QML",
+                    "extensions": [
+                        ".qml",
+                        ".qbs"
+                    ]
+                },
+                {
+                    "const": "QMake",
+                    "extensions": [
+                        ".pro",
+                        ".pri"
+                    ]
+                },
+                {
+                    "const": "Quake",
+                    "filenames": [
+                        "m3makefile",
+                        "m3overrides"
+                    ]
+                },
+                {
+                    "const": "R",
+                    "extensions": [
+                        ".r",
+                        ".rd",
+                        ".rsx"
+                    ],
+                    "filenames": [
+                        ".Rprofile",
+                        "expr-dist"
+                    ]
+                },
+                {
+                    "const": "RAML",
+                    "extensions": [
+                        ".raml"
+                    ]
+                },
+                {
+                    "const": "RDoc",
+                    "extensions": [
+                        ".rdoc"
+                    ]
+                },
+                {
+                    "const": "REALbasic",
+                    "extensions": [
+                        ".rbbas",
+                        ".rbfrm",
+                        ".rbmnu",
+                        ".rbres",
+                        ".rbtbar",
+                        ".rbuistate"
+                    ]
+                },
+                {
+                    "const": "REXX",
+                    "extensions": [
+                        ".rexx",
+                        ".pprx",
+                        ".rex"
+                    ]
+                },
+                {
+                    "const": "RHTML",
+                    "extensions": [
+                        ".rhtml"
+                    ]
+                },
+                {
+                    "const": "RMarkdown",
+                    "extensions": [
+                        ".rmd"
+                    ]
+                },
+                {
+                    "const": "RPC",
+                    "extensions": [
+                        ".x"
+                    ]
+                },
+                {
+                    "const": "RPM Spec",
+                    "extensions": [
+                        ".spec"
+                    ]
+                },
+                {
+                    "const": "RUNOFF",
+                    "extensions": [
+                        ".rnh",
+                        ".rno"
+                    ]
+                },
+                {
+                    "const": "Racket",
+                    "extensions": [
+                        ".rkt",
+                        ".rktd",
+                        ".rktl",
+                        ".scrbl"
+                    ]
+                },
+                {
+                    "const": "Ragel",
+                    "extensions": [
+                        ".rl"
+                    ]
+                },
+                {
+                    "const": "Rascal",
+                    "extensions": [
+                        ".rsc"
+                    ]
+                },
+                {
+                    "const": "Raw token data",
+                    "extensions": [
+                        ".raw"
+                    ]
+                },
+                {
+                    "const": "Reason",
+                    "extensions": [
+                        ".re",
+                        ".rei"
+                    ]
+                },
+                {
+                    "const": "Rebol",
+                    "extensions": [
+                        ".reb",
+                        ".r",
+                        ".r2",
+                        ".r3",
+                        ".rebol"
+                    ]
+                },
+                {
+                    "const": "Red",
+                    "extensions": [
+                        ".red",
+                        ".reds"
+                    ]
+                },
+                {
+                    "const": "Redcode",
+                    "extensions": [
+                        ".cw"
+                    ]
+                },
+                {
+                    "const": "Regular Expression",
+                    "extensions": [
+                        ".regexp",
+                        ".regex"
+                    ]
+                },
+                {
+                    "const": "Ren'Py",
+                    "extensions": [
+                        ".rpy"
+                    ]
+                },
+                {
+                    "const": "RenderScript",
+                    "extensions": [
+                        ".rs",
+                        ".rsh"
+                    ]
+                },
+                {
+                    "const": "Ring",
+                    "extensions": [
+                        ".ring"
+                    ]
+                },
+                {
+                    "const": "RobotFramework",
+                    "extensions": [
+                        ".robot"
+                    ]
+                },
+                {
+                    "const": "Roff",
+                    "extensions": [
+                        ".roff",
+                        ".1",
+                        ".1in",
+                        ".1m",
+                        ".1x",
+                        ".2",
+                        ".3",
+                        ".3in",
+                        ".3m",
+                        ".3qt",
+                        ".3x",
+                        ".4",
+                        ".5",
+                        ".6",
+                        ".7",
+                        ".8",
+                        ".9",
+                        ".l",
+                        ".man",
+                        ".mdoc",
+                        ".me",
+                        ".ms",
+                        ".n",
+                        ".nr",
+                        ".rno",
+                        ".tmac"
+                    ],
+                    "filenames": [
+                        "mmn",
+                        "mmt"
+                    ]
+                },
+                {
+                    "const": "Rouge",
+                    "extensions": [
+                        ".rg"
+                    ]
+                },
+                {
+                    "const": "Ruby",
+                    "extensions": [
+                        ".rb",
+                        ".builder",
+                        ".eye",
+                        ".fcgi",
+                        ".gemspec",
+                        ".god",
+                        ".jbuilder",
+                        ".mspec",
+                        ".pluginspec",
+                        ".podspec",
+                        ".rabl",
+                        ".rake",
+                        ".rbuild",
+                        ".rbw",
+                        ".rbx",
+                        ".ru",
+                        ".ruby",
+                        ".spec",
+                        ".thor",
+                        ".watchr"
+                    ],
+                    "filenames": [
+                        ".irbrc",
+                        ".pryrc",
+                        "Appraisals",
+                        "Berksfile",
+                        "Brewfile",
+                        "Buildfile",
+                        "Capfile",
+                        "Dangerfile",
+                        "Deliverfile",
+                        "Fastfile",
+                        "Gemfile",
+                        "Gemfile.lock",
+                        "Guardfile",
+                        "Jarfile",
+                        "Mavenfile",
+                        "Podfile",
+                        "Puppetfile",
+                        "Rakefile",
+                        "Snapfile",
+                        "Thorfile",
+                        "Vagrantfile",
+                        "buildfile"
+                    ]
+                },
+                {
+                    "const": "Rust",
+                    "extensions": [
+                        ".rs",
+                        ".rs.in"
+                    ]
+                },
+                {
+                    "const": "SAS",
+                    "extensions": [
+                        ".sas"
+                    ]
+                },
+                {
+                    "const": "SCSS",
+                    "extensions": [
+                        ".scss"
+                    ]
+                },
+                {
+                    "const": "SMT",
+                    "extensions": [
+                        ".smt2",
+                        ".smt"
+                    ]
+                },
+                {
+                    "const": "SPARQL",
+                    "extensions": [
+                        ".sparql",
+                        ".rq"
+                    ]
+                },
+                {
+                    "const": "SQF",
+                    "extensions": [
+                        ".sqf",
+                        ".hqf"
+                    ]
+                },
+                {
+                    "const": "SQL",
+                    "extensions": [
+                        ".sql",
+                        ".cql",
+                        ".ddl",
+                        ".inc",
+                        ".mysql",
+                        ".prc",
+                        ".tab",
+                        ".udf",
+                        ".viw"
+                    ]
+                },
+                {
+                    "const": "SQLPL",
+                    "extensions": [
+                        ".sql",
+                        ".db2"
+                    ]
+                },
+                {
+                    "const": "SRecode Template",
+                    "extensions": [
+                        ".srt"
+                    ]
+                },
+                {
+                    "const": "STON",
+                    "extensions": [
+                        ".ston"
+                    ]
+                },
+                {
+                    "const": "SVG",
+                    "extensions": [
+                        ".svg"
+                    ]
+                },
+                {
+                    "const": "Sage",
+                    "extensions": [
+                        ".sage",
+                        ".sagews"
+                    ]
+                },
+                {
+                    "const": "SaltStack",
+                    "extensions": [
+                        ".sls"
+                    ]
+                },
+                {
+                    "const": "Sass",
+                    "extensions": [
+                        ".sass"
+                    ]
+                },
+                {
+                    "const": "Scala",
+                    "extensions": [
+                        ".scala",
+                        ".kojo",
+                        ".sbt",
+                        ".sc"
+                    ]
+                },
+                {
+                    "const": "Scaml",
+                    "extensions": [
+                        ".scaml"
+                    ]
+                },
+                {
+                    "const": "Scheme",
+                    "extensions": [
+                        ".scm",
+                        ".sch",
+                        ".sld",
+                        ".sls",
+                        ".sps",
+                        ".ss"
+                    ]
+                },
+                {
+                    "const": "Scilab",
+                    "extensions": [
+                        ".sci",
+                        ".sce",
+                        ".tst"
+                    ]
+                },
+                {
+                    "const": "Self",
+                    "extensions": [
+                        ".self"
+                    ]
+                },
+                {
+                    "const": "ShaderLab",
+                    "extensions": [
+                        ".shader"
+                    ]
+                },
+                {
+                    "const": "Shell",
+                    "extensions": [
+                        ".sh",
+                        ".bash",
+                        ".bats",
+                        ".cgi",
+                        ".command",
+                        ".fcgi",
+                        ".ksh",
+                        ".sh.in",
+                        ".tmux",
+                        ".tool",
+                        ".zsh"
+                    ],
+                    "filenames": [
+                        ".bash_history",
+                        ".bash_logout",
+                        ".bash_profile",
+                        ".bashrc",
+                        ".cshrc",
+                        ".login",
+                        ".profile",
+                        ".zlogin",
+                        ".zlogout",
+                        ".zprofile",
+                        ".zshenv",
+                        ".zshrc",
+                        "9fs",
+                        "PKGBUILD",
+                        "bash_logout",
+                        "bash_profile",
+                        "bashrc",
+                        "cshrc",
+                        "gradlew",
+                        "login",
+                        "man",
+                        "profile",
+                        "zlogin",
+                        "zlogout",
+                        "zprofile",
+                        "zshenv",
+                        "zshrc"
+                    ]
+                },
+                {
+                    "const": "ShellSession",
+                    "extensions": [
+                        ".sh-session"
+                    ]
+                },
+                {
+                    "const": "Shen",
+                    "extensions": [
+                        ".shen"
+                    ]
+                },
+                {
+                    "const": "Slash",
+                    "extensions": [
+                        ".sl"
+                    ]
+                },
+                {
+                    "const": "Slim",
+                    "extensions": [
+                        ".slim"
+                    ]
+                },
+                {
+                    "const": "Smali",
+                    "extensions": [
+                        ".smali"
+                    ]
+                },
+                {
+                    "const": "Smalltalk",
+                    "extensions": [
+                        ".st",
+                        ".cs"
+                    ]
+                },
+                {
+                    "const": "Smarty",
+                    "extensions": [
+                        ".tpl"
+                    ]
+                },
+                {
+                    "const": "Solidity"
+                },
+                {
+                    "const": "SourcePawn",
+                    "extensions": [
+                        ".sp",
+                        ".inc",
+                        ".sma"
+                    ]
+                },
+                {
+                    "const": "Spline Font Database",
+                    "extensions": [
+                        ".sfd"
+                    ]
+                },
+                {
+                    "const": "Squirrel",
+                    "extensions": [
+                        ".nut"
+                    ]
+                },
+                {
+                    "const": "Stan",
+                    "extensions": [
+                        ".stan"
+                    ]
+                },
+                {
+                    "const": "Standard ML",
+                    "extensions": [
+                        ".ML",
+                        ".fun",
+                        ".sig",
+                        ".sml"
+                    ]
+                },
+                {
+                    "const": "Stata",
+                    "extensions": [
+                        ".do",
+                        ".ado",
+                        ".doh",
+                        ".ihlp",
+                        ".mata",
+                        ".matah",
+                        ".sthlp"
+                    ]
+                },
+                {
+                    "const": "Stylus",
+                    "extensions": [
+                        ".styl"
+                    ]
+                },
+                {
+                    "const": "SubRip Text",
+                    "extensions": [
+                        ".srt"
+                    ]
+                },
+                {
+                    "const": "SugarSS",
+                    "extensions": [
+                        ".sss"
+                    ]
+                },
+                {
+                    "const": "SuperCollider",
+                    "extensions": [
+                        ".sc",
+                        ".scd"
+                    ]
+                },
+                {
+                    "const": "Swift",
+                    "extensions": [
+                        ".swift"
+                    ]
+                },
+                {
+                    "const": "SystemVerilog",
+                    "extensions": [
+                        ".sv",
+                        ".svh",
+                        ".vh"
+                    ]
+                },
+                {
+                    "const": "TI Program",
+                    "extensions": [
+                        ".8xp",
+                        ".8xk",
+                        ".8xk.txt",
+                        ".8xp.txt"
+                    ]
+                },
+                {
+                    "const": "TLA",
+                    "extensions": [
+                        ".tla"
+                    ]
+                },
+                {
+                    "const": "TOML",
+                    "extensions": [
+                        ".toml"
+                    ],
+                    "filenames": [
+                        "Cargo.lock",
+                        "Gopkg.lock"
+                    ]
+                },
+                {
+                    "const": "TXL",
+                    "extensions": [
+                        ".txl"
+                    ]
+                },
+                {
+                    "const": "Tcl",
+                    "extensions": [
+                        ".tcl",
+                        ".adp",
+                        ".tm"
+                    ],
+                    "filenames": [
+                        "owh",
+                        "starfield"
+                    ]
+                },
+                {
+                    "const": "Tcsh",
+                    "extensions": [
+                        ".tcsh",
+                        ".csh"
+                    ]
+                },
+                {
+                    "const": "TeX",
+                    "extensions": [
+                        ".tex",
+                        ".aux",
+                        ".bbx",
+                        ".bib",
+                        ".cbx",
+                        ".cls",
+                        ".dtx",
+                        ".ins",
+                        ".lbx",
+                        ".ltx",
+                        ".mkii",
+                        ".mkiv",
+                        ".mkvi",
+                        ".sty",
+                        ".toc"
+                    ]
+                },
+                {
+                    "const": "Tea",
+                    "extensions": [
+                        ".tea"
+                    ]
+                },
+                {
+                    "const": "Terra",
+                    "extensions": [
+                        ".t"
+                    ]
+                },
+                {
+                    "const": "Text",
+                    "extensions": [
+                        ".txt",
+                        ".fr",
+                        ".nb",
+                        ".ncl",
+                        ".no"
+                    ],
+                    "filenames": [
+                        "COPYING",
+                        "COPYING.regex",
+                        "COPYRIGHT.regex",
+                        "FONTLOG",
+                        "INSTALL",
+                        "INSTALL.mysql",
+                        "LICENSE",
+                        "LICENSE.mysql",
+                        "NEWS",
+                        "README.1ST",
+                        "README.me",
+                        "README.mysql",
+                        "click.me",
+                        "delete.me",
+                        "keep.me",
+                        "read.me",
+                        "readme.1st",
+                        "test.me"
+                    ]
+                },
+                {
+                    "const": "Textile",
+                    "extensions": [
+                        ".textile"
+                    ]
+                },
+                {
+                    "const": "Thrift",
+                    "extensions": [
+                        ".thrift"
+                    ]
+                },
+                {
+                    "const": "Turing",
+                    "extensions": [
+                        ".t",
+                        ".tu"
+                    ]
+                },
+                {
+                    "const": "Turtle",
+                    "extensions": [
+                        ".ttl"
+                    ]
+                },
+                {
+                    "const": "Twig",
+                    "extensions": [
+                        ".twig"
+                    ]
+                },
+                {
+                    "const": "Type Language",
+                    "extensions": [
+                        ".tl"
+                    ]
+                },
+                {
+                    "const": "TypeScript",
+                    "extensions": [
+                        ".ts",
+                        ".tsx"
+                    ]
+                },
+                {
+                    "const": "Unified Parallel C",
+                    "extensions": [
+                        ".upc"
+                    ]
+                },
+                {
+                    "const": "Unity3D Asset",
+                    "extensions": [
+                        ".anim",
+                        ".asset",
+                        ".mat",
+                        ".meta",
+                        ".prefab",
+                        ".unity"
+                    ]
+                },
+                {
+                    "const": "Unix Assembly",
+                    "extensions": [
+                        ".s",
+                        ".ms"
+                    ]
+                },
+                {
+                    "const": "Uno",
+                    "extensions": [
+                        ".uno"
+                    ]
+                },
+                {
+                    "const": "UnrealScript",
+                    "extensions": [
+                        ".uc"
+                    ]
+                },
+                {
+                    "const": "UrWeb",
+                    "extensions": [
+                        ".ur",
+                        ".urs"
+                    ]
+                },
+                {
+                    "const": "VCL",
+                    "extensions": [
+                        ".vcl"
+                    ]
+                },
+                {
+                    "const": "VHDL",
+                    "extensions": [
+                        ".vhdl",
+                        ".vhd",
+                        ".vhf",
+                        ".vhi",
+                        ".vho",
+                        ".vhs",
+                        ".vht",
+                        ".vhw"
+                    ]
+                },
+                {
+                    "const": "Vala",
+                    "extensions": [
+                        ".vala",
+                        ".vapi"
+                    ]
+                },
+                {
+                    "const": "Verilog",
+                    "extensions": [
+                        ".v",
+                        ".veo"
+                    ]
+                },
+                {
+                    "const": "Vim script",
+                    "extensions": [
+                        ".vim"
+                    ],
+                    "filenames": [
+                        ".gvimrc",
+                        ".nvimrc",
+                        ".vimrc",
+                        "_vimrc",
+                        "gvimrc",
+                        "nvimrc",
+                        "vimrc"
+                    ]
+                },
+                {
+                    "const": "Visual Basic",
+                    "extensions": [
+                        ".vb",
+                        ".bas",
+                        ".cls",
+                        ".frm",
+                        ".frx",
+                        ".vba",
+                        ".vbhtml",
+                        ".vbs"
+                    ]
+                },
+                {
+                    "const": "Volt",
+                    "extensions": [
+                        ".volt"
+                    ]
+                },
+                {
+                    "const": "Vue",
+                    "extensions": [
+                        ".vue"
+                    ]
+                },
+                {
+                    "const": "Wavefront Material",
+                    "extensions": [
+                        ".mtl"
+                    ]
+                },
+                {
+                    "const": "Wavefront Object",
+                    "extensions": [
+                        ".obj"
+                    ]
+                },
+                {
+                    "const": "Web Ontology Language",
+                    "extensions": [
+                        ".owl"
+                    ]
+                },
+                {
+                    "const": "WebAssembly",
+                    "extensions": [
+                        ".wast",
+                        ".wat"
+                    ]
+                },
+                {
+                    "const": "WebIDL",
+                    "extensions": [
+                        ".webidl"
+                    ]
+                },
+                {
+                    "const": "Windows Registry Entries",
+                    "extensions": [
+                        ".reg"
+                    ]
+                },
+                {
+                    "const": "World of Warcraft Addon Data",
+                    "extensions": [
+                        ".toc"
+                    ]
+                },
+                {
+                    "const": "X BitMap",
+                    "extensions": [
+                        ".xbm"
+                    ]
+                },
+                {
+                    "const": "X Font Directory Index",
+                    "filenames": [
+                        "encodings.dir",
+                        "fonts.alias",
+                        "fonts.dir",
+                        "fonts.scale"
+                    ]
+                },
+                {
+                    "const": "X PixMap",
+                    "extensions": [
+                        ".xpm",
+                        ".pm"
+                    ]
+                },
+                {
+                    "const": "X10",
+                    "extensions": [
+                        ".x10"
+                    ]
+                },
+                {
+                    "const": "XC",
+                    "extensions": [
+                        ".xc"
+                    ]
+                },
+                {
+                    "const": "XCompose",
+                    "filenames": [
+                        ".XCompose",
+                        "XCompose",
+                        "xcompose"
+                    ]
+                },
+                {
+                    "const": "XML",
+                    "extensions": [
+                        ".xml",
+                        ".adml",
+                        ".admx",
+                        ".ant",
+                        ".axml",
+                        ".builds",
+                        ".ccproj",
+                        ".ccxml",
+                        ".clixml",
+                        ".cproject",
+                        ".cscfg",
+                        ".csdef",
+                        ".csl",
+                        ".csproj",
+                        ".ct",
+                        ".depproj",
+                        ".dita",
+                        ".ditamap",
+                        ".ditaval",
+                        ".dll.config",
+                        ".dotsettings",
+                        ".filters",
+                        ".fsproj",
+                        ".fxml",
+                        ".glade",
+                        ".gml",
+                        ".gmx",
+                        ".grxml",
+                        ".iml",
+                        ".ivy",
+                        ".jelly",
+                        ".jsproj",
+                        ".kml",
+                        ".launch",
+                        ".mdpolicy",
+                        ".mjml",
+                        ".mm",
+                        ".mod",
+                        ".mxml",
+                        ".natvis",
+                        ".ncl",
+                        ".ndproj",
+                        ".nproj",
+                        ".nuspec",
+                        ".odd",
+                        ".osm",
+                        ".pkgproj",
+                        ".plist",
+                        ".pluginspec",
+                        ".proj",
+                        ".props",
+                        ".ps1xml",
+                        ".psc1",
+                        ".pt",
+                        ".rdf",
+                        ".resx",
+                        ".rss",
+                        ".sch",
+                        ".scxml",
+                        ".sfproj",
+                        ".shproj",
+                        ".srdf",
+                        ".storyboard",
+                        ".stTheme",
+                        ".sublime-snippet",
+                        ".targets",
+                        ".tmCommand",
+                        ".tml",
+                        ".tmLanguage",
+                        ".tmPreferences",
+                        ".tmSnippet",
+                        ".tmTheme",
+                        ".ts",
+                        ".tsx",
+                        ".ui",
+                        ".urdf",
+                        ".ux",
+                        ".vbproj",
+                        ".vcxproj",
+                        ".vsixmanifest",
+                        ".vssettings",
+                        ".vstemplate",
+                        ".vxml",
+                        ".wixproj",
+                        ".wsdl",
+                        ".wsf",
+                        ".wxi",
+                        ".wxl",
+                        ".wxs",
+                        ".x3d",
+                        ".xacro",
+                        ".xaml",
+                        ".xib",
+                        ".xlf",
+                        ".xliff",
+                        ".xmi",
+                        ".xml.dist",
+                        ".xproj",
+                        ".xsd",
+                        ".xspec",
+                        ".xul",
+                        ".zcml"
+                    ],
+                    "filenames": [
+                        ".classpath",
+                        ".cproject",
+                        ".project",
+                        "App.config",
+                        "NuGet.config",
+                        "Settings.StyleCop",
+                        "Web.Debug.config",
+                        "Web.Release.config",
+                        "Web.config",
+                        "packages.config"
+                    ]
+                },
+                {
+                    "const": "XPages",
+                    "extensions": [
+                        ".xsp-config",
+                        ".xsp.metadata"
+                    ]
+                },
+                {
+                    "const": "XProc",
+                    "extensions": [
+                        ".xpl",
+                        ".xproc"
+                    ]
+                },
+                {
+                    "const": "XQuery",
+                    "extensions": [
+                        ".xquery",
+                        ".xq",
+                        ".xql",
+                        ".xqm",
+                        ".xqy"
+                    ]
+                },
+                {
+                    "const": "XS",
+                    "extensions": [
+                        ".xs"
+                    ]
+                },
+                {
+                    "const": "XSLT",
+                    "extensions": [
+                        ".xslt",
+                        ".xsl"
+                    ]
+                },
+                {
+                    "const": "Xojo",
+                    "extensions": [
+                        ".xojo_code",
+                        ".xojo_menu",
+                        ".xojo_report",
+                        ".xojo_script",
+                        ".xojo_toolbar",
+                        ".xojo_window"
+                    ]
+                },
+                {
+                    "const": "Xtend",
+                    "extensions": [
+                        ".xtend"
+                    ]
+                },
+                {
+                    "const": "YAML",
+                    "extensions": [
+                        ".yml",
+                        ".mir",
+                        ".reek",
+                        ".rviz",
+                        ".sublime-syntax",
+                        ".syntax",
+                        ".yaml",
+                        ".yaml-tmlanguage",
+                        ".yml.mysql"
+                    ],
+                    "filenames": [
+                        ".clang-format",
+                        ".clang-tidy",
+                        ".gemrc",
+                        "glide.lock"
+                    ]
+                },
+                {
+                    "const": "YANG",
+                    "extensions": [
+                        ".yang"
+                    ]
+                },
+                {
+                    "const": "YARA",
+                    "extensions": [
+                        ".yar",
+                        ".yara"
+                    ]
+                },
+                {
+                    "const": "YASnippet",
+                    "extensions": [
+                        ".yasnippet"
+                    ]
+                },
+                {
+                    "const": "Yacc",
+                    "extensions": [
+                        ".y",
+                        ".yacc",
+                        ".yy"
+                    ]
+                },
+                {
+                    "const": "Zephir",
+                    "extensions": [
+                        ".zep"
+                    ]
+                },
+                {
+                    "const": "Zimpl",
+                    "extensions": [
+                        ".zimpl",
+                        ".zmpl",
+                        ".zpl"
+                    ]
+                },
+                {
+                    "const": "desktop",
+                    "extensions": [
+                        ".desktop",
+                        ".desktop.in"
+                    ]
+                },
+                {
+                    "const": "eC",
+                    "extensions": [
+                        ".ec",
+                        ".eh"
+                    ]
+                },
+                {
+                    "const": "edn",
+                    "extensions": [
+                        ".edn"
+                    ]
+                },
+                {
+                    "const": "fish",
+                    "extensions": [
+                        ".fish"
+                    ]
+                },
+                {
+                    "const": "mupad",
+                    "extensions": [
+                        ".mu"
+                    ]
+                },
+                {
+                    "const": "nesC",
+                    "extensions": [
+                        ".nc"
+                    ]
+                },
+                {
+                    "const": "ooc",
+                    "extensions": [
+                        ".ooc"
+                    ]
+                },
+                {
+                    "const": "q",
+                    "extensions": [
+                        ".q"
+                    ]
+                },
+                {
+                    "const": "reStructuredText",
+                    "extensions": [
+                        ".rst",
+                        ".rest",
+                        ".rest.txt",
+                        ".rst.txt"
+                    ]
+                },
+                {
+                    "const": "sed",
+                    "extensions": [
+                        ".sed"
+                    ]
+                },
+                {
+                    "const": "wdl",
+                    "extensions": [
+                        ".wdl"
+                    ]
+                },
+                {
+                    "const": "wisp",
+                    "extensions": [
+                        ".wisp"
+                    ]
+                },
+                {
+                    "const": "xBase",
+                    "extensions": [
+                        ".prg",
+                        ".ch",
+                        ".prw"
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://schema.linterhub.com/type/language.json#",
+    "title": "Programming Language",
+    "description": "The programming language name and associated metadata",
+    "type": "string",
+    "oneOf": [
+        {
+            "$ref": "./language/custom.json#"
+        },
+        {
+            "$ref": "./language/linguist.json#"
+        }
+    ],
+    "additionalItems": false
+}

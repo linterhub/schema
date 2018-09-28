@@ -11,6 +11,7 @@ const config = core.cfg;
 // Cleanup build
 const cleanBuild = () => del([
     config.build.dir,
+    config.doc.schema,
 ]);
 
 // Cleanup release
